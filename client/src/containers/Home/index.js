@@ -1,9 +1,10 @@
 import React from 'react'
+import { BannerWrapper} from './homestyle.js'
 
 export default function Home() {
     return (
-        <div>
+        <BannerWrapper>
             This is Home page
-        </div>
+        </BannerWrapper>
     )
 }
