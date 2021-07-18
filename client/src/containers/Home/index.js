@@ -1,10 +1,10 @@
-import React from 'react'
-import { BannerWrapper} from './homestyle.js'
+import React from "react";
+import { BannerWrapper, HomeWrapper } from "./homestyle.js";
 
 export default function Home() {
-    return (
-        <BannerWrapper>
-            This is Home page
-        </BannerWrapper>
-    )
+  return (
+    <HomeWrapper>
+      <BannerWrapper>This is Home page</BannerWrapper>
+    </HomeWrapper>
+  );
 }

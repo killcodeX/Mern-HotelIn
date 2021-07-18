@@ -1,14 +1,20 @@
 import styled from 'styled-components';
 
+export const HomeWrapper = styled.div`
+width: 100%;
+min-height:100vh;
+position: relative;
+background-color: rgb(255, 255, 255);
+`;
 
 export const BannerWrapper = styled.div`
-background: url(${process.env.PUBLIC_URL+'/assets/banners/1.jpg'});
-position: absolute;
+background: url(${process.env.PUBLIC_URL+'/assets/banners/3.jpg'});
 width: 100%;
 height: 100%;
+position: absolute;
 top: 0px;
 left: 0px;
-pointer-events: all;
+padding-top:90px;
 &:after {
   display: block;
   content: '';
@@ -21,3 +27,6 @@ pointer-events: all;
   z-index: 0;
 }
 `;
+
+
+//pointer-events: all;
