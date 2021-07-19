@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { AiFillStar } from "react-icons/ai";
 import {
   CardWrapper,
@@ -39,7 +40,7 @@ export const Card = (props) => {
           </RatingWrapper>
         </ReviewWrapper>
         <ReviewWrapper>
-          <BookButton>Book Now</BookButton>
+          <BookButton><Link to={`/book-hotel/${id}`} style={{ textDecoration: 'none', color:'white' }}>Book Now</Link></BookButton>
           <Reviews>{`${totalReview} Reviews`}</Reviews>
         </ReviewWrapper>
       </CardDetails>
