@@ -10,7 +10,6 @@ export const CardWrapper = styled.div`
   justify-content:center;
   align-items:center;
   padding:20px;
-
   @media(max-width:480px){
     width:300px;
   }
