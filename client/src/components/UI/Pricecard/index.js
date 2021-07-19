@@ -10,10 +10,19 @@ import {
   ReviewWrapper,
   RatingWrapper,
   StarWrapper,
+  BookButton,
+  Reviews
 } from "./cardStyle";
 
 export const Card = (props) => {
-  const { name, city, image, price, rating } = props;
+  const { id, name, city, image, price, rating, totalReview } = props;
+
+   // Create our number formatter.
+   var formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "INR",
+  });
+  
   return (
     <CardWrapper>
       <ImageWrapper src={image} alt={name} />
@@ -21,13 +30,17 @@ export const Card = (props) => {
         <NameWrapper>{name}</NameWrapper>
         <CityWrapper>{city}</CityWrapper>
         <ReviewWrapper>
-          <PriceWrapper>{`Starting from ${price}`}</PriceWrapper>
+          <PriceWrapper>{`Starting from ${formatter.format(price)}`}</PriceWrapper>
           <RatingWrapper>
             {rating}
             <StarWrapper>
               <AiFillStar />
             </StarWrapper>
           </RatingWrapper>
+        </ReviewWrapper>
+        <ReviewWrapper>
+          <BookButton>Book Now</BookButton>
+          <Reviews>{`${totalReview} Reviews`}</Reviews>
         </ReviewWrapper>
       </CardDetails>
     </CardWrapper>

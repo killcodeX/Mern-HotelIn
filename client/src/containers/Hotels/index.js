@@ -15,11 +15,13 @@ export default function Hotels() {
               <div className="col-md-4 col-sm-12 pt-4">
                 <Card
                   key={item.id}
+                  id={item.id}
                   name={item.name}
                   city={item.city}
                   image={item.image}
                   price={item.price}
                   rating={item.rating}
+                  totalReview={item.totalReview}
                 />
               </div>
             );

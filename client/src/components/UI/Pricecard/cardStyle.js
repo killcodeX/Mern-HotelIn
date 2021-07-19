@@ -52,17 +52,39 @@ export const PriceWrapper = styled.p`
 export const ReviewWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items:center;
+  margin-top: 8px;
 `;
 
 export const RatingWrapper = styled.div`
   font-weight: 600;
   line-height: 20px;
   margin-bottom: 0;
-  margin-top: 8px;
 `;
 
 export const StarWrapper = styled.span`
-  color:#FAD02C;
-  font-size:20px;
-  padding-left:5px;
+  color: #fad02c;
+  font-size: 20px;
+  padding-left: 5px;
+  padding-top: 7px;
+`;
+
+export const BookButton = styled.button`
+  min-width: 107px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #008489;
+  border-radius: 0 3px 3px 0;
+  border: 0;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: none;
+`;
+
+export const Reviews = styled.p`
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 2px;
+  padding-top:12px;
 `;
