@@ -5,12 +5,16 @@ export const NavbarWrapper = styled.nav`
   width: 100%;
   padding: 10px 25px;
   min-height: 82px;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: ${(props) => props.back};
   border-bottom: 0px;
   transition: all 0.3s ease-out 0s;
+`;
+
+export const NavItems = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const LogoWrapper = styled.img`
@@ -36,8 +40,8 @@ export const ImageAvatar = styled.div`
 
 export const DropdownMenu = styled.div`
   min-width: 150px;
-  padding:10px;
-  background:white;
+  padding: 10px;
+  background: white;
   border-right: 0;
   position: absolute;
   right: 44px;
