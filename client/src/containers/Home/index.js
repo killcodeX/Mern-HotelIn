@@ -4,6 +4,7 @@ import { Heading } from "../../components/UI/Heading";
 import { Text } from "../../components/UI/Text";
 import SearchForm from "./searchForm";
 import TopDestinations from "../TopDestinations";
+import Hotels from "../Hotels";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         </BannerWrapper>
       </HomeWrapper>
       <TopDestinations />
+      <Hotels />
     </>
   );
 }
