@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const FooterWrapper = styled.footer`
 width: 100%;
 background-color: #ffffff;
-background-image: url(${process.env.PUBLIC_URL+'/assets/banners/footer-bg.svg'});
+background-image: url(${process.env.PUBLIC_URL+'/assets/footer-bg.svg'});
 background-repeat: no-repeat;
 background-position: bottom;
 background-size: 100%;
