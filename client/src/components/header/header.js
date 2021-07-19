@@ -29,7 +29,7 @@ export default function Header() {
               />
             )}
           </Link>
-          <Dropdown overlay={menu}>
+          <Dropdown overlay={menu} placement="bottomCenter" arrow>
             <ImageAvatar>
               <img
                 src={process.env.PUBLIC_URL + "/assets/profileImage.jpg"}
