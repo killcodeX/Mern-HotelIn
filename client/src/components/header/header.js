@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavbarWrapper, LogoWrapper, ImageAvatar, DropdownMenu  } from "./navbarStyle";
 
 export default function Header() {
