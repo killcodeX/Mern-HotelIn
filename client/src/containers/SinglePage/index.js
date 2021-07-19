@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { SectionWrapper } from './singleStyle';
+import { data } from './fakeData';
 
-export default function SingleHotel() {
+export const SingleHotel = () => {
+    console.log(data)
     return (
-        <div>
+        <SectionWrapper>
             This is Single hotel
-        </div>
+            <img src={data.image} alt={data.name}/>
+        </SectionWrapper>
     )
 }

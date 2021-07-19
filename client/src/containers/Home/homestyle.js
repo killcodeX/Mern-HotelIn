@@ -76,6 +76,7 @@ export const FormWrapper = styled.form`
   background-color: #f7f7f7;
   border-radius: 3px 0 0 3px;
   min-height: 60px;
+  z-index:100;
   @media only screen and (max-width: 991px) {
     flex-direction: column;
   }

@@ -30,12 +30,10 @@ export default function SearchForm() {
       </ComponentWrapper>
       {/* for starting dates */}
       <ComponentWrapper>
-        <FaRegCalendar />
         <FormInput type="date" placeholder="Search cities.." />
       </ComponentWrapper>
         {/* for ending dates */}
       <ComponentWrapper>
-        <FaRegCalendar />
         <FormInput type="date" placeholder="Search cities.." />
       </ComponentWrapper>
       {/*  for rooms */}

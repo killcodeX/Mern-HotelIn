@@ -8,6 +8,7 @@ export const NavbarWrapper = styled.nav`
   background: ${(props) => props.back};
   border-bottom: 0px;
   transition: all 0.3s ease-out 0s;
+  box-shadow: ${props => props.shadow};
 `;
 
 export const NavItems = styled.div`
@@ -25,7 +26,6 @@ export const LogoWrapper = styled.img`
 `;
 
 export const ImageAvatar = styled.div`
-  position: relative;
   width: 45px;
   height: 45px;
   overflow: hidden;
@@ -38,23 +38,23 @@ export const ImageAvatar = styled.div`
   }
 `;
 
-export const DropdownMenu = styled.div`
-  min-width: 150px;
-  padding: 10px;
-  background: white;
-  border-right: 0;
-  position: absolute;
-  right: 44px;
-  top: 76px;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  &.hide {
-    opacity: 0;
-    visibility: hidden;
-  }
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
-`;
+// export const DropdownMenu = styled.div`
+//   min-width: 150px;
+//   padding: 10px;
+//   background: white;
+//   border-right: 0;
+//   position: absolute;
+//   right: 44px;
+//   top: 76px;
+//   border-radius: 4px;
+//   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+//   transition: all 0.3s ease;
+//   &.hide {
+//     opacity: 0;
+//     visibility: hidden;
+//   }
+//   &.active {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// `;

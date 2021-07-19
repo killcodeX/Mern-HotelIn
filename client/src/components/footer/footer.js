@@ -14,7 +14,7 @@ export default function Footer() {
           <li>About Us</li>
           <li>Terms & Conditions</li>
           <li>Privacy Policy</li>
-          <l>Refund Policy</l>
+          <li>Refund Policy</li>
         </ul>
       </MenuWrapper>
       <AddressWrapper>
