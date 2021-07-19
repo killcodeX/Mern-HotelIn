@@ -73,7 +73,7 @@ export const FormWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border-radius: 3px 0 0 3px;
   min-height: 60px;
   @media only screen and (max-width: 991px) {
@@ -109,3 +109,41 @@ export const FormWrapper = styled.div`
     }
   }
 `;
+
+export const ComponentWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  .target {
+    right: 10px;
+    left: auto;
+    @media only screen and (max-width: 480px) {
+      right: 25px;
+    }
+  }
+`;
+
+export const FormInput = styled.input`
+  border: 0;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 0;
+  height: 60px;
+  padding: 0 30px 0 40px;
+  background: transparent;
+  color:#2C2C2C;
+  @media only screen and (max-width: 480px) {
+    height: 47px;
+    padding: 0 30px 0 36px;
+  }
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &::placeholder {
+    color: #2C2C2C;
+  }
+}
+  `;
