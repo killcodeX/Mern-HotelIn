@@ -69,7 +69,7 @@ export const SearchWrapper = styled.div`
   }
 `;
 
-export const FormWrapper = styled.div`
+export const FormWrapper = styled.form`
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -115,8 +115,9 @@ export const ComponentWrapper = styled.div`
   width: 100%;
   align-items: center;
   position: relative;
+  padding-right:10px;
   .target {
-    right: 10px;
+    right: 0px;
     left: auto;
     @media only screen and (max-width: 480px) {
       right: 25px;
