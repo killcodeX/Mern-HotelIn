@@ -3,6 +3,7 @@ export const data = {
   image: "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1603290425979-SR7.jpg",
   description:
     "Classic Double Rooms come with either double or single beds. \n Designed in open-concept living area, they have lots of in-room facilities.The room sizes vary from 20 to 25 sqm. \n They are also equipped with a fully-stocked minibar and snacks, air-conditioning unit, two comfortable chairs, makeup mirror, huge wardrobe, a soft hand-made carpet and ensuite bathroom.Perfect choice for honeymooners and couples.",
+  price:159,
   details: {
     adults: 2,
     ameties:

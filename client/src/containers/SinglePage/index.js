@@ -2,6 +2,7 @@ import React from "react";
 import { Heading } from "../../components/UI/Heading";
 import Details from './details';
 import Review from './review';
+import ReservationForm from './ReservationForm'
 import {
   SectionWrapper,
   ImageWrapper,
@@ -21,7 +22,7 @@ export const SingleHotel = () => {
         <HotelImage src={data.image} alt={data.name} />
       </ImageWrapper>
       <div className="container">
-        <div className="row mt-5">
+        <div className="row mt-5 position-relative">
           <div className="col-md-7 col-sm-12">
             <Heading content={data.name} />
             <DescWrapper>{data.description}</DescWrapper>
@@ -36,7 +37,7 @@ export const SingleHotel = () => {
               })
             }
           </div>
-          <div className="col-md-5 col-sm-12">2</div>
+          <div className="col-md-5 col-sm-12 p-5"><ReservationForm price={data.price}/></div>
         </div>
       </div>
     </SectionWrapper>
