@@ -28,6 +28,7 @@ export const MenuWrapper = styled.div`
   ul{
     display: flex;
     align-items: center;
+    justify-content:center;
     border: 0;
     background-color: transparent;
     list-style-type: none;
@@ -62,6 +63,7 @@ export const AddressWrapper = styled.p`
     font-size: 14px;
     margin-top: 20px;
     flex-wrap: wrap;
+    width:300px;
   }
 `;
 
@@ -74,6 +76,7 @@ export const SocialMediaWrapper = styled.div`
   ul{
     display: flex;
     align-items: center;
+    justify-content: center;
     border: 0;
     background-color: transparent;
     list-style-type: none;

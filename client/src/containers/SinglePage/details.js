@@ -16,7 +16,7 @@ export default function Details(props) {
         paddingRight:'5px'
     }
     return (
-        <table class="table table-bordered">
+        <table className="table table-bordered">
         <tbody>
           <tr>
             <th scope="row">

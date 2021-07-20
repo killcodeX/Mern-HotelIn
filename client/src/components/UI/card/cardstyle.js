@@ -12,6 +12,7 @@ export const CardWrapper = styled.div`
   padding:20px;
   @media(max-width:480px){
     width:300px;
+    margin:0 auto;
   }
 `;
 

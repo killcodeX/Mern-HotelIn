@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const CardWrapper = styled.div`
-  position: absolute;
+  position: ${props => props.pos};
   right: 0;
   top: 0;
   bottom: 0;
-  width: 33.333%;
+  //width: 33.333%;
 `;
 
 export const FormWrapper = styled.div`
@@ -58,6 +58,11 @@ export const FormLabel = styled.label`
   font-size: 0.875rem;
 `;
 
+export const FormItemStyle = styled.div`
+  width:100%;
+  height:40px;
+`;
+
 export const FormsubmitButton = styled.button`
   width: 100%;
   height: 47px;
@@ -68,3 +73,8 @@ export const FormsubmitButton = styled.button`
   background-color: #008489;
   transition: all 0.2s ease 0s;
 `;
+
+
+// @media only screen and (max-width: 480px) {
+//   width:185px;
+// }

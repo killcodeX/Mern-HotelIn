@@ -7,6 +7,9 @@ export const CardWrapper = styled.div`
   overflow: hidden;
   transition: box-shadow 0.3s;
   box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
+  @media(max-width:480px){
+    margin:0 auto;
+  }
 `;
 
 export const ImageWrapper = styled.img`

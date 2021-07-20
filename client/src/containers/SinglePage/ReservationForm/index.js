@@ -1,4 +1,5 @@
 import React from "react";
+import { Form, Select, DatePicker } from "antd";
 import {
   CardWrapper,
   FormWrapper,
@@ -7,25 +8,15 @@ import {
   CurrencyWrapper,
   PricePeriod,
   FormLabel,
+  FormItemStyle,
   FormsubmitButton,
 } from "./style";
-import {
-  Form,
-  Input,
-  Button,
-  Radio,
-  Select,
-  Cascader,
-  DatePicker,
-  InputNumber,
-  TreeSelect,
-  Switch,
-} from "antd";
 
 export default function ReservationForm({ price }) {
+  console.log(window.innerWidth)
   return (
     <CardWrapper>
-      <FormWrapper>
+      <FormWrapper pos={window.innerWidth < 500? 'auto':'absolute'}>
         <PriceWrapper>
           <RoomPrice>
             <CurrencyWrapper>$</CurrencyWrapper>
@@ -36,23 +27,31 @@ export default function ReservationForm({ price }) {
         <Form layout="horizontal">
           <FormLabel>Check-In Date</FormLabel>
           <Form.Item>
-            <DatePicker style={{ width: "290px", height: "40px" }} />
+            <FormItemStyle>
+              <DatePicker />
+            </FormItemStyle>
           </Form.Item>
           <FormLabel>Check-Out Date</FormLabel>
           <Form.Item>
-            <DatePicker style={{ width: "290px", height: "40px" }} />
+            <FormItemStyle>
+              <DatePicker />
+            </FormItemStyle>
           </Form.Item>
           <FormLabel>Adults</FormLabel>
           <Form.Item>
-            <Select style={{ width: "290px", height: "40px" }}>
-              <Select.Option value="demo">Demo</Select.Option>
-            </Select>
+            <FormItemStyle>
+              <Select>
+                <Select.Option value="demo">Demo</Select.Option>
+              </Select>
+            </FormItemStyle>
           </Form.Item>
           <FormLabel>Children</FormLabel>
           <Form.Item>
-            <Select style={{ width: "290px", height: "40px" }}>
-              <Select.Option value="demo">Demo</Select.Option>
-            </Select>
+            <FormItemStyle>
+              <Select>
+                <Select.Option value="demo">Demo</Select.Option>
+              </Select>
+            </FormItemStyle>
           </Form.Item>
           <FormsubmitButton>Book Now</FormsubmitButton>
         </Form>
