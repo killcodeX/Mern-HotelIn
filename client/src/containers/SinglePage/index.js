@@ -1,5 +1,7 @@
 import React from "react";
 import { Heading } from "../../components/UI/Heading";
+import Details from './details';
+import Review from './review';
 import {
   SectionWrapper,
   ImageWrapper,
@@ -7,21 +9,11 @@ import {
   DescWrapper,
   HeadText,
 } from "./singleStyle";
-import {
-  FaBed,
-  FaDelicious,
-  FaUmbrellaBeach,
-  FaTv,
-  FaUserAlt,
-} from "react-icons/fa";
+
 import { data } from "./fakeData";
 
 export const SingleHotel = () => {
-    const iconStyle = {
-        color:'#008489',
-        fontSize:'20px',
-        paddingRight:'5px'
-    }
+    
   console.log(data);
   return (
     <SectionWrapper>
@@ -34,41 +26,15 @@ export const SingleHotel = () => {
             <Heading content={data.name} />
             <DescWrapper>{data.description}</DescWrapper>
             <HeadText>Details</HeadText>
-            <table class="table table-bordered">
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <FaUserAlt style={iconStyle} /> Adults
-                  </th>
-                  <td>{data.details.adults}</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <FaTv style={iconStyle} /> Amenities
-                  </th>
-                  <td>{data.details.ameties}</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <FaUmbrellaBeach style={iconStyle} /> View
-                  </th>
-                  <td>{data.details.view}</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <FaDelicious style={iconStyle} /> Size
-                  </th>
-                  <td>{data.details.size}</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <FaBed style={iconStyle} /> Bed Type
-                  </th>
-                  <td>{data.details.bedType}</td>
-                </tr>
-              </tbody>
-            </table>
+              <Details details={data.details}/>
             <HeadText>Reviews</HeadText>
+            {
+              data.reviews.map(item => {
+                return(
+                  <Review key={item.id} data={item} />
+                )
+              })
+            }
           </div>
           <div className="col-md-5 col-sm-12">2</div>
         </div>
