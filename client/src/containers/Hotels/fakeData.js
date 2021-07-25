@@ -281,60 +281,272 @@ export const data = [
     id: 7,
     name: "Radisson Blu Mumbai International Airport",
     image:"https://cdn1.goibibo.com/voy_ing/t_g/6a653fe4d7ac11eabeec0242ac110005.jpg",
+    description:
+      "Radisson Blu Mumbai International Airport is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 92% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent.",
     city: "Mumbai",
-    price: "8229",
-    rating: "4.8",
-    totalReview: "27",
+    price: "2930",
+    rating: "4.2",
+    totalReview: "850",
+    details: {
+        adults: 2,
+        ameties:
+          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+        view: "Pools",
+        size: "900 sq.ft.",
+        bedType: "1 Double bed or 2 Twin Bed(s) sized bed",
+      },
+      reviews: [
+        {
+          id: 1,
+          name: "LUCIO ROSSI",
+          image:
+            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+          rating: "4.1",
+          review:
+            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+        },
+        {
+          id: 2,
+          name: "ERIK MAURER",
+          image:
+            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+          rating: "4.5",
+          review: "Super up-to-date design and responsive stuff!",
+        },
+        {
+          id: 3,
+          name: "JOSHUA ROBERTS",
+          image:
+            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+          rating: "4.5",
+          review: "Very neat and nice room with beautiful view.",
+        },
+      ],
   },
   {
     id: 8,
-    name: "Hotel Samrat Ashok",
-    city: "Delhi",
-    price: "5929",
-    rating: "4.5",
-    image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602775364463-ash23.jpg",
-    totalReview: "3059",
+    name: "Hilton Mumbai International Airport",
+    image:"https://cdn1.goibibo.com/voy_ing/t_g/cbff2a2c237611e883fe025f77df004f.jpg",
+    description: "Hilton Mumbai International Airport is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport. Hotel is rated 4.1 out of 5, which is considered as very good.",
+    city: "Mumbai",
+    price: "3989",
+    rating: "4.1",
+    totalReview: "191",
+    details: {
+        adults: 2,
+        ameties:
+          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+        view: "Pools",
+        size: "425 sq.ft.",
+        bedType: "King Bed sized bed",
+      },
+      reviews: [
+        {
+          id: 1,
+          name: "LUCIO ROSSI",
+          image:
+            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+          rating: "4.1",
+          review:
+            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+        },
+        {
+          id: 2,
+          name: "ERIK MAURER",
+          image:
+            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+          rating: "4.5",
+          review: "Super up-to-date design and responsive stuff!",
+        },
+        {
+          id: 3,
+          name: "JOSHUA ROBERTS",
+          image:
+            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+          rating: "4.5",
+          review: "Very neat and nice room with beautiful view.",
+        },
+      ],
   },
   {
     id: 9,
-    name: "Hotel Green Orchid",
-    city: "Bangalore",
-    price: "1020",
-    rating: "4.7",
-    image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602751842126-4bed53527dec11e7aef20a4cef95d023.jpg",
-    totalReview: "20",
+    name: "President,Mumbai IHCL SeleQtions",
+    image:"https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/200901081442472303-b18d7a7e5ca611eb8bd50242ac110006.jpg",
+    description: "President,Mumbai IHCL SeleQtions is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in South Mumbai.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 94% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent. ",
+    city: "Mumbai",
+    price: "3500",
+    rating: "4.5",
+    totalReview: "708",
+    details: {
+        adults: 2,
+        ameties:
+          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+        view: "Sea",
+        size: "269 sq.ft.",
+        bedType: "Twin Bed sized bed",
+      },
+      reviews: [
+        {
+          id: 1,
+          name: "LUCIO ROSSI",
+          image:
+            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+          rating: "4.1",
+          review:
+            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+        },
+        {
+          id: 2,
+          name: "ERIK MAURER",
+          image:
+            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+          rating: "4.5",
+          review: "Super up-to-date design and responsive stuff!",
+        },
+        {
+          id: 3,
+          name: "JOSHUA ROBERTS",
+          image:
+            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+          rating: "4.5",
+          review: "Very neat and nice room with beautiful view.",
+        },
+      ],
   },
   {
     id: 10,
-    name: "Hotel Ocean View",
+    name: "ITC Grand Central",
+    image:"https://cdn1.goibibo.com/voy_ing/t_g/rtgflv27ml43b7old7gjubjp0077.jpg",
+    description: "ITC Grand Central is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in South Mumbai.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 94% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent.",
     city: "Mumbai",
-    price: "6229",
-    rating: "4.2",
-    image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602747368687-sha1.jpg",
-    totalReview: "59",
+    price: "3950",
+    rating: "4.5",
+    totalReview: "386",
+    details: {
+        adults: 3,
+        ameties:
+          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+        view: "Sea",
+        size: "300 sq.ft.",
+        bedType: "King Bed sized bed",
+      },
+      reviews: [
+        {
+          id: 1,
+          name: "LUCIO ROSSI",
+          image:
+            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+          rating: "4.1",
+          review:
+            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+        },
+        {
+          id: 2,
+          name: "ERIK MAURER",
+          image:
+            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+          rating: "4.5",
+          review: "Super up-to-date design and responsive stuff!",
+        },
+        {
+          id: 3,
+          name: "JOSHUA ROBERTS",
+          image:
+            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+          rating: "4.5",
+          review: "Very neat and nice room with beautiful view.",
+        },
+      ],
   },
   {
     id: 11,
-    name: "Krishna Grand Inn",
-    city: "Chennai",
-    price: "2229",
-    rating: "4.5",
-    image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1603295342262-IMG_20181025_185429.jpg",
-    totalReview: "76",
+    name: "Lemon Tree Premier, Mumbai",
+    image:"https://cdn1.goibibo.com/voy_ing/t_g/0a98768a728511ea94730242ac110009.jpg",
+    description: "Lemon Tree Premier, Mumbai International Airport, Mumbai is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 88% of our guests.",
+    city: "Mumbai",
+    price: "3053",
+    rating: "4.1",
+    totalReview: "1097",
+    details: {
+        adults: 3,
+        ameties:
+          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+        view: "Sea",
+        size: "269 sq.ft.",
+        bedType: "1 King bed or 2 Twin Bed(s) sized bed",
+      },
+      reviews: [
+        {
+          id: 1,
+          name: "LUCIO ROSSI",
+          image:
+            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+          rating: "4.1",
+          review:
+            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+        },
+        {
+          id: 2,
+          name: "ERIK MAURER",
+          image:
+            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+          rating: "4.5",
+          review: "Super up-to-date design and responsive stuff!",
+        },
+        {
+          id: 3,
+          name: "JOSHUA ROBERTS",
+          image:
+            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+          rating: "4.5",
+          review: "Very neat and nice room with beautiful view.",
+        },
+      ],
   },
   {
     id: 12,
-    name: "Hotel SR Grand",
-    city: "Hyderabad",
-    price: "8229",
-    rating: "4.8",
-    image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1603290425979-SR7.jpg",
-    totalReview: "27",
+    name: "JW Marriott Mumbai Sahar",
+    image:"https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201502241232053860-ba7d0b4e5fe811e8adec0a33396621b6.jpg",
+    description: "Lemon Tree Premier, Mumbai International Airport, Mumbai is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 88% of our guests.,JW Marriott Mumbai Sahar is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 90% of our guests.",
+    city: "Mumbai",
+    price: "4500",
+    rating: "4.2",
+    totalReview: "221",
+    details: {
+        adults: 3,
+        ameties:
+          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+        view: "Sea",
+        size: "409 sq.ft.",
+        bedType: "Twin Bed sized bed",
+      },
+      reviews: [
+        {
+          id: 1,
+          name: "LUCIO ROSSI",
+          image:
+            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+          rating: "4.1",
+          review:
+            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+        },
+        {
+          id: 2,
+          name: "ERIK MAURER",
+          image:
+            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+          rating: "4.5",
+          review: "Super up-to-date design and responsive stuff!",
+        },
+        {
+          id: 3,
+          name: "JOSHUA ROBERTS",
+          image:
+            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+          rating: "4.5",
+          review: "Very neat and nice room with beautiful view.",
+        },
+      ],
   },
   {
     id: 13,
