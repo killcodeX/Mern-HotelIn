@@ -1131,62 +1131,284 @@ export const data = [
   },
   {
     id: 25,
-    name: "Hotel Ocean View",
-    city: "Mumbai",
-    price: "6229",
-    rating: "4.2",
+    name: "Radisson Blu Hotel New Delhi Paschim Vihar",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602747368687-sha1.jpg",
-    totalReview: "59",
+      "https://cdn1.goibibo.com/voy_ing/t_g/28af6938f43211ea9c450242ac110004.jfif",
+    description:
+      "Radisson Blu Hotel New Delhi Paschim Vihar is a good choice for travellers looking for a 5 star hotel in Delhi. It is located in Paschim Vihar. Hotel is rated 3.8 out of 5, which is considered as good.",
+    city: "Delhi",
+    price: "3150",
+    rating: "3.8",
+    totalReview: "1613",
+    details: {
+      adults: 3,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "384 sq.ft.",
+      bedType: "1 King bed or 2 Twin Bed(s) sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 26,
-    name: "Krishna Grand Inn",
-    city: "Chennai",
-    price: "2229",
-    rating: "4.5",
+    name: "The Muse Sarovar Portico- Kapashera",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1603295342262-IMG_20181025_185429.jpg",
-    totalReview: "76",
+      "https://cdn1.goibibo.com/voy_ing/t_g/76f0ec7093a511e79a970a4cef95d023.jpg",
+    description:
+      "The Muse Sarovar Portico- Kapashera is a good choice for travellers looking for a 4 star hotel in Delhi. It is located in Near IGI Airport. Hotel is rated 3.9 out of 5, which is considered as good.",
+    city: "Delhi",
+    price: "2070",
+    rating: "3.9",
+    totalReview: "849",
+    details: {
+      adults: 3,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "252 sq.ft.",
+      bedType: "Double sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 27,
-    name: "Hotel SR Grand",
-    city: "Hyderabad",
-    price: "8229",
-    rating: "4.8",
+    name: "The Leela Delhi Ambience Convention Hotel",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1603290425979-SR7.jpg",
-    totalReview: "27",
+      "https://cdn1.goibibo.com/voy_ing/t_g/6cdd3f44783a11e788ea0a4cef95d023.jpg",
+    description:
+      "The Leela Delhi Ambience Convention Hotel is a great choice for travellers looking for a 5 star hotel in Delhi. It is located in East Delhi.This Hotel stands out as one of the highly recommended hotel in Delhi and is recommended by 90% of our guests. Hotel is rated 4.4 out of 5, which is considered as very good.",
+    city: "Delhi",
+    price: "4299",
+    rating: "4.4",
+    totalReview: "709",
+    details: {
+      adults: 3,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "396 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 28,
-    name: "Hotel Samrat Ashok",
-    city: "Delhi",
-    price: "5929",
-    rating: "4.5",
+    name: "Holiday Inn New Delhi Mayur Vihar",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602775364463-ash23.jpg",
-    totalReview: "3059",
+      "https://cdn1.goibibo.com/voy_ing/t_g/6618067c12b411eb8e320242ac110003.jpeg",
+    description:
+      "Holiday Inn New Delhi Mayur Vihar is a great choice for travellers looking for a 5 star hotel in Delhi. It is located in East Delhi.This Hotel stands out as one of the highly recommended hotel in Delhi and is recommended by 88% of our guests. Hotel is rated 4.2 out of 5, which is considered as very good. ",
+    city: "Delhi",
+    price: "2888",
+    rating: "4.2",
+    totalReview: "543",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "324 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 29,
-    name: "Hotel Green Orchid",
-    city: "Bangalore",
-    price: "1020",
-    rating: "4.7",
+    name: "Eros Hotel New Delhi ,Nehru Place",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602751842126-4bed53527dec11e7aef20a4cef95d023.jpg",
-    totalReview: "20",
+      "https://cdn1.goibibo.com/voy_ing/t_g/29bfb31ee26811e4be23001ec9b85d13.jfif",
+    description:
+      "Eros Hotel New Delhi ,Nehru Place is a great choice for travellers looking for a 5 star hotel in Delhi. It is located in Near Nehru Place.This Hotel stands out as one of the highly recommended hotel in Delhi and is recommended by 88% of our guests. Hotel is rated 4.1 out of 5, which is considered as very good.",
+    city: "Delhi",
+    price: "4099",
+    rating: "4.1",
+    totalReview: "541",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "324 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 30,
-    name: "Hotel Ocean View",
-    city: "Mumbai",
-    price: "6229",
-    rating: "4.2",
+    name: "Hotel LA New Delhi",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602747368687-sha1.jpg",
-    totalReview: "59",
+      "https://cdn1.goibibo.com/voy_ing/t_g/32ef517c636211e9843f0242ac110003.jpg",
+    description:
+      "Hotel LA New Delhi is a good choice for travellers looking for a 5 star hotel in Delhi. It is located in Mangolpuri. Hotel is rated 3.8 out of 5, which is considered as good. Some of the popular transit points from Hotel LA New Delhi are ISBT Kashmere Gate (12.7 kms), Shakurbasti Railway Station (2.6 kms), Model Town Metro Station (9.2 kms) and Delhi Airport (15.4 kms).",
+    city: "Delhi",
+    price: "1941",
+    rating: "3.8",
+    totalReview: "1161",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "324 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
 ];
