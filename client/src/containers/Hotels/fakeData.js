@@ -849,63 +849,285 @@ export const data = [
   },
   {
     id: 19,
-    name: "Hotel Green Orchid",
-    city: "Bangalore",
-    price: "1020",
-    rating: "4.7",
+    name: "Four Points by Sheraton Chennai OMR",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602751842126-4bed53527dec11e7aef20a4cef95d023.jpg",
-    totalReview: "20",
+      "https://cdn1.goibibo.com/voy_ing/t_g/acae08eab75a11e9891c0242ac110007.jpg",
+    description:
+      "Four Points by Sheraton Chennai OMR is a great choice for travellers looking for a 4 star hotel in Chennai. It is located in Sholinganallur.This Hotel stands out as one of the highly recommended hotel in Chennai and is recommended by 91% of our guests. Hotel is rated 4.3 out of 5, which is considered as very good.",
+    city: "Chennai",
+    price: "1808",
+    rating: "4.3",
+    totalReview: "316",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "210 sq.ft.",
+      bedType: "Double Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 20,
-    name: "Hotel Ocean View",
-    city: "Mumbai",
-    price: "6229",
-    rating: "4.2",
+    name: "Vivanta Chennai IT Expressway OMR",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602747368687-sha1.jpg",
-    totalReview: "59",
+      "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201306101502582518-cfeb050e65b811e9940b0242ac110002.jpg",
+    description:
+      "Vivanta Chennai IT Expressway OMR is a great choice for travellers looking for a 5 star hotel in Chennai. It is located in Sholinganallur.This Hotel stands out as one of the highly recommended hotel in Chennai and is recommended by 91% of our guests. Hotel is rated 4.3 out of 5, which is considered as very good.",
+    city: "Chennai",
+    price: "2350",
+    rating: "4.3",
+    totalReview: "271",
+    details: {
+      adults: 3,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "300 sq.ft.",
+      bedType: "Twin Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 21,
-    name: "Krishna Grand Inn",
-    city: "Chennai",
-    price: "2229",
-    rating: "4.5",
+    name: "Hilton Chennai",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1603295342262-IMG_20181025_185429.jpg",
-    totalReview: "76",
+      "https://cdn1.goibibo.com/voy_ing/t_g/192ce212237711e8a8d6025f77df004f.jpg",
+    description:
+      "Hilton Chennai is a great choice for travellers looking for a 5 star hotel in Chennai. It is located in Guindy.This Hotel stands out as one of the highly recommended hotel in Chennai and is recommended by 87% of our guests. Hotel is rated 4.4 out of 5, which is considered as very good",
+    city: "Chennai",
+    price: "3499",
+    rating: "4.4",
+    totalReview: "128",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "366 sq.ft.",
+      bedType: "Twin Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 22,
-    name: "Hotel SR Grand",
-    city: "Hyderabad",
-    price: "8229",
-    rating: "4.8",
+    name: "Ibis Chennai SIPCOT",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1603290425979-SR7.jpg",
-    totalReview: "27",
+      "https://cdn1.goibibo.com/voy_ing/t_g/62659bd8825811e7a50c0a4cef95d023.jpg",
+    description:
+      "Ibis Chennai SIPCOT is a great choice for travellers looking for a 3 star hotel in Chennai. It is located in Egatoor.This Hotel stands out as one of the highly recommended hotel in Chennai and is recommended by 91% of our guests. Hotel is rated 4.2 out of 5, which is considered as very good.",
+    city: "Chennai",
+    price: "1125",
+    rating: "4.2",
+    totalReview: "364",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "366 sq.ft.",
+      bedType: "Twin Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 23,
-    name: "Hotel Samrat Ashok",
-    city: "Delhi",
-    price: "5929",
-    rating: "4.5",
+    name: "Novotel Chennai Sipcot - An Accor Brand",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602775364463-ash23.jpg",
-    totalReview: "3059",
+      "https://cdn1.goibibo.com/voy_ing/t_g/2a702822b89711e79ddd02755708f0b3.jpg",
+    description:
+      "Novotel Chennai Sipcot - An Accor Brand is a great choice for travellers looking for a 5 star hotel in Chennai. It is located in Egatoor.This Hotel stands out as one of the highly recommended hotel in Chennai and is recommended by 93% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent.",
+    city: "Chennai",
+    price: "1800",
+    rating: "4.5",
+    totalReview: "133",
+    details: {
+      adults: 3,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "303 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 24,
-    name: "Hotel Green Orchid",
-    city: "Bangalore",
-    price: "1020",
-    rating: "4.7",
+    name: "ITC Grand Chola - A Luxury Collection Hotel",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602751842126-4bed53527dec11e7aef20a4cef95d023.jpg",
-    totalReview: "20",
+      "https://cdn1.goibibo.com/voy_ing/t_g/13afc4e8a99311e7a17e02755708f0b3.jpg",
+    description:
+      "ITC Grand Chola - A Luxury Collection Hotel is a great choice for travellers looking for a 5 star hotel in Chennai. It is located in Guindy.This Hotel stands out as one of the highly recommended hotel in Chennai and is recommended by 91% of our guests. Hotel is rated 4.4 out of 5, which is considered as very good.",
+    city: "Chennai",
+    price: "6800",
+    rating: "4.4",
+    totalReview: "415",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "405 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 25,
