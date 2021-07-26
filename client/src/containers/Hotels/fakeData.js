@@ -2,7 +2,8 @@ export const data = [
   {
     id: 1,
     name: "Novotel Hyderabad Convention Centre",
-    image:"https://cdn1.goibibo.com/voy_ing/t_g/91c8c81cf6b311e7b1850a4cef95d023.jpg",
+    image:
+      "https://cdn1.goibibo.com/voy_ing/t_g/91c8c81cf6b311e7b1850a4cef95d023.jpg",
     description:
       "Classic Double Rooms come with either double or single beds. \n Designed in open-concept living area, they have lots of in-room facilities.The room sizes vary from 20 to 25 sqm. \n They are also equipped with a fully-stocked minibar and snacks, air-conditioning unit, two comfortable chairs, makeup mirror, huge wardrobe, a soft hand-made carpet and ensuite bathroom.Perfect choice for honeymooners and couples.",
     city: "Hyderabad",
@@ -57,45 +58,46 @@ export const data = [
     rating: "4.5",
     totalReview: "3059",
     details: {
-        adults: 2,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "beach",
-        size: "25m2",
-        bedType: "1 Queen bed",
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "beach",
+      size: "25m2",
+      bedType: "1 Queen bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 3,
     name: "Ellaa Hotel Gachibowli",
-    image:"https://cdn1.goibibo.com/voy_ing/t_g/fab0ab8af48b11e7ab060a4cef95d023.jpg",
+    image:
+      "https://cdn1.goibibo.com/voy_ing/t_g/fab0ab8af48b11e7ab060a4cef95d023.jpg",
     description:
       "Classic Double Rooms come with either double or single beds. \n Designed in open-concept living area, they have lots of in-room facilities.The room sizes vary from 20 to 25 sqm. \n They are also equipped with a fully-stocked minibar and snacks, air-conditioning unit, two comfortable chairs, makeup mirror, huge wardrobe, a soft hand-made carpet and ensuite bathroom.Perfect choice for honeymooners and couples.",
     city: "Hyderabad",
@@ -103,45 +105,46 @@ export const data = [
     rating: "4.5",
     totalReview: "3059",
     details: {
-        adults: 2,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "beach",
-        size: "25m2",
-        bedType: "1 Queen bed",
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "beach",
+      size: "25m2",
+      bedType: "1 Queen bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 4,
     name: "Hotel Imperial Classic",
-    image:"https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201108301434398753-b09bd896f90c11e7b48f0a9df65c8753.jpg",
+    image:
+      "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201108301434398753-b09bd896f90c11e7b48f0a9df65c8753.jpg",
     description:
       "Hotel Imperial Classic is a great choice for travellers looking for a 3 star hotel in Hyderabad. It is located in Himayat Nagar.This Hotel stands out as one of the highly recommended hotel in Hyderabad and is recommended by 87% of our guests. Hotel is rated 4.1 out of 5, which is considered as very good. ",
     city: "Hyderabad",
@@ -149,45 +152,46 @@ export const data = [
     rating: "4.5",
     totalReview: "3059",
     details: {
-        adults: 2,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "Pool",
-        size: "180 sq.ft.",
-        bedType: "Double Bed sized bed",
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Pool",
+      size: "180 sq.ft.",
+      bedType: "Double Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 5,
     name: "Radisson Hyderabad Hitec City, India",
-    image:"https://cdn1.goibibo.com/voy_ing/t_g/32d4c786780811e7ad04025f77df004f.jpg",
+    image:
+      "https://cdn1.goibibo.com/voy_ing/t_g/32d4c786780811e7ad04025f77df004f.jpg",
     description:
       "Radisson Hyderabad Hitec City, India is a great choice for travellers looking for a 5 star hotel in Hyderabad. It is located in Gachibowli.This Hotel stands out as one of the highly recommended hotel in Hyderabad and is recommended by 91% of our guests. Hotel is rated 4.2 out of 5, which is considered as very good. ",
     city: "Hyderabad",
@@ -195,45 +199,46 @@ export const data = [
     rating: "4.2",
     totalReview: "2780",
     details: {
-        adults: 2,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "Malls",
-        size: "364 sq.ft.",
-        bedType: "1 King bed or 2 Twin Bed(s) sized bed",
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Malls",
+      size: "364 sq.ft.",
+      bedType: "1 King bed or 2 Twin Bed(s) sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 6,
     name: "Marriott Executive Apartments Hyderabad",
-    image:"https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201801031617525650-208dac22109811e890420a9df65c8753.jpg",
+    image:
+      "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201801031617525650-208dac22109811e890420a9df65c8753.jpg",
     description:
       "Marriott Executive Apartments Hyderabad is a great choice for travellers looking for a 5 star hotel in Hyderabad. It is located in Kondapur.This Hotel stands out as one of the highly recommended hotel in Hyderabad and is recommended by 88% of our guests. Hotel is rated 4.2 out of 5, which is considered as very good. ",
     city: "Hyderabad",
@@ -241,46 +246,47 @@ export const data = [
     rating: "4.2",
     totalReview: "85",
     details: {
-        adults: 2,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "Pools",
-        size: "900 sq.ft.",
-        bedType: "King Bed sized bed",
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Pools",
+      size: "900 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
-//   this section for mumbai hotels
+  //   this section for mumbai hotels
   {
     id: 7,
     name: "Radisson Blu Mumbai International Airport",
-    image:"https://cdn1.goibibo.com/voy_ing/t_g/6a653fe4d7ac11eabeec0242ac110005.jpg",
+    image:
+      "https://cdn1.goibibo.com/voy_ing/t_g/6a653fe4d7ac11eabeec0242ac110005.jpg",
     description:
       "Radisson Blu Mumbai International Airport is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 92% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent.",
     city: "Mumbai",
@@ -288,325 +294,558 @@ export const data = [
     rating: "4.2",
     totalReview: "850",
     details: {
-        adults: 2,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "Pools",
-        size: "900 sq.ft.",
-        bedType: "1 Double bed or 2 Twin Bed(s) sized bed",
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Pools",
+      size: "900 sq.ft.",
+      bedType: "1 Double bed or 2 Twin Bed(s) sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 8,
     name: "Hilton Mumbai International Airport",
-    image:"https://cdn1.goibibo.com/voy_ing/t_g/cbff2a2c237611e883fe025f77df004f.jpg",
-    description: "Hilton Mumbai International Airport is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport. Hotel is rated 4.1 out of 5, which is considered as very good.",
+    image:
+      "https://cdn1.goibibo.com/voy_ing/t_g/cbff2a2c237611e883fe025f77df004f.jpg",
+    description:
+      "Hilton Mumbai International Airport is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport. Hotel is rated 4.1 out of 5, which is considered as very good.",
     city: "Mumbai",
     price: "3989",
     rating: "4.1",
     totalReview: "191",
     details: {
-        adults: 2,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "Pools",
-        size: "425 sq.ft.",
-        bedType: "King Bed sized bed",
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Pools",
+      size: "425 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 9,
     name: "President,Mumbai IHCL SeleQtions",
-    image:"https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/200901081442472303-b18d7a7e5ca611eb8bd50242ac110006.jpg",
-    description: "President,Mumbai IHCL SeleQtions is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in South Mumbai.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 94% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent. ",
+    image:
+      "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/200901081442472303-b18d7a7e5ca611eb8bd50242ac110006.jpg",
+    description:
+      "President,Mumbai IHCL SeleQtions is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in South Mumbai.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 94% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent. ",
     city: "Mumbai",
     price: "3500",
     rating: "4.5",
     totalReview: "708",
     details: {
-        adults: 2,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "Sea",
-        size: "269 sq.ft.",
-        bedType: "Twin Bed sized bed",
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Sea",
+      size: "269 sq.ft.",
+      bedType: "Twin Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 10,
     name: "ITC Grand Central",
-    image:"https://cdn1.goibibo.com/voy_ing/t_g/rtgflv27ml43b7old7gjubjp0077.jpg",
-    description: "ITC Grand Central is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in South Mumbai.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 94% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent.",
+    image:
+      "https://cdn1.goibibo.com/voy_ing/t_g/rtgflv27ml43b7old7gjubjp0077.jpg",
+    description:
+      "ITC Grand Central is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in South Mumbai.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 94% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent.",
     city: "Mumbai",
     price: "3950",
     rating: "4.5",
     totalReview: "386",
     details: {
-        adults: 3,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "Sea",
-        size: "300 sq.ft.",
-        bedType: "King Bed sized bed",
+      adults: 3,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Sea",
+      size: "300 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 11,
     name: "Lemon Tree Premier, Mumbai",
-    image:"https://cdn1.goibibo.com/voy_ing/t_g/0a98768a728511ea94730242ac110009.jpg",
-    description: "Lemon Tree Premier, Mumbai International Airport, Mumbai is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 88% of our guests.",
+    image:
+      "https://cdn1.goibibo.com/voy_ing/t_g/0a98768a728511ea94730242ac110009.jpg",
+    description:
+      "Lemon Tree Premier, Mumbai International Airport, Mumbai is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 88% of our guests.",
     city: "Mumbai",
     price: "3053",
     rating: "4.1",
     totalReview: "1097",
     details: {
-        adults: 3,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "Sea",
-        size: "269 sq.ft.",
-        bedType: "1 King bed or 2 Twin Bed(s) sized bed",
+      adults: 3,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Sea",
+      size: "269 sq.ft.",
+      bedType: "1 King bed or 2 Twin Bed(s) sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 12,
     name: "JW Marriott Mumbai Sahar",
-    image:"https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201502241232053860-ba7d0b4e5fe811e8adec0a33396621b6.jpg",
-    description: "Lemon Tree Premier, Mumbai International Airport, Mumbai is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 88% of our guests.,JW Marriott Mumbai Sahar is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 90% of our guests.",
+    image:
+      "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201502241232053860-ba7d0b4e5fe811e8adec0a33396621b6.jpg",
+    description:
+      "Lemon Tree Premier, Mumbai International Airport, Mumbai is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 88% of our guests.,JW Marriott Mumbai Sahar is a great choice for travellers looking for a 5 star hotel in Mumbai. It is located in Near Mumbai Airport.This Hotel stands out as one of the highly recommended hotel in Mumbai and is recommended by 90% of our guests.",
     city: "Mumbai",
     price: "4500",
     rating: "4.2",
     totalReview: "221",
     details: {
-        adults: 3,
-        ameties:
-          "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
-        view: "Sea",
-        size: "409 sq.ft.",
-        bedType: "Twin Bed sized bed",
+      adults: 3,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Sea",
+      size: "409 sq.ft.",
+      bedType: "Twin Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
       },
-      reviews: [
-        {
-          id: 1,
-          name: "LUCIO ROSSI",
-          image:
-            "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
-          rating: "4.1",
-          review:
-            "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
-        },
-        {
-          id: 2,
-          name: "ERIK MAURER",
-          image:
-            "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
-          rating: "4.5",
-          review: "Super up-to-date design and responsive stuff!",
-        },
-        {
-          id: 3,
-          name: "JOSHUA ROBERTS",
-          image:
-            "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
-          rating: "4.5",
-          review: "Very neat and nice room with beautiful view.",
-        },
-      ],
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
+  //  for bengaluru hotels
   {
     id: 13,
-    name: "Hotel Samrat Ashok",
-    city: "Delhi",
-    price: "5929",
-    rating: "4.5",
+    name: "Radisson Blu Bengaluru Outer Ring Road",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602775364463-ash23.jpg",
-    totalReview: "3059",
+      "https://cdn1.goibibo.com/voy_ing/t_g/93f2cfbe40d811e9b36c0242ac110003.jpg",
+    description:
+      "Radisson Blu Bengaluru Outer Ring Road is a great choice for travellers looking for a 5 star hotel in Bangalore. It is located in Outer Ring Road.This Hotel stands out as one of the highly recommended hotel in Bangalore and is recommended by 91% of our guests. Hotel is rated 4.2 out of 5, which is considered as very good",
+    city: "Bengaluru",
+    price: "3219",
+    rating: "4.2",
+    totalReview: "118",
+    details: {
+      adults: 3,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Malls",
+      size: "345 sq.ft.",
+      bedType: "1 Queen bed or 2 Twin Bed(s) sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 14,
-    name: "Hotel Green Orchid",
-    city: "Bangalore",
-    price: "1020",
-    rating: "4.7",
+    name: "Welcomhotel by ITC Hotels, Richmond Road, Bengaluru",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602751842126-4bed53527dec11e7aef20a4cef95d023.jpg",
-    totalReview: "20",
+      "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201405201545153229-ae3adc802ce811e4ade45ee5da2daa2a.jpg",
+    description:
+      "Welcomhotel by ITC Hotels, Richmond Road, Bengaluru is a great choice for travellers looking for a 5 star hotel in Bangalore. It is located in Richmond road.This Hotel stands out as one of the highly recommended hotel in Bangalore and is recommended by 95% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent.",
+    city: "Bengaluru",
+    price: "2930",
+    rating: "4.2",
+    totalReview: "398",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Malls",
+      size: "333 sq.ft.",
+      bedType: "Twin Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 15,
-    name: "Hotel Ocean View",
-    city: "Mumbai",
-    price: "6229",
-    rating: "4.2",
+    name: "Taj MG Road, Bengaluru",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602747368687-sha1.jpg",
-    totalReview: "59",
+      "https://cdn1.goibibo.com/voy_ing/t_g/f68f602a123811e9944e0242ac110002.jpg",
+    description:
+      "Taj MG Road, Bengaluru is a great choice for travellers looking for a 5 star hotel in Bangalore. It is located in Ulsoor.This Hotel stands out as one of the highly recommended hotel in Bangalore and is recommended by 96% of our guests. Hotel is rated 4.5 out of 5, which is considered as excellent.",
+    city: "Bengaluru",
+    price: "5000",
+    rating: "4.5",
+    totalReview: "224",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Malls",
+      size: "200 sq.ft.",
+      bedType: "Twin Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 16,
-    name: "Krishna Grand Inn",
-    city: "Chennai",
-    price: "2229",
-    rating: "4.5",
+    name: "Holiday Inn Bengaluru Racecourse",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1603295342262-IMG_20181025_185429.jpg",
-    totalReview: "76",
+      "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201711031722411846-a21d2dbc9fd411ea80e90242ac110002.jpg",
+    description:
+      "Holiday Inn Bengaluru Racecourse is a great choice for travellers looking for a 5 star hotel in Bangalore. It is located in Gandhi Nagar.This Hotel stands out as one of the highly recommended hotel in Bangalore and is recommended by 86% of our guests. Hotel is rated 4.2 out of 5, which is considered as very good",
+    city: "Bengaluru",
+    price: "2448",
+    rating: "4.2",
+    totalReview: "237",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Malls",
+      size: "208 sq.ft.",
+      bedType: "Twin Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 17,
-    name: "Hotel SR Grand",
-    city: "Hyderabad",
-    price: "8229",
-    rating: "4.8",
+    name: "The Leela Palace Bangalore",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1603290425979-SR7.jpg",
-    totalReview: "27",
+      "https://cdn1.goibibo.com/voy_ing/t_g/9f9d40ec3e8d11e689bd0022195573b9.jfif",
+    description:
+      "The Leela Palace Bangalore is a great choice for travellers looking for a 5 star hotel in Bangalore. It is located in HAL old airport road.This Hotel stands out as one of the highly recommended hotel in Bangalore and is recommended by 97% of our guests. Hotel is rated 4.7 out of 5, which is considered as excellent.",
+    city: "Bengaluru",
+    price: "7500",
+    rating: "4.7",
+    totalReview: "112",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "500 sq.ft.",
+      bedType: "King Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 18,
-    name: "Hotel Samrat Ashok",
-    city: "Delhi",
-    price: "5929",
-    rating: "4.5",
+    name: "Vivanta Bengaluru, Whitefield",
     image:
-      "https://uploads-bkt.s3.ap-south-1.amazonaws.com/images/1602775364463-ash23.jpg",
-    totalReview: "3059",
+      "https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/200901081315376914-650271c8f24911e99d510242ac110002.jpg",
+    description:
+      "Vivanta Bengaluru, Whitefield is a great choice for travellers looking for a 5 star hotel in Bangalore. It is located in Kundalahalli Gate road.This Hotel stands out as one of the highly recommended hotel in Bangalore and is recommended by 92% of our guests. Hotel is rated 4.4 out of 5, which is considered as very good.",
+    city: "Bengaluru",
+    price: "2400",
+    rating: "4.4",
+    totalReview: "114",
+    details: {
+      adults: 2,
+      ameties:
+        "air-conditioning, free wi-fi, hairdryer, in-room safety, laundry, minibar, telephone",
+      view: "Garden",
+      size: "327 sq.ft.",
+      bedType: "Queen Bed sized bed",
+    },
+    reviews: [
+      {
+        id: 1,
+        name: "LUCIO ROSSI",
+        image:
+          "https://secure.gravatar.com/avatar/17779da5a0bfeecb31efb4877ce083c2?s=64&r=g",
+        rating: "4.1",
+        review:
+          "Room is very neat and snug. Our window view was a court yard that disappointed a bit.",
+      },
+      {
+        id: 2,
+        name: "ERIK MAURER",
+        image:
+          "https://secure.gravatar.com/avatar/40a02bf881b0d1e982aee0e5d169575e?s=64&r=g",
+        rating: "4.5",
+        review: "Super up-to-date design and responsive stuff!",
+      },
+      {
+        id: 3,
+        name: "JOSHUA ROBERTS",
+        image:
+          "https://secure.gravatar.com/avatar/8cd09fe8c983a2c8a8c8818129950a76?s=64&r=g",
+        rating: "4.5",
+        review: "Very neat and nice room with beautiful view.",
+      },
+    ],
   },
   {
     id: 19,
