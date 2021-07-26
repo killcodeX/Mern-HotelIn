@@ -2,7 +2,7 @@ import React from "react";
 import { Heading } from "../../components/UI/Heading";
 import { Card } from "../../components/UI/Pricecard";
 import { SectionWrapper } from "./hotelStyle";
-import { data } from "./fakeData";
+import { data } from "../../fakeData";
 
 export default function Hotels() {
   return (
