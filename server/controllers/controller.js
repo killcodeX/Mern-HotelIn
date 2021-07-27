@@ -11,6 +11,21 @@ export const getHotel = async (req, res) => {
   }
 };
 
+export const getSingleHotel = async (req, res) => {
+  const { id } = req.params;
+
+  console.log('id received in backend', id)
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(404).send("No Code Snippet with that Id");
+  try {
+    const singleHotel = await HotelMessage.findById(id);
+    console.log(singleProduct);
+    res.status(200).json(singleHotel);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+}
+
 export const createHotel = async (req, res) => {
   const body = req.body;
   //console.log('received in backend', body)

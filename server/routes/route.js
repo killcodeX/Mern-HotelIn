@@ -1,11 +1,12 @@
 import express from 'express'
-import { getHotel, createHotel, updateHotel} from '../controllers/controller.js'
+import { getHotel, getSingleHotel, createHotel, updateHotel} from '../controllers/controller.js'
 
 
 
 const router = express.Router()
 
 router.get('/', getHotel)
+router.get('/:id', getSingleHotel)
 router.post('/', createHotel)
 router.patch('/:id', updateHotel)
 
