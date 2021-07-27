@@ -10,3 +10,12 @@ export const getAllhotelsApi = async () => {
     console.log(error);
   }
 };
+
+export const getSinglehotelsApi = async (id) => {
+  try {
+    let { data }  = await axios.get(`${baseUrl}/${id}`);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};

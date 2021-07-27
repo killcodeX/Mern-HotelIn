@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Heading } from "../../components/UI/Heading";
-import Details from './details';
-import Review from './review';
-import ReservationForm from './ReservationForm'
+import Details from "./details";
+import Review from "./review";
+import ReservationForm from "./ReservationForm";
 import {
   SectionWrapper,
   ImageWrapper,
@@ -11,15 +11,18 @@ import {
   HeadText,
 } from "./singleStyle";
 import { useParams } from "react-router";
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
+import { getsinglehotel } from "../../redux/actions/actions";
 //import { data } from "./fakeData";
 
 export const SingleHotel = () => {
   const { id } = useParams();
-  const state = useSelector(state => state.Hotels.allHotels)
-  console.log(state)
-  let data = state.filter(item => console.log('hhh',item._id))
-  console.log(data)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getsinglehotel(id));
+  }, [id]);
+  const data = useSelector((state) => state.Hotels.singleHotel);
   return (
     <SectionWrapper>
       <ImageWrapper>
@@ -31,17 +34,15 @@ export const SingleHotel = () => {
             <Heading content={data.name} />
             <DescWrapper>{data.description}</DescWrapper>
             <HeadText>Details</HeadText>
-              <Details details={data.details}/>
+            <Details details={data.details} />
             <HeadText>Reviews</HeadText>
-            {
-              data.reviews.map(item => {
-                return(
-                  <Review key={item.id} data={item} />
-                )
-              })
-            }
+            {data.reviews.map((item) => {
+              return <Review key={item.id} data={item} />;
+            })}
           </div>
-          <div className="col-md-5 col-sm-12 p-5"><ReservationForm price={data.price}/></div>
+          <div className="col-md-5 col-sm-12 p-5">
+            <ReservationForm price={data.price} />
+          </div>
         </div>
       </div>
     </SectionWrapper>
