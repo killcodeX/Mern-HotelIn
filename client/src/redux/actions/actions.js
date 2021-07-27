@@ -13,6 +13,7 @@ export const getAllhotel = () => async (dispatch) => {
 
 
 export const getsinglehotel = (id) => async (dispatch) => {
+  console.log('recived id',)
   const result = await getSinglehotelsApi(id);
   dispatch({
     type: GetSingleHotel,

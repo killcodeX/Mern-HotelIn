@@ -16,10 +16,10 @@ export const getSingleHotel = async (req, res) => {
 
   console.log('id received in backend', id)
   if (!mongoose.Types.ObjectId.isValid(id))
-    return res.status(404).send("No Code Snippet with that Id");
+    return res.status(404).send("No Hotel with that Id");
   try {
     const singleHotel = await HotelMessage.findById(id);
-    console.log(singleProduct);
+    console.log(singleHotel);
     res.status(200).json(singleHotel);
   } catch (error) {
     res.status(404).json({ message: error.message });

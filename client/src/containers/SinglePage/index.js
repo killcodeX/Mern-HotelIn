@@ -13,16 +13,16 @@ import {
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { getsinglehotel } from "../../redux/actions/actions";
-//import { data } from "./fakeData";
+import { data } from "./fakeData";
 
 export const SingleHotel = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-
+  console.log(id)
   useEffect(() => {
     dispatch(getsinglehotel(id));
-  }, [id]);
-  const data = useSelector((state) => state.Hotels.singleHotel);
+  }, []);
+  //const data = useSelector((state) => state.Hotels.singleHotel);
   return (
     <SectionWrapper>
       <ImageWrapper>
