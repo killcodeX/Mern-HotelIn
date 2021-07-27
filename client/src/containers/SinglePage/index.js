@@ -10,12 +10,16 @@ import {
   DescWrapper,
   HeadText,
 } from "./singleStyle";
-
-import { data } from "./fakeData";
+import { useParams } from "react-router";
+import {useSelector, useDispatch} from 'react-redux';
+//import { data } from "./fakeData";
 
 export const SingleHotel = () => {
-    
-  console.log(data);
+  const { id } = useParams();
+  const state = useSelector(state => state.Hotels.allHotels)
+  console.log(state)
+  let data = state.filter(item => console.log('hhh',item._id))
+  console.log(data)
   return (
     <SectionWrapper>
       <ImageWrapper>

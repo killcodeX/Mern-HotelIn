@@ -9,7 +9,7 @@ const postSchema = mongoose.Schema({
   rating: String,
   totalReview: String,
   details: {
-    adult: Number,
+    adults: Number,
     ameties: String,
     view: String,
     size: String,
