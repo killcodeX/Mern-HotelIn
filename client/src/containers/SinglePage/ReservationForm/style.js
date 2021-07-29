@@ -5,7 +5,7 @@ export const CardWrapper = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
-  //width: 33.333%;
+  width: 33.333%;
 `;
 
 export const FormWrapper = styled.div`

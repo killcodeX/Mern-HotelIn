@@ -13,9 +13,10 @@ import {
 } from "./style";
 
 export default function ReservationForm({ price }) {
+  console.log(window.innerWidth) //
   return (
-    <CardWrapper>
-      <FormWrapper pos={window.innerWidth < 500? 'auto':'absolute'}>
+    <CardWrapper pos={window.innerWidth < 500? 'auto':'absolute'}>
+      <FormWrapper>
         <PriceWrapper>
           <RoomPrice>
             <CurrencyWrapper>$</CurrencyWrapper>
