@@ -6,7 +6,6 @@ export const HomeWrapper = styled.div`
   position: relative;
   background-color: rgb(255, 255, 255);
   top: -82px;
-  z-index: -1;
 
   @media (max-width: 480px) {
     min-height: 80vh;

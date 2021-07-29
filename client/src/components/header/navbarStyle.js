@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const NavbarWrapper = styled.nav`
-  z-index: 1;
+  z-index: 1000;
+  position: relative;
   width: 100%;
   padding: 10px 25px;
   min-height: 82px;
   background: ${(props) => props.back};
   border-bottom: 0px;
   transition: all 0.3s ease-out 0s;
-  box-shadow: ${props => props.shadow};
+  box-shadow: ${(props) => props.shadow};
 `;
 
 export const NavItems = styled.div`

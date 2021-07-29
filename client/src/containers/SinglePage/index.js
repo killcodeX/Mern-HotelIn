@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Heading } from "../../components/UI/Heading";
 import Details from "./details";
 import Review from "./review";
@@ -12,17 +12,24 @@ import {
 } from "./singleStyle";
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
-import { getsinglehotel } from "../../redux/actions/actions";
-//import { data } from "./fakeData";
+import { getSingleHotel } from "../../redux/actions/actions";
+import { data } from "./fakeData";
 
 export const SingleHotel = () => {
-  const { id } = useParams();
   const dispatch = useDispatch();
-  console.log(id)
+  const { id } = useParams();
+  let data = useSelector((state) => state.Hotels.singleHotel);
+  console.log("current page id", id);
+
   useEffect(() => {
-    dispatch(getsinglehotel(id));
+    dispatch(getSingleHotel(id));
   }, [id]);
-  const data = useSelector((state) => state.Hotels.singleHotel);
+
+  console.log(data);
+
+  if (!data.name) {
+    return <p>Lodaing....</p>;
+  }
   return (
     <SectionWrapper>
       <ImageWrapper>
@@ -36,9 +43,10 @@ export const SingleHotel = () => {
             <HeadText>Details</HeadText>
             <Details details={data.details} />
             <HeadText>Reviews</HeadText>
-            {data.reviews.map((item) => {
-              return <Review key={item.id} data={item} />;
-            })}
+            {data?.reviews &&
+              data.reviews.map((item) => {
+                return <Review key={item.id} data={item} />;
+              })}
           </div>
           <div className="col-md-5 col-sm-12 p-5">
             <ReservationForm price={data.price} />

@@ -3,7 +3,6 @@ import { AiFillStar } from "react-icons/ai";
 import { ReviewWrapper, AvtarImage, AuthorImage, CommentBody, ReviewAuthor, GivenStar, Comment } from './singleStyle';
 
 export default function Review({data}) {
-    console.log('review data',data)
     return (
         <ReviewWrapper>
             <AvtarImage>

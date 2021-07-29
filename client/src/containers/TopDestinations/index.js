@@ -12,7 +12,7 @@ export default function Destinations() {
         <div className="row">
           {data.map((item) => {
             return (
-              <div className={`col-md-6 col-sm-12 pt-4 ${item.id === 5? `mx-auto`:''}`}>
+              <div key={item.id} className={`col-md-6 col-sm-12 pt-4 ${item.id === 5? `mx-auto`:''}`}>
                 <Card key={item.id} name={item.name} image={item.image} />
               </div>
             );

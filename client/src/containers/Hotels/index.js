@@ -20,9 +20,8 @@ export default function Hotels() {
         <div className="row pt-4">
           {state.map((item) => {
             return (
-              <div className="col-md-4 col-sm-12 pt-4">
+              <div key={item._id} className="col-md-4 col-sm-12 pt-4">
                 <Card
-                  key={item._id}
                   id={item._id}
                   name={item.name}
                   city={item.city}

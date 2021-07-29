@@ -13,7 +13,6 @@ import {
 } from "./style";
 
 export default function ReservationForm({ price }) {
-  console.log(window.innerWidth)
   return (
     <CardWrapper>
       <FormWrapper pos={window.innerWidth < 500? 'auto':'absolute'}>
