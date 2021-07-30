@@ -8,13 +8,14 @@ export const HomeWrapper = styled.div`
   top: -82px;
 
   @media (max-width: 480px) {
-    min-height: 80vh;
+    min-height: 100vh;
   }
 `;
 
 export const BannerWrapper = styled.div`
   background: url(${process.env.PUBLIC_URL + "/assets/banners/3.jpg"}) no-repeat
     center;
+  background-size: cover;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -24,127 +25,189 @@ export const BannerWrapper = styled.div`
   &:after {
     display: block;
     content: "";
-    width: 100%;
-    height: 60%;
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
-    pointer-events: none;
-    z-index: 0;
+    top: 0;
+    background: rgba(47, 103, 177, 0.6);
+    // display: block;
+    // content: "";
+    // width: 100%;
+    // height: 60%;
+    // position: absolute;
+    // bottom: 0;
+    // background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    // pointer-events: none;
+  }
+`;
+
+export const ContentWrapper = styled.div`
+  margin-top: 100px;
+`;
+
+export const BookingCTA = styled.div`
+  margin-top: 80px;
+  margin-bottom: 30px;
+  @media (max-width: 480px) {
+    margin-top: 40px;
+    margin-bottom: 15px;
   }
 `;
 
 export const SearchWrapper = styled.div`
-  width: calc(100% - 60px);
-  padding: 28px 30px 30px;
-  border-radius: 6px;
-  background-color: #ffffff;
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  @media only screen and (min-width: 569px) and (max-width: 991px) {
-    width: 414px;
-    left: 30px;
-    transform: translateY(-50%);
-  }
-  @media only screen and (max-width: 480px) {
-    width: calc(100% - 30px);
-    padding: 15px;
-    // left: 15px;
-    > p {
-      display: none;
-    }
-  }
-  > div {
-    @media only screen and (min-width: 481px) {
-      margin-top: 30px;
-    }
-  }
-  h2 {
-    margin-bottom: 10px;
+  background-color: #fff;
+  padding: 50px 20px;
+  -webkit-box-shadow: 0 5px 20px -5px rgb(0 0 0 / 30%);
+  box-shadow: 0 5px 20px -5px rgb(0 0 0 / 30%);
+  border-radius: 4px;
+`;
+
+export const HomeHeadLine = styled.h1`
+  font-size: 52px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  @media (max-width: 480px) {
+    font-size: 32px;
   }
 `;
 
-export const FormWrapper = styled.form`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  background-color: #f7f7f7;
-  border-radius: 3px 0 0 3px;
-  min-height: 60px;
-  z-index:100;
-  @media only screen and (max-width: 991px) {
-    flex-direction: column;
-  }
-  @media only screen and (max-width: 480px) {
-    margin-top: 10px;
-  }
-  /* submit button style */
-  button[type="submit"].ant-btn {
-    min-width: 157px;
-    height: 60px;
-    color: #ffffff;
-    background-color: #008489;
-    border-radius: 0 3px 3px 0;
-    border: 0;
-    box-shadow: none;
-    font-size: 15px;
-    font-weight: 700;
-    text-shadow: none;
-    @media only screen and (max-width: 991px) {
-      min-width: 100%;
-      border-radius: 0 0 3px 3px;
-    }
-    @media only screen and (max-width: 480px) {
-      height: 47px;
-    }
-    &::after {
-      display: none;
-    }
-    &:hover {
-      opacity: 0.85;
-    }
-  }
-`;
-
-export const ComponentWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
-  position: relative;
-  padding-right:10px;
-  .target {
-    right: 0px;
-    left: auto;
-    @media only screen and (max-width: 480px) {
-      right: 25px;
-    }
-  }
-`;
-
-export const FormInput = styled.input`
-  border: 0;
-  font-size: 15px;
+export const HomePara = styled.p`
+  font-size: 16px;
   font-weight: 400;
-  border-radius: 0;
-  height: 60px;
-  padding: 0 30px 0 40px;
-  background: transparent;
-  color:#2C2C2C;
-  @media only screen and (max-width: 480px) {
-    height: 47px;
-    padding: 0 30px 0 36px;
+  width: 500px;
+  color: rgba(255, 255, 255, 0.8);
+  @media (max-width: 480px) {
+    font-size: 14px;
+    width: 300px;
   }
-  &:hover,
-  &:focus {
-    outline: none;
-    box-shadow: none;
+`;
+
+// for form
+
+export const FormLabel = styled.label`
+  display: inline-block;
+  margin-bottom: 0.5em;
+  color: #3e3f46;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+`;
+
+export const SubmitButton = styled.button`
+  display: block;
+  width: 100%;
+  color: #fff;
+  background-color: #1e62d8;
+  font-weight: 700;
+  padding: 14px 30px;
+  border-radius: 4px;
+  border: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+`;
+
+//  for intro
+
+export const ImageSection = styled.div`
+  padding-top: 60px;
+  padding-right: 70px;
+`;
+
+export const ImagesWrapper = styled.div`
+  position: relative;
+`;
+
+export const FirstImageHolder = styled.div`
+  padding-top: 68%;
+  position:relative;
+`;
+
+export const FirstImage = styled.div`
+  position: absolute;
+  width: 54%;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+`;
+
+
+export const SecondImage = styled.div`
+  position: absolute;
+  width: 65%;
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
+`;
+
+export const SecondImageHolder = styled.div`
+  padding-top: 68%;
+  position:relative;
+`;
+
+export const ImageHolder = styled.img`
+  box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  border-radius: 0 !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 0;
+`;
+
+
+export const IntroWrapper = styled.div`
+  padding-top: 60px;
+  padding-left: 20px;
+`;
+
+export const UpContent = styled.div`
+  color: #222;
+  font-size: 12px;
+`;
+
+export const UpContentLine = styled.p`
+  position: relative;
+  padding-top: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 4px;
+    background-color: #182eff;
   }
-  &::placeholder {
-    color: #2C2C2C;
-  }
-}
-  `;
+`;
+
+export const HeadlineWrapper = styled.div`
+  margin-bottom: 30px;
+  margin-top: 10px;
+`;
+
+export const HeadLine = styled.h2`
+  color: #222;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+`;
+
+export const HotelWrapper = styled.div`
+  padding-left: 50px;
+  color: #5f6060;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+`;
