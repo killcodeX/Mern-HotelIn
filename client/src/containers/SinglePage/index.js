@@ -14,11 +14,12 @@ import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { getSingleHotel } from "../../redux/actions/actions";
 import { data } from "./fakeData";
+import Loader from "../../components/loader";
 
 export const SingleHotel = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  let data = useSelector((state) => state.Hotels.singleHotel);
+  let data = [] //useSelector((state) => state.Hotels.singleHotel);
   console.log("current page id", id);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export const SingleHotel = () => {
   console.log(data);
 
   if (!data.name) {
-    return <p>Lodaing....</p>;
+    return <Loader/>
   }
   return (
     <SectionWrapper>

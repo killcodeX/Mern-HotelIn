@@ -22,6 +22,8 @@ export default function Cities() {
     }
   };
 
+  //if(data == [])
+
   return (
     <SectionWrapper>
       <div className="container">
