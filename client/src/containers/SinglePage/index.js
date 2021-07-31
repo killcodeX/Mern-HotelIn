@@ -19,7 +19,7 @@ import Loader from "../../components/loader";
 export const SingleHotel = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  let data = [] //useSelector((state) => state.Hotels.singleHotel);
+  let data = useSelector((state) => state.Hotels.singleHotel);
   console.log("current page id", id);
 
   useEffect(() => {
