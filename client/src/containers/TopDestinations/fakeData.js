@@ -1,7 +1,7 @@
 export const data = [
     {
         id: 1,
-        name:'Bangalore',
+        name:'Bengaluru',
         image:'/assets/bangalore.png',
     },
     {

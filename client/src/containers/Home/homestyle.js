@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const HomeWrapper = styled.div`
   width: 100%;
+  height:100%;
   min-height: 100vh;
   position: relative;
   background-color: rgb(255, 255, 255);
   top: -82px;
 
   @media (max-width: 480px) {
-    min-height: 100vh;
+    min-height: 170vh;
   }
 `;
 
@@ -44,6 +45,10 @@ export const BannerWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   margin-top: 100px;
+
+  @media(max-width:480px){
+    margin-top:0px;
+  }
 `;
 
 export const BookingCTA = styled.div`
@@ -210,4 +215,8 @@ export const HotelWrapper = styled.div`
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.75;
+
+  @media(max-width:480px){
+    padding-left:0px;
+  }
 `;
