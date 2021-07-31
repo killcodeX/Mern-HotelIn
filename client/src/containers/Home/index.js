@@ -9,7 +9,6 @@ import {
   ContentWrapper,
 } from "./homestyle.js";
 import { Heading } from "../../components/UI/Heading";
-import { Text } from "../../components/UI/Text";
 import SearchForm from "./searchForm";
 import Intro from "./intro";
 import TopDestinations from "../TopDestinations";

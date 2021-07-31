@@ -1,26 +1,18 @@
-import React,{useEffect} from "react";
+import React from "react";
+import { SectionWrapper } from "./destStyle";
 import { Heading } from "../../components/UI/Heading";
 import { Text } from "../../components/UI/Text";
 import { Card } from "../../components/UI/Pricecard";
-import { SectionWrapper } from "./hotelStyle";
-import { data } from "../../fakeData";
-import { getAllhotel } from '../../redux/actions/actions';
-import {useSelector, useDispatch} from 'react-redux';
 
-export default function Hotels() {
-  const dispatch = useDispatch();
-  const state = useSelector(state => state.Hotels.allHotels)
-  console.log(state)
-  useEffect(() => {
-    dispatch(getAllhotel())
-  }, [])
+export default function Cities() {
   return (
     <SectionWrapper>
       <div className="container">
         <Heading content="Homes guests love" />
-        <Text content='Get hotels of your choice' />
+        <Text content="Get hotels of your choice" />
         <div className="row pt-4">
-          {state.map((item) => {
+            hi
+          {/* {state.map((item) => {
             return (
               <div key={item._id} className="col-md-4 col-sm-12 pt-4">
                 <Card
@@ -34,7 +26,7 @@ export default function Hotels() {
                 />
               </div>
             );
-          })}
+          })} */}
         </div>
       </div>
     </SectionWrapper>
