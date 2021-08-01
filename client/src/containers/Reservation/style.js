@@ -64,7 +64,7 @@ export const BookingDetails = styled.div`
   background: rgb(232, 243, 255);
   padding: 1rem;
   margin-bottom: 1.5rem;
-  margin-top:30px;
+  margin-top: 30px;
 `;
 
 export const BookingWrapper = styled.div`
@@ -83,4 +83,43 @@ export const BookingDate = styled.span`
   ont-size: 1.6rem;
   padding: 0.2rem 0px;
   font-weight: bold;
+`;
+
+//  for price summary
+
+export const PriceWrapper = styled.div`
+  padding: 10px 0;
+  border-bottom: 1px solid #eff3f8;
+`;
+
+export const PriceSum = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const PriceText = styled.span`
+  font-weight: 400;
+  font-size: 16px;
+`;
+
+export const DiscountWrapper = styled.span`
+  border: 1px solid #FF4867;
+  padding:2px 5px;
+  border-radius:10px;
+  background-color: #FFF1ED;
+  color:#FF4867;
+  font: 400 .8rem / 1.33 "Helvetica Neue", Helvetica, Arial, sans-serif;
+`;
+
+export const BookingButton = styled.button`
+  display: block;
+  width: 100%;
+  color: #fff;
+  background-color: #1e62d8;
+  font-weight: 700;
+  padding: 14px 30px;
+  border-radius: 4px;
+  border: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
 `;

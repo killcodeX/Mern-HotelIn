@@ -8,3 +8,12 @@ export const bookingdata = {
     guest:'2 Guests | 1 Room',
     cancel:'Free Cancellation till Aug 03, 2021 13:59 hours'
 }
+
+
+export const PriceData = {
+    rooms:2,
+    nights:3,
+    discount:47,
+    price:1800,
+    tax:278,
+}
