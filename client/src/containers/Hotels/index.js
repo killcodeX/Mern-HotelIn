@@ -10,7 +10,7 @@ import {useSelector, useDispatch} from 'react-redux';
 export default function Hotels() {
   const dispatch = useDispatch();
   const state = useSelector(state => state.Hotels.allHotels)
-  console.log(state)
+  //console.log(state)
   useEffect(() => {
     dispatch(getAllhotel())
   }, [])

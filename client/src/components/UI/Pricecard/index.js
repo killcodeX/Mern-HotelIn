@@ -12,7 +12,8 @@ import {
   RatingWrapper,
   StarWrapper,
   BookButton,
-  Reviews
+  Reviews,
+  HotelDetails
 } from "./cardStyle";
 
 export const Card = (props) => {

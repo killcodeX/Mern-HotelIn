@@ -1,30 +1,36 @@
 import React from "react";
-import { Form, Input, Select, DatePicker } from "antd";
+import { Form, Select, DatePicker } from "antd";
 import { FormLabel, SubmitButton } from "./homestyle";
 import { useFormik } from "formik";
+import { dateFormat } from "../../helpers/constant";
 
 export default function SearchForm() {
-  // const formik = useFormik({
-  //   initialValues: {
-  //     name: "",
-  //     profession: "",
-  //     email: "",
-  //     mobile: "",
-  //     password: "",
-  //     confirmPassword: "",
-  //     address: "",
-  //     terms: false,
-  //   },
-  //   onSubmit: (values) => {
-  //     alert(JSON.stringify(values, null, 2));
-  //   },
-  // });
+  const formik = useFormik({
+    initialValues: {
+      city: "",
+      checkIn: "",
+      checkOut: "",
+      rooms: "",
+      adults: "",
+      children: "",
+    },
+    onSubmit: (values) => {
+      console.log(values)
+    },
+  });
+
+  //console.log(formik.values)
 
   return (
-    <Form>
+    <Form onSubmit={formik.handleSubmit}>
       <FormLabel>Select City</FormLabel>
       <Form.Item>
-        <Select placeholder="Please select a country">
+        <Select
+          name="city"
+          value={formik.values.city}
+          placeholder="Please select a country"
+          onChange={(value) => formik.setFieldValue("city", value)}
+        >
           <Select.Option value="mumbai">Mumbai</Select.Option>
           <Select.Option value="bengaluru">Bengaluru</Select.Option>
           <Select.Option value="delhi">Delhi</Select.Option>
@@ -36,13 +42,22 @@ export default function SearchForm() {
         <div className="col-sm-6">
           <FormLabel>Check-In-Date</FormLabel>
           <Form.Item>
-            <DatePicker />
+            <DatePicker
+              name="checkIn"
+              value={formik.values.checkIn}
+              format={dateFormat}
+              onChange={(value) => formik.setFieldValue("checkIn", value)}
+            />
           </Form.Item>
         </div>
         <div className="col-sm-6">
           <FormLabel>Check-Out Date</FormLabel>
           <Form.Item>
-            <DatePicker />
+            <DatePicker
+              name="checkOut"
+              value={formik.values.checkOut}
+              onChange={(value) => formik.setFieldValue("checkOut", value)}
+            />
           </Form.Item>
         </div>
       </div>
@@ -50,7 +65,12 @@ export default function SearchForm() {
         <div className="col-sm-4">
           <FormLabel>Rooms</FormLabel>
           <Form.Item>
-            <Select placeholder="Select No of rooms">
+            <Select
+              name="rooms"
+              value={formik.values.rooms}
+              placeholder="Select No of rooms"
+              onChange={(value) => formik.setFieldValue("rooms", value)}
+            >
               <Select.Option value="1">1</Select.Option>
               <Select.Option value="2">2</Select.Option>
               <Select.Option value="3">3</Select.Option>
@@ -62,7 +82,12 @@ export default function SearchForm() {
         <div className="col-sm-4">
           <FormLabel>Adults</FormLabel>
           <Form.Item>
-            <Select placeholder="Select No of rooms">
+            <Select
+              name="adults"
+              value={formik.values.adults}
+              placeholder="Select No of adults"
+              onChange={(value) => formik.setFieldValue("adults", value)}
+            >
               <Select.Option value="1">1</Select.Option>
               <Select.Option value="2">2</Select.Option>
               <Select.Option value="3">3</Select.Option>
@@ -73,7 +98,12 @@ export default function SearchForm() {
         <div className="col-sm-4">
           <FormLabel>Children</FormLabel>
           <Form.Item>
-            <Select placeholder="Select No of children">
+            <Select
+              name="children"
+              value={formik.values.children}
+              placeholder="Select No of children"
+              onChange={(value) => formik.setFieldValue("children", value)}
+            >
               <Select.Option value="1">1</Select.Option>
               <Select.Option value="2">2</Select.Option>
               <Select.Option value="3">3</Select.Option>
@@ -82,7 +112,7 @@ export default function SearchForm() {
           </Form.Item>
         </div>
       </div>
-      <SubmitButton type="submit">Book Now</SubmitButton>
+      <SubmitButton htmlType="submit">Book Now</SubmitButton>
     </Form>
   );
 }

@@ -7,35 +7,36 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { FormLabel } from "../Home/homestyle";
 import { Form, Select } from "antd";
-import Loader from '../../components/loader'
+import Loader from "../../components/loader";
 
 export default function Cities() {
   const param = useParams();
   const state = useSelector((state) => state.Hotels.allHotels);
-  const HotelData = state.filter((state) => state.city == param.id)
-  const [data, setData] = useState(HotelData)
-  console.log(data)
+  const HotelData = state.filter((state) => state.city == param.id);
+  const [data, setData] = useState(HotelData);
+  console.log(data);
 
   const handleFilter = (data) => {
     if (data == "ah") {
-        setData(HotelData)
+      setData(HotelData);
     } else if (data == "plh") {
-        let sortData = HotelData.sort((a,b) => a.price - b.price)
-        setData(sortData)
+      console.log("plh");
+      let sortData = HotelData.sort((a, b) => a.price - b.price);
+      setData(sortData);
     } else if (data == "phl") {
-        let sortData = HotelData.sort((a,b) => b.price - a.price)
-        setData(sortData)
+      let sortData = HotelData.sort((a, b) => b.price - a.price);
+      setData(sortData);
     } else if (data == "rlh") {
-        let sortData = HotelData.sort((a,b) => a.rating - b.rating)
-        setData(sortData)
+      let sortData = HotelData.sort((a, b) => a.rating - b.rating);
+      setData(sortData);
     } else if (data == "rhl") {
-        let sortData = HotelData.sort((a,b) => b.rating - a.rating)
-        setData(sortData)
+      let sortData = HotelData.sort((a, b) => b.rating - a.rating);
+      setData(sortData);
     }
   };
 
-  if(data.length == 0){
-      return <Loader/>
+  if (data.length == 0) {
+    return <Loader />;
   }
 
   return (
