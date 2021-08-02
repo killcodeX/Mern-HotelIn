@@ -125,13 +125,13 @@ export const ImagesWrapper = styled.div`
 `;
 
 export const FirstImageHolder = styled.div`
-  padding-top: 68%;
-  position:relative;
+  padding-top: 0%;
 `;
 
 export const FirstImage = styled.div`
   position: absolute;
   width: 54%;
+  top:0;
   bottom: 0;
   left: 0;
   padding: 0;
@@ -142,16 +142,15 @@ export const FirstImage = styled.div`
 export const SecondImage = styled.div`
   position: absolute;
   width: 65%;
-  top: auto;
+  top: 0;
   left: auto;
   right: 0;
   bottom: 0;
 `;
 
 export const SecondImageHolder = styled.div`
-  padding-top: 68%;
-  position:relative;
-`;
+  padding-top: 26%;
+  `
 
 export const ImageHolder = styled.img`
   box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
@@ -160,12 +159,7 @@ export const ImageHolder = styled.img`
   height: 100%;
   object-fit: cover;
   display: block;
-  position: absolute;
   border-radius: 0 !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   outline: 0;
 `;
 
