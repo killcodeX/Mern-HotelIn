@@ -2,6 +2,7 @@ import HotelMessage from "../models/hotelModel.js";
 import mongoose from "mongoose";
 
 export const getHotel = async (req, res) => {
+  console.log('called')
   try {
     const hotelMessages = await HotelMessage.find();
     //console.log(pMessages);
@@ -24,6 +25,17 @@ export const getSingleHotel = async (req, res) => {
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
+}
+
+export const getCityHotel = async (req, res) => {
+  const { city } = req.query;
+  console.log('city hotel --> ',req.query)
+  // try{
+  //   let result = [1,2,3,4]//await HotelMessage.find({'city' : city});
+  //   res.status(200).json(result);
+  // } catch(error){
+  //   res.status(404).json({ message: error.message });
+  // }
 }
 
 export const createHotel = async (req, res) => {

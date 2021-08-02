@@ -19,3 +19,13 @@ export const getSinglehotelsApi = async (id) => {
     console.log(error);
   }
 };
+
+
+export const getFilterCitiesApi = async (city) => {
+  try {
+    let { data }  = await axios.get(`${baseUrl}/?city=${city}`);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};

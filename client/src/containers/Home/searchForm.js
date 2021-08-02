@@ -3,31 +3,31 @@ import { Form, Select, DatePicker } from "antd";
 import { FormLabel, SubmitButton } from "./homestyle";
 import { useFormik } from "formik";
 import { dateFormat } from "../../helpers/constant";
+import moment from "moment";
 
 export default function SearchForm() {
   const formik = useFormik({
     initialValues: {
       city: "",
-      checkIn: "",
+      checkIn: moment(Date.now()),
       checkOut: "",
       rooms: "",
       adults: "",
       children: "",
     },
     onSubmit: (values) => {
-      console.log(values)
+      console.log(values);
     },
   });
 
-  //console.log(formik.values)
+  //console.log(formik.values);
 
   return (
-    <Form onSubmit={formik.handleSubmit}>
+    <Form onFinish={formik.handleSubmit}>
       <FormLabel>Select City</FormLabel>
       <Form.Item>
         <Select
           name="city"
-          value={formik.values.city}
           placeholder="Please select a country"
           onChange={(value) => formik.setFieldValue("city", value)}
         >
@@ -44,9 +44,8 @@ export default function SearchForm() {
           <Form.Item>
             <DatePicker
               name="checkIn"
-              value={formik.values.checkIn}
               format={dateFormat}
-              onChange={(value) => formik.setFieldValue("checkIn", value)}
+              onChange={(value) => formik.setFieldValue("checkIn", moment(value).format(dateFormat))}
             />
           </Form.Item>
         </div>
@@ -55,8 +54,7 @@ export default function SearchForm() {
           <Form.Item>
             <DatePicker
               name="checkOut"
-              value={formik.values.checkOut}
-              onChange={(value) => formik.setFieldValue("checkOut", value)}
+              onChange={(value) => formik.setFieldValue("checkOut",  moment(value).format(dateFormat))}
             />
           </Form.Item>
         </div>
@@ -67,7 +65,6 @@ export default function SearchForm() {
           <Form.Item>
             <Select
               name="rooms"
-              value={formik.values.rooms}
               placeholder="Select No of rooms"
               onChange={(value) => formik.setFieldValue("rooms", value)}
             >
@@ -84,7 +81,6 @@ export default function SearchForm() {
           <Form.Item>
             <Select
               name="adults"
-              value={formik.values.adults}
               placeholder="Select No of adults"
               onChange={(value) => formik.setFieldValue("adults", value)}
             >
@@ -100,7 +96,6 @@ export default function SearchForm() {
           <Form.Item>
             <Select
               name="children"
-              value={formik.values.children}
               placeholder="Select No of children"
               onChange={(value) => formik.setFieldValue("children", value)}
             >

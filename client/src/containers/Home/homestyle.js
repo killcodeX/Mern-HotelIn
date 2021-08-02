@@ -14,7 +14,7 @@ export const HomeWrapper = styled.div`
 `;
 
 export const BannerWrapper = styled.div`
-  background: url(${process.env.PUBLIC_URL + "/assets/banners/3.jpg"}) no-repeat
+  background: url(${process.env.PUBLIC_URL + "/assets/banners/2.jpg"}) no-repeat
     center;
   background-size: cover;
   width: 100%;
