@@ -70,7 +70,7 @@ export const FormsubmitButton = styled.button`
   font-size: 15px;
   font-weight: 700;
   border:none;
-  background-color: #008489;
+  background-color: #1e62d8;
   transition: all 0.2s ease 0s;
 `;
 

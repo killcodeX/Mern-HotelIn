@@ -50,7 +50,7 @@ export const SingleHotel = () => {
               })}
           </div>
           <div className="col-md-5 col-sm-12 p-5">
-            <ReservationForm price={data.price} />
+            <ReservationForm price={data.price} id={id}/>
           </div>
         </div>
       </div>

@@ -76,7 +76,7 @@ export const BookButton = styled.button`
   min-width: 107px;
   height: 40px;
   color: #ffffff;
-  background-color: #008489;
+  background-color: #1e62d8;
   border-radius: 0 3px 3px 0;
   border: 0;
   box-shadow: none;
