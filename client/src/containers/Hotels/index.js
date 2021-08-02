@@ -9,7 +9,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 export default function Hotels() {
   const dispatch = useDispatch();
-  const state = useSelector(state => state.Hotels.allHotels)
+  const state = useSelector(state => state.Hotels.popularHotels)
   //console.log(state)
   useEffect(() => {
     dispatch(getAllhotel())

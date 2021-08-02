@@ -14,7 +14,6 @@ app.use(cors())
 app.use('/hotel', hotelRoutes)
 
 // for database
-
 const connectionUrl = "mongodb+srv://Aaquib5076:Aaquib@5076@cluster0.oknup.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 const PORT = process.env.PORT || 5000;

@@ -27,17 +27,6 @@ export const getSingleHotel = async (req, res) => {
   }
 }
 
-export const getCityHotel = async (req, res) => {
-  const { city } = req.query;
-  console.log('city hotel --> ',req.query)
-  // try{
-  //   let result = [1,2,3,4]//await HotelMessage.find({'city' : city});
-  //   res.status(200).json(result);
-  // } catch(error){
-  //   res.status(404).json({ message: error.message });
-  // }
-}
-
 export const createHotel = async (req, res) => {
   const body = req.body;
   //console.log('received in backend', body)
@@ -62,4 +51,16 @@ export const updateHotel = async (req, res) => {
   });
 
   res.json(update);
+}
+
+
+export const getCityHotel = async (req, res) => {
+  const { city } = req.query;
+  console.log('city hotel --> ',req.query)
+  // try{
+  //   let result = [1,2,3,4]//await HotelMessage.find({'city' : city});
+  //   res.status(200).json(result);
+  // } catch(error){
+  //   res.status(404).json({ message: error.message });
+  // }
 }

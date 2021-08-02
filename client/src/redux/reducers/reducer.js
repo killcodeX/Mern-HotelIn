@@ -7,6 +7,7 @@ import {
 
 const initialState = {
   allHotels: [],
+  popularHotels:[],
   singleHotel: {},
   citiesHotel: [],
   filterData: [],
@@ -16,9 +17,20 @@ const initialState = {
 const ProductReducer = (state = initialState, action) => {
   switch (action.type) {
     case GetAllHotel:
+      let val = []
+      while(val.length < 6){
+	      let rand = Math.floor(Math.random() * (0, 29) + 1)
+	      if(!val.includes(rand)){
+  	      val.push(rand)
+        }}
+      let popHotel = [];
+      for(let i = 0; i < val.length; i++){
+        popHotel.push(action.payload[val[i]])
+      }
       return {
         ...state,
         allHotels: action.payload || [],
+        popularHotels: popHotel
       };
     case GetSingleHotel:
       return {
