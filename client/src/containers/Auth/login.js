@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { Wrapper}  from './style';
 
 export default function login() {
     return (
-        <div>
+        <Wrapper>
             Login
-        </div>
+        </Wrapper>
     )
 }
