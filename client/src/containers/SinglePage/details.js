@@ -11,7 +11,7 @@ export default function Details(props) {
 
     const { details } = props;
     const iconStyle = {
-        color:'#008489',
+        color:'#1E62D8',
         fontSize:'20px',
         paddingRight:'5px'
     }
