@@ -6,10 +6,18 @@ import { dateFormat } from "../../helpers/constant";
 import moment from "moment";
 
 export default function SearchForm() {
+
+  function disabledDate(current) {
+    //console.log(current)
+    let customDate = moment(Date.now()).format(dateFormat);
+    return current && current < moment(customDate, dateFormat);
+  }
+
+
   const formik = useFormik({
     initialValues: {
       city: "",
-      checkIn: moment(Date.now()),
+      checkIn: "",
       checkOut: "",
       rooms: "",
       adults: "",
@@ -25,10 +33,14 @@ export default function SearchForm() {
   return (
     <Form onFinish={formik.handleSubmit}>
       <FormLabel>Select City</FormLabel>
-      <Form.Item>
+      <Form.Item
+        name="city"
+        hasFeedback
+        rules={[{ required: true, message: "Please Select your city!" }]}
+      >
         <Select
-          name="city"
-          placeholder="Please select a country"
+          allowClear
+          placeholder="Please select a city"
           onChange={(value) => formik.setFieldValue("city", value)}
         >
           <Select.Option value="mumbai">Mumbai</Select.Option>
@@ -41,20 +53,43 @@ export default function SearchForm() {
       <div className="row">
         <div className="col-sm-6">
           <FormLabel>Check-In-Date</FormLabel>
-          <Form.Item>
+          <Form.Item
+            name="checkIn"
+            hasFeedback
+            rules={[
+              { required: true, message: "Please Select Check In Date!" },
+            ]}
+          >
             <DatePicker
-              name="checkIn"
+              allowClear
               format={dateFormat}
-              onChange={(value) => formik.setFieldValue("checkIn", moment(value).format(dateFormat))}
+              disabledDate={disabledDate}
+              onChange={(value) =>
+                formik.setFieldValue(
+                  "checkIn",
+                  moment(value).format(dateFormat)
+                )
+              }
             />
           </Form.Item>
         </div>
         <div className="col-sm-6">
           <FormLabel>Check-Out Date</FormLabel>
-          <Form.Item>
+          <Form.Item
+            name="checkOut"
+            hasFeedback
+            rules={[
+              { required: true, message: "Please Select Check Out Date!" },
+            ]}
+          >
             <DatePicker
-              name="checkOut"
-              onChange={(value) => formik.setFieldValue("checkOut",  moment(value).format(dateFormat))}
+              allowClear
+              onChange={(value) =>
+                formik.setFieldValue(
+                  "checkOut",
+                  moment(value).format(dateFormat)
+                )
+              }
             />
           </Form.Item>
         </div>
@@ -62,9 +97,13 @@ export default function SearchForm() {
       <div className="row">
         <div className="col-sm-4">
           <FormLabel>Rooms</FormLabel>
-          <Form.Item>
+          <Form.Item
+            name="rooms"
+            hasFeedback
+            rules={[{ required: true, message: "Please Select no of Rooms!" }]}
+          >
             <Select
-              name="rooms"
+              allowClear
               placeholder="Select No of rooms"
               onChange={(value) => formik.setFieldValue("rooms", value)}
             >
@@ -78,9 +117,13 @@ export default function SearchForm() {
         </div>
         <div className="col-sm-4">
           <FormLabel>Adults</FormLabel>
-          <Form.Item>
+          <Form.Item
+            name="adults"
+            hasFeedback
+            rules={[{ required: true, message: "Please Select no of Adults!" }]}
+          >
             <Select
-              name="adults"
+              allowClear
               placeholder="Select No of adults"
               onChange={(value) => formik.setFieldValue("adults", value)}
             >
@@ -93,12 +136,19 @@ export default function SearchForm() {
         </div>
         <div className="col-sm-4">
           <FormLabel>Children</FormLabel>
-          <Form.Item>
+          <Form.Item
+            name="children"
+            hasFeedback
+            rules={[
+              { required: true, message: "Please Select no of children!" },
+            ]}
+          >
             <Select
-              name="children"
+              allowClear
               placeholder="Select No of children"
               onChange={(value) => formik.setFieldValue("children", value)}
             >
+              <Select.Option value="0">None</Select.Option>
               <Select.Option value="1">1</Select.Option>
               <Select.Option value="2">2</Select.Option>
               <Select.Option value="3">3</Select.Option>
@@ -107,7 +157,7 @@ export default function SearchForm() {
           </Form.Item>
         </div>
       </div>
-      <SubmitButton htmlType="submit">Book Now</SubmitButton>
+      <SubmitButton type="submit">Book Now</SubmitButton>
     </Form>
   );
 }
