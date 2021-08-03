@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Form, Select, DatePicker } from "antd";
 import { useFormik } from "formik";
 import { dateFormat } from "../../../helpers/constant";
@@ -25,7 +25,7 @@ export default function ReservationForm({ price, id }) {
   }
 
   const formik = useFormik({
-    enableReinitialize:true,
+    enableReinitialize: true,
     initialValues: {
       hotelId: id, //hotelID,
       checkIn: "",
@@ -53,25 +53,27 @@ export default function ReservationForm({ price, id }) {
           <div className="row">
             <div className="col-sm-12">
               <FormLabel>Check-In-Date</FormLabel>
-              <Form.Item
-                name="checkIn"
-                hasFeedback
-                rules={[
-                  { required: true, message: "Please Select Check In Date!" },
-                ]}
-              >
-                <DatePicker
-                  allowClear
-                  format={dateFormat}
-                  disabledDate={disabledDate}
-                  onChange={(value) =>
-                    formik.setFieldValue(
-                      "checkIn",
-                      moment(value).format(dateFormat)
-                    )
-                  }
-                />
-              </Form.Item>
+              <FormItemStyle>
+                <Form.Item
+                  name="checkIn"
+                  hasFeedback
+                  rules={[
+                    { required: true, message: "Please Select Check In Date!" },
+                  ]}
+                >
+                  <DatePicker
+                    allowClear
+                    format={dateFormat}
+                    disabledDate={disabledDate}
+                    onChange={(value) =>
+                      formik.setFieldValue(
+                        "checkIn",
+                        moment(value).format(dateFormat)
+                      )
+                    }
+                  />
+                </Form.Item>
+              </FormItemStyle>
             </div>
           </div>
           <div className="col-sm-12">
@@ -150,7 +152,7 @@ export default function ReservationForm({ price, id }) {
               <Select.Option value="4">4</Select.Option>
             </Select>
           </Form.Item>
-          <FormsubmitButton>Book Now</FormsubmitButton>
+          <FormsubmitButton>Search</FormsubmitButton>
         </Form>
       </FormWrapper>
     </CardWrapper>

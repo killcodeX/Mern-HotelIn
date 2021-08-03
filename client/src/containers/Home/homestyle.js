@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HomeWrapper = styled.div`
   width: 100%;
-  height:100%;
+  height: 100%;
   min-height: 100vh;
   position: relative;
   background-color: rgb(255, 255, 255);
@@ -44,10 +44,10 @@ export const BannerWrapper = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  margin-top: 100px;
+  margin-top: 50px;
 
-  @media(max-width:480px){
-    margin-top:0px;
+  @media (max-width: 480px) {
+    margin-top: 0px;
   }
 `;
 
@@ -62,7 +62,7 @@ export const BookingCTA = styled.div`
 
 export const SearchWrapper = styled.div`
   background-color: #fff;
-  padding: 50px 20px;
+  padding: 30px 20px;
   -webkit-box-shadow: 0 5px 20px -5px rgb(0 0 0 / 30%);
   box-shadow: 0 5px 20px -5px rgb(0 0 0 / 30%);
   border-radius: 4px;
@@ -131,13 +131,12 @@ export const FirstImageHolder = styled.div`
 export const FirstImage = styled.div`
   position: absolute;
   width: 54%;
-  top:0;
+  top: 0;
   bottom: 0;
   left: 0;
   padding: 0;
   margin: 0;
 `;
-
 
 export const SecondImage = styled.div`
   position: absolute;
@@ -150,7 +149,7 @@ export const SecondImage = styled.div`
 
 export const SecondImageHolder = styled.div`
   padding-top: 26%;
-  `
+`;
 
 export const ImageHolder = styled.img`
   box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
@@ -162,7 +161,6 @@ export const ImageHolder = styled.img`
   border-radius: 0 !important;
   outline: 0;
 `;
-
 
 export const IntroWrapper = styled.div`
   padding-top: 60px;
@@ -202,6 +200,17 @@ export const HeadLine = styled.h2`
   letter-spacing: -0.5px;
 `;
 
+export const FormHeadLine = styled.h3`
+  font-size:25px;
+  color: #222;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  @media (max-width: 480px) {
+    font-size: 22px;
+  }
+`;
+
 export const HotelWrapper = styled.div`
   padding-left: 50px;
   color: #5f6060;
@@ -210,7 +219,7 @@ export const HotelWrapper = styled.div`
   font-size: 1rem;
   line-height: 1.75;
 
-  @media(max-width:480px){
-    padding-left:0px;
+  @media (max-width: 480px) {
+    padding-left: 0px;
   }
 `;

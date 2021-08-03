@@ -7,6 +7,7 @@ import {
   HomeHeadLine,
   HomePara,
   ContentWrapper,
+  FormHeadLine
 } from "./homestyle.js";
 import { Heading } from "../../components/UI/Heading";
 import SearchForm from "./searchForm";
@@ -36,6 +37,7 @@ export default function Home() {
                 </div>
                 <div className="col-md-4 col-md-pull-7" style={{ zIndex: "1" }}>
                   <SearchWrapper>
+                    <FormHeadLine>Holidays just a click Away</FormHeadLine>
                     <SearchForm />
                   </SearchWrapper>
                 </div>
