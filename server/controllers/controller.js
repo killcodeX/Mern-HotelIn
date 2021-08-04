@@ -14,13 +14,13 @@ export const getHotel = async (req, res) => {
 
 export const getSingleHotel = async (req, res) => {
   const { id } = req.params;
-
   console.log('id received in backend', id)
+
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(404).send("No Hotel with that Id");
   try {
     const singleHotel = await HotelMessage.findById(id);
-    console.log(singleHotel);
+    //console.log(singleHotel);
     res.status(200).json(singleHotel);
   } catch (error) {
     res.status(404).json({ message: error.message });
@@ -55,12 +55,12 @@ export const updateHotel = async (req, res) => {
 
 
 export const getCityHotel = async (req, res) => {
-  const { city } = req.query;
-  console.log('city hotel --> ',req.query)
-  // try{
-  //   let result = [1,2,3,4]//await HotelMessage.find({'city' : city});
-  //   res.status(200).json(result);
-  // } catch(error){
-  //   res.status(404).json({ message: error.message });
-  // }
+  const { city } = req.params;
+  console.log('city hotel --> ',req.params)
+  try{
+    let result = await HotelMessage.find({'city' : city});
+    res.status(200).json(result);
+  } catch(error){
+    res.status(404).json({ message: error.message });
+  }
 }

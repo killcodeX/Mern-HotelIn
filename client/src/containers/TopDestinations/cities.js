@@ -24,6 +24,9 @@ export default function Cities() {
     dispatch(getFilter(data))
   };
 
+  useEffect(() => {
+  }, [data])
+
   if (data.length == 0) {
     return <Loader />;
   }

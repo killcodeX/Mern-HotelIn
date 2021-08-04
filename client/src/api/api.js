@@ -23,7 +23,7 @@ export const getSinglehotelsApi = async (id) => {
 
 export const getFilterCitiesApi = async (city) => {
   try {
-    let { data }  = await axios.get(`${baseUrl}/?city=${city}`);
+    let { data }  = await axios.get(`${baseUrl}/city/${city}`);
     return data;
   } catch (error) {
     console.log(error);

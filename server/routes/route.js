@@ -9,6 +9,6 @@ router.get('/', getHotel)
 router.get('/:id', getSingleHotel)
 router.post('/', createHotel)
 router.patch('/:id', updateHotel)
-router.get('/city', getCityHotel)
+router.get('/city/:city', getCityHotel)
 
 export default router;

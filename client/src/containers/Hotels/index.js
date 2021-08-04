@@ -14,6 +14,7 @@ export default function Hotels() {
   useEffect(() => {
     dispatch(getAllhotel())
   }, [])
+
   return (
     <SectionWrapper>
       <div className="container">
