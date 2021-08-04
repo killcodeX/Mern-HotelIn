@@ -13,7 +13,7 @@ import Loader from "../../components/loader";
 export default function Cities() {
   const param = useParams();
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.Hotels.filterData);
+  const data = useSelector((state) => state.Hotels.filterData)
   
 
   useEffect(() => {

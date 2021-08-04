@@ -45,6 +45,7 @@ const ProductReducer = (state = initialState, action) => {
       };
     case FilterHotel:
       let data = action.payload;
+      let cityData = [...state.filterData];
       if (data == "ah") {
         return {
           ...state,
@@ -52,25 +53,26 @@ const ProductReducer = (state = initialState, action) => {
         };
       } else if (data == "plh") {
         console.log("plh");
-        let sortData = state.citiesHotel.sort((a, b) => a.price - b.price);
+        let sortData = cityData.sort((a, b) => a.price - b.price);
         return {
           ...state,
           filterData: sortData,
         };
       } else if (data == "phl") {
-        let sortData = state.citiesHotel.sort((a, b) => b.price - a.price);
+        let sortData = cityData.sort((a, b) => b.price - a.price);
+        console.log(sortData == state.filterData)
         return {
           ...state,
           filterData: sortData,
         };
       } else if (data == "rlh") {
-        let sortData = state.citiesHotel.sort((a, b) => a.rating - b.rating);
+        let sortData = cityData.sort((a, b) => a.rating - b.rating);
         return {
           ...state,
           filterData: sortData,
         };
       } else if (data == "rhl") {
-        let sortData = state.citiesHotel.sort((a, b) => b.rating - a.rating);
+        let sortData = cityData.sort((a, b) => b.rating - a.rating);
         return {
           ...state,
           filterData: sortData,
