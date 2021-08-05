@@ -4,9 +4,11 @@ import { FormLabel, SubmitButton } from "./homestyle";
 import { useFormik } from "formik";
 import { dateFormat } from "../../helpers/constant";
 import moment from "moment";
+import { useDispatch } from 'react-redux';
+import { getSearchResults } from '../../redux/actions/actions';
 
 export default function SearchForm() {
-
+  const dispatch = useDispatch();
   function disabledDate(current) {
     //console.log(current)
     let customDate = moment(Date.now()).format(dateFormat);
@@ -24,7 +26,7 @@ export default function SearchForm() {
       children: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      dispatch(getSearchResults(values))
     },
   });
 
@@ -157,7 +159,7 @@ export default function SearchForm() {
           </Form.Item>
         </div>
       </div>
-      <SubmitButton type="submit">Book Now</SubmitButton>
+      <SubmitButton type="submit">Search Hotels</SubmitButton>
     </Form>
   );
 }

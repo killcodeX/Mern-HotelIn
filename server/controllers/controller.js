@@ -1,6 +1,9 @@
 import HotelMessage from "../models/hotelModel.js";
 import mongoose from "mongoose";
 
+
+// GET Controllers
+
 export const getHotel = async (req, res) => {
   console.log('called')
   try {
@@ -27,6 +30,21 @@ export const getSingleHotel = async (req, res) => {
   }
 }
 
+export const getCityHotel = async (req, res) => {
+  const { city } = req.params;
+  console.log('city hotel --> ',req.params)
+  try{
+    let result = await HotelMessage.find({'city' : city});
+    res.status(200).json(result);
+  } catch(error){
+    res.status(404).json({ message: error.message });
+  }
+}
+
+
+
+// POST Controllers
+
 export const createHotel = async (req, res) => {
   const body = req.body;
   //console.log('received in backend', body)
@@ -38,6 +56,13 @@ export const createHotel = async (req, res) => {
     res.status(404).json({ message: error.message });
   }
 };
+
+export const searchHotel = async (req, res) => {
+  console.log(req.body)
+}
+
+
+// PTACH Controllers
 
 export const updateHotel = async (req, res) => {
   const { id: _id } = req.params;
@@ -54,13 +79,6 @@ export const updateHotel = async (req, res) => {
 }
 
 
-export const getCityHotel = async (req, res) => {
-  const { city } = req.params;
-  console.log('city hotel --> ',req.params)
-  try{
-    let result = await HotelMessage.find({'city' : city});
-    res.status(200).json(result);
-  } catch(error){
-    res.status(404).json({ message: error.message });
-  }
-}
+
+
+
