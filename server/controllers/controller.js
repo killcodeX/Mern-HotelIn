@@ -58,7 +58,15 @@ export const createHotel = async (req, res) => {
 };
 
 export const searchHotel = async (req, res) => {
-  console.log(req.body)
+  let searchData = req.body;
+  console.log('Data recieved', searchData)
+  let result = await HotelMessage.find({'city' : searchData.city});
+  console.log(result)
+}
+
+export const bookHotel = async (req, res) => {
+  let searchData = req.body;
+  console.log('Data recieved', searchData)
 }
 
 
