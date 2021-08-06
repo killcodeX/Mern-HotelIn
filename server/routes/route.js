@@ -3,11 +3,15 @@ import {
   getHotel,
   getSingleHotel,
   getCityHotel,
+} from "../controllers/getController.js";
+
+import {
   createHotel,
   searchHotel,
   bookHotel,
-  updateHotel,
-} from "../controllers/controller.js";
+} from "../controllers/postcontroller.js";
+
+import { updateHotel } from "../controllers/updateController.js";
 
 const router = express.Router();
 
@@ -19,7 +23,7 @@ router.get("/city/:city", getCityHotel);
 // post hotel
 router.post("/", createHotel);
 router.post("/search", searchHotel);
-router.post('/book-hotel', bookHotel)
+router.post("/book-hotel", bookHotel);
 
 // for update hotel
 router.patch("/:id", updateHotel);
