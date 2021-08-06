@@ -1,11 +1,10 @@
 import HotelMessage from "../models/hotelModel.js";
 import mongoose from "mongoose";
 
-
 // GET Controllers
 
 export const getHotel = async (req, res) => {
-  console.log('called')
+  console.log("called");
   try {
     const hotelMessages = await HotelMessage.find();
     //console.log(pMessages);
@@ -17,7 +16,7 @@ export const getHotel = async (req, res) => {
 
 export const getSingleHotel = async (req, res) => {
   const { id } = req.params;
-  console.log('id received in backend', id)
+  console.log("id received in backend", id);
 
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(404).send("No Hotel with that Id");
@@ -28,20 +27,18 @@ export const getSingleHotel = async (req, res) => {
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
-}
+};
 
 export const getCityHotel = async (req, res) => {
   const { city } = req.params;
-  console.log('city hotel --> ',req.params)
-  try{
-    let result = await HotelMessage.find({'city' : city});
+  console.log("city hotel --> ", req.params);
+  try {
+    let result = await HotelMessage.find({ city: city });
     res.status(200).json(result);
-  } catch(error){
+  } catch (error) {
     res.status(404).json({ message: error.message });
   }
-}
-
-
+};
 
 // POST Controllers
 
@@ -59,16 +56,31 @@ export const createHotel = async (req, res) => {
 
 export const searchHotel = async (req, res) => {
   let searchData = req.body;
-  console.log('Data recieved', searchData)
-  let result = await HotelMessage.find({'city' : searchData.city});
-  console.log(result)
-}
+  console.log("Data recieved", searchData);
+  let result = await HotelMessage.find({ city: searchData.city });
+  let val = [];
+  while (val.length < 3) {
+    let rand = Math.floor(Math.random() * (0, 5) + 1);
+    if (!val.includes(rand)) {
+      val.push(rand);
+    }
+  }
+  let popHotel = [];
+  for (let i = 0; i < val.length; i++) {
+    popHotel.push(result[val[i]]);
+  }
+
+  try {
+    res.status(200).json(popHotel);
+  } catch (error) {
+    res.status(404).json({ message: 'No Hotels at these dates' });
+  }
+};
 
 export const bookHotel = async (req, res) => {
   let searchData = req.body;
-  console.log('Data recieved', searchData)
-}
-
+  console.log("Data recieved", searchData);
+};
 
 // PTACH Controllers
 
@@ -84,9 +96,4 @@ export const updateHotel = async (req, res) => {
   });
 
   res.json(update);
-}
-
-
-
-
-
+};

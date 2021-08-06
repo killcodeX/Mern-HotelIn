@@ -45,11 +45,11 @@ export default function SearchForm() {
           placeholder="Please select a city"
           onChange={(value) => formik.setFieldValue("city", value)}
         >
-          <Select.Option value="mumbai">Mumbai</Select.Option>
-          <Select.Option value="bengaluru">Bengaluru</Select.Option>
-          <Select.Option value="delhi">Delhi</Select.Option>
-          <Select.Option value="hyderabad">Hyderabad</Select.Option>
-          <Select.Option value="chennai">Chennai</Select.Option>
+          <Select.Option value="Mumbai">Mumbai</Select.Option>
+          <Select.Option value="Bengaluru">Bengaluru</Select.Option>
+          <Select.Option value="Delhi">Delhi</Select.Option>
+          <Select.Option value="Hyderabad">Hyderabad</Select.Option>
+          <Select.Option value="Chennai">Chennai</Select.Option>
         </Select>
       </Form.Item>
       <div className="row">

@@ -3,6 +3,7 @@ import {
   GetSingleHotel,
   GetCityHotel,
   FilterHotel,
+  SearchHotel
 } from "../actions/actionConstant";
 
 const initialState = {
@@ -11,6 +12,7 @@ const initialState = {
   singleHotel: {},
   citiesHotel: [],
   filterData: [],
+  searchResults:[],
 };
 
 // Reducers
@@ -78,6 +80,11 @@ const ProductReducer = (state = initialState, action) => {
           filterData: sortData,
         };
       }
+      case SearchHotel:
+      return {
+        ...state,
+        searchHotel: action.payload,
+      };
     default:
       return state;
   }
