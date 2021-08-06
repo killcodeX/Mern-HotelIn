@@ -4,6 +4,7 @@ import {
   GetCityHotel,
   FilterHotel,
   SearchHotel,
+  BookHotel
 } from "./actionConstant";
 
 import {
@@ -11,6 +12,7 @@ import {
   getSinglehotelsApi,
   getFilterCitiesApi,
   getSearchHotelsApi,
+  bookHotelsApi
 } from "../../api/api";
 
 // actions
@@ -53,3 +55,12 @@ export const getSearchResults = (data) => async (dispatch) => {
     payload: result,
   });
 };
+
+export const doHotelBook = (data) => async (dispatch) => {
+  const result = await bookHotelsApi(data);
+  console.log(result)
+  // dispatch({
+  //   type:BookHotel,
+  //   payload:result,
+  // })
+}

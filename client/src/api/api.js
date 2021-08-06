@@ -45,3 +45,13 @@ export const getSearchHotelsApi = async (body) => {
     console.log(error);
   }
 };
+
+
+export const bookHotelsApi = async (body) => {
+  try {
+    let { data }  = await axios.post(`${baseUrl}/book-hotel`, body);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};

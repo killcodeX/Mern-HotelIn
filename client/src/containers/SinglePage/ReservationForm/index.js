@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Select, DatePicker } from "antd";
 import { useFormik } from "formik";
 import { dateFormat } from "../../../helpers/constant";
+import { useDispatch } from "react-redux";
+import { doHotelBook } from '../../../redux/actions/actions'
 import moment from "moment";
 import {
   CardWrapper,
@@ -11,11 +13,11 @@ import {
   CurrencyWrapper,
   PricePeriod,
   FormLabel,
-  FormItemStyle,
   FormsubmitButton,
 } from "./style";
 
 export default function ReservationForm({ price, id }) {
+  const dispatch = useDispatch();
   function disabledDate(current) {
     if (formik.values.checkIn) {
       return current && current < moment(formik.values.checkIn, dateFormat);
@@ -36,7 +38,7 @@ export default function ReservationForm({ price, id }) {
       children: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      dispatch(doHotelBook(values));
     },
   });
 
