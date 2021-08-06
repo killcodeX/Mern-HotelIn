@@ -8,8 +8,8 @@ import Loader from "../../components/loader";
 
 export default function SearchHotels() {
   const data = useSelector((state) => state.Hotels.searchHotel);
-
-  if (data.length == 0) {
+    console.log(data)
+  if (data == undefined) {
     return <Loader />;
   }
 
