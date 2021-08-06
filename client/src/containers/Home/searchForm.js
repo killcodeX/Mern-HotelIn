@@ -4,21 +4,22 @@ import { FormLabel, SubmitButton } from "./homestyle";
 import { useFormik } from "formik";
 import { dateFormat } from "../../helpers/constant";
 import moment from "moment";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
-import { getSearchResults } from '../../redux/actions/actions';
+import { getSearchResults } from "../../redux/actions/actions";
 
 export default function SearchForm() {
   const dispatch = useDispatch();
-  const history = useHistory()
-
+  const history = useHistory();
 
   function disabledDate(current) {
-    //console.log(current)
-    let customDate = moment(Date.now()).format(dateFormat);
-    return current && current < moment(customDate, dateFormat);
+    if (formik.values.checkIn) {
+      return current && current < moment(formik.values.checkIn, dateFormat);
+    } else {
+      let customDate = moment(Date.now()).format(dateFormat);
+      return current && current < moment(customDate, dateFormat);
+    }
   }
-
 
   const formik = useFormik({
     initialValues: {
@@ -30,8 +31,8 @@ export default function SearchForm() {
       children: "",
     },
     onSubmit: (values) => {
-      dispatch(getSearchResults(values))
-      history.push('/search-hotel/results')
+      dispatch(getSearchResults(values));
+      history.push("/search-hotel/results");
     },
   });
 
@@ -91,6 +92,7 @@ export default function SearchForm() {
           >
             <DatePicker
               allowClear
+              disabledDate={disabledDate}
               onChange={(value) =>
                 formik.setFieldValue(
                   "checkOut",
