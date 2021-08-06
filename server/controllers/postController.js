@@ -1,6 +1,12 @@
 import HotelMessage from "../models/hotelModel.js";
+import moment from 'moment';
 import mongoose from "mongoose";
-import { numberOfNights, calPrice } from "../helpers/helper.js";
+import {
+  numberOfNights,
+  calDiscount,
+  findTax,
+  calPrice,
+} from "../helpers/helper.js";
 
 // POST Controllers
 
@@ -46,21 +52,40 @@ export const bookHotel = async (req, res) => {
     return res.status(404).send("No Hotel with that Id");
 
   const singleHotel = await HotelMessage.findById(hotelId);
-  console.log(singleHotel);
+
+  let totalNights = numberOfNights(checkIn, checkOut);
+  let discount = Math.floor(Math.random() * (10, 60) + 1);
+  let discountPrice = calDiscount(singleHotel.price, discount);
+  let totalTax = findTax(singleHotel.price);
+  let totalPrice = calPrice(
+    totalNights,
+    singleHotel.price,
+    rooms,
+    discountPrice,
+    totalTax
+  );
 
   let result = {
-    _id: singleHotel._id,
-    name: singleHotel.name,
-    image: singleHotel.image,
-    city: singleHotel.city,
-    rating: singleHotel.rating,
-    checkIn: checkIn,
-    checkOut: checkOut,
-    rooms: rooms,
-    guest: adults + children,
-    nights: numberOfNights(checkIn, checkOut),
-    discount: Math.floor(Math.random() * (10, 60) + 1),
-    tax: findTax(singleHotel.price),
+    hotelDetails: {
+      _id: singleHotel._id,
+      name: singleHotel.name,
+      image: singleHotel.image,
+      city: singleHotel.city,
+      rating: singleHotel.rating,
+      checkIn: checkIn,
+      checkOut: checkOut,
+      cancel:`Free Cancellation till ${moment(checkIn).format('MMMM Do YYYY, h:mm:ss a')}`
+    },
+    priceDetails: {
+      rooms: rooms,
+      guest: parseInt(adults) + parseInt(children),
+      nights: totalNights,
+      price:singleHotel.price,
+      discount: discount,
+      discountPrice: discountPrice,
+      tax: totalTax,
+      totalAmount: totalPrice,
+    },
   };
   try {
     res.status(200).json(result);
