@@ -14,6 +14,7 @@ import {
   getSearchHotelsApi,
   bookHotelsApi
 } from "../../api/api";
+import { saveState } from '../../helpers/localStorage';
 
 // actions
 export const getAllhotel = () => async (dispatch) => {
@@ -58,9 +59,16 @@ export const getSearchResults = (data) => async (dispatch) => {
 
 export const doHotelBook = (data) => async (dispatch) => {
   const result = await bookHotelsApi(data);
-  console.log(result)
-  // dispatch({
-  //   type:BookHotel,
-  //   payload:result,
-  // })
+  saveState('hotelIn booking details',result)
+  dispatch({
+    type:BookHotel,
+    payload:result,
+  })
+}
+
+export const checkStorageBooking = () => {
+  console.log('called local for booking details')
+  return{
+    type:BookHotel
+  }
 }

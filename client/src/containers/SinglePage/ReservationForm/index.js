@@ -5,6 +5,7 @@ import { dateFormat } from "../../../helpers/constant";
 import { useDispatch } from "react-redux";
 import { doHotelBook } from '../../../redux/actions/actions'
 import moment from "moment";
+import { useHistory } from 'react-router-dom'
 import {
   CardWrapper,
   FormWrapper,
@@ -18,6 +19,8 @@ import {
 
 export default function ReservationForm({ price, id }) {
   const dispatch = useDispatch();
+  const history = useHistory();
+
   function disabledDate(current) {
     if (formik.values.checkIn) {
       return current && current < moment(formik.values.checkIn, dateFormat);
@@ -39,6 +42,7 @@ export default function ReservationForm({ price, id }) {
     },
     onSubmit: (values) => {
       dispatch(doHotelBook(values));
+      history.push(`/booking-confirmation/${id}`)
     },
   });
 
@@ -150,7 +154,7 @@ export default function ReservationForm({ price, id }) {
               <Select.Option value="4">4</Select.Option>
             </Select>
           </Form.Item>
-          <FormsubmitButton>Search</FormsubmitButton>
+          <FormsubmitButton>Search for Availability</FormsubmitButton>
         </Form>
       </FormWrapper>
     </CardWrapper>

@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/book-hotel/:id" exact component={SingleHotel} />
         <Route exact path="/book-hotel/cities/:id" exact component={Cities} />
         <Route exact path="/search-hotel/results" exact component={SearchHotels} />
-        <Route exact path="/test" exact component={Reservation} />
+        <Route exact path="/booking-confirmation/:id" exact component={Reservation} />
         <Route exact path="/login" exact component={Login} />
         <Route exact path="/register" exact component={Register} />
       </Switch>

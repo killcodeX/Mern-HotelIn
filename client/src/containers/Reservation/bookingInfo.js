@@ -17,22 +17,24 @@ import { StarWrapper } from "../../components/UI/Pricecard/cardStyle";
 import { bookingdata } from "./fakeData";
 import { BsHouseDoor, BsGeo } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
+import moment from 'moment'
 
-export default function BookingInfo() {
+export default function BookingInfo({hotelInfo}) {
+  console.log(hotelInfo)
   return (
     <CardWrapper>
       <CardHeading>Hotel Info</CardHeading>
       <HotelDetails>
-        <HotelImage src={bookingdata.image} alt={bookingdata.name} />
+        <HotelImage src={hotelInfo.image} alt={hotelInfo.name} />
         <HotelDetailsWrapper>
           <HotelName>
-            <BsHouseDoor /> {bookingdata.name}
+            <BsHouseDoor /> {hotelInfo.name}
           </HotelName>
           <HotelCity>
-            <BsGeo /> {bookingdata.city}
+            <BsGeo /> {hotelInfo.city}
           </HotelCity>
           <HotelRating>
-            {bookingdata.rating}
+            {hotelInfo.rating}
             <StarWrapper>
               <AiFillStar />
             </StarWrapper>
@@ -42,17 +44,17 @@ export default function BookingInfo() {
       <BookingDetails>
         <BookingWrapper>
           <BookingHead>Check In</BookingHead>
-          <BookingDate>{bookingdata.checkIn}</BookingDate>
-          <BookingHead>02:00 PM</BookingHead>
+          <BookingDate>{moment(hotelInfo.checkIn).format('Do MMM YY')}</BookingDate>
+          {/* <BookingHead>02:00 PM</BookingHead> */}
         </BookingWrapper>
         <BookingWrapper>
           <BookingHead>Check Out</BookingHead>
-          <BookingDate>{bookingdata.checkOut}</BookingDate>
-          <BookingHead>12:00 PM</BookingHead>
+          <BookingDate>{hotelInfo.checkOut}</BookingDate>
+          {/* <BookingHead>12:00 PM</BookingHead> */}
         </BookingWrapper>
         <BookingWrapper>
           <BookingHead>Guest</BookingHead>
-          <BookingDate>{bookingdata.guest}</BookingDate>
+          <BookingDate>{hotelInfo.guest}</BookingDate>
           <BookingHead>1 Night</BookingHead>
         </BookingWrapper>
       </BookingDetails>

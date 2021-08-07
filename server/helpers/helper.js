@@ -12,6 +12,10 @@ export const numberOfNights = (startDate, endDate) => {
   return numberOfNight
 };
 
+export const roomNightPrice = (price, rooms, totalNights) => {
+    return price * rooms * totalNights
+}
+
 export const calDiscount = (price, discount) => {
     return Math.floor((price * discount) / 100)
 }

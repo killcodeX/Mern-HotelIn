@@ -3,6 +3,7 @@ import moment from 'moment';
 import mongoose from "mongoose";
 import {
   numberOfNights,
+  roomNightPrice,
   calDiscount,
   findTax,
   calPrice,
@@ -54,6 +55,7 @@ export const bookHotel = async (req, res) => {
   const singleHotel = await HotelMessage.findById(hotelId);
 
   let totalNights = numberOfNights(checkIn, checkOut);
+  let roomNnight = roomNightPrice(singleHotel.price, rooms, totalNights)
   let discount = Math.floor(Math.random() * (10, 60) + 1);
   let discountPrice = calDiscount(singleHotel.price, discount);
   let totalTax = findTax(singleHotel.price);
@@ -72,11 +74,13 @@ export const bookHotel = async (req, res) => {
       image: singleHotel.image,
       city: singleHotel.city,
       rating: singleHotel.rating,
-      checkIn: checkIn,
-      checkOut: checkOut,
-      cancel:`Free Cancellation till ${moment(checkIn).format('MMMM Do YYYY, h:mm:ss a')}`
+      checkIn: moment(checkIn,'DD MMMM YYYY, h:mm:ss a'),
+      checkOut: moment(checkOut, 'DD MMMM YYYY, h:mm:ss a'),
+      rooms: rooms,
+      guest: parseInt(adults) + parseInt(children),
     },
     priceDetails: {
+      roomNnight: roomNnight,
       rooms: rooms,
       guest: parseInt(adults) + parseInt(children),
       nights: totalNights,

@@ -3,8 +3,10 @@ import {
   GetSingleHotel,
   GetCityHotel,
   FilterHotel,
-  SearchHotel
+  SearchHotel,
+  BookHotel
 } from "../actions/actionConstant";
+import { loadState } from '../../helpers/localStorage';
 
 const initialState = {
   allHotels: [],
@@ -13,6 +15,7 @@ const initialState = {
   citiesHotel: [],
   filterData: [],
   searchResults:[],
+  bookingDetails:{},
 };
 
 // Reducers
@@ -85,6 +88,19 @@ const ProductReducer = (state = initialState, action) => {
         ...state,
         searchHotel: action.payload,
       };
+      case BookHotel:
+      // loadState('hotelIn booking details')
+      if(loadState('hotelIn booking details')){
+        return {
+          ...state,
+          bookingDetails: loadState('hotelIn booking details')
+        }
+      }
+      return{
+        ...state,
+        bookingDetails: action.payload
+      }
+      
     default:
       return state;
   }
