@@ -5,8 +5,9 @@ const dateFormat = "DD-MM-YYYY";
 // calculate number of nights
 
 export const numberOfNights = (startDate, endDate) => {
-  let date1 = moment(startDate, dateFormat);
-  let date2 = moment(endDate, dateFormat);
+    //console.log()
+  let date1 = moment(startDate);
+  let date2 = moment(endDate);
   let numberOfNight = date2.diff(date1, 'days')
 
   return numberOfNight

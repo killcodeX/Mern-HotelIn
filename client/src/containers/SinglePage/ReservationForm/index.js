@@ -3,9 +3,9 @@ import { Form, Select, DatePicker } from "antd";
 import { useFormik } from "formik";
 import { dateFormat } from "../../../helpers/constant";
 import { useDispatch } from "react-redux";
-import { doHotelBook } from '../../../redux/actions/actions'
+import { doHotelBook } from "../../../redux/actions/actions";
 import moment from "moment";
-import { useHistory } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 import {
   CardWrapper,
   FormWrapper,
@@ -41,7 +41,12 @@ export default function ReservationForm({ price, id }) {
       children: "",
     },
     onSubmit: (values) => {
-      dispatch(doHotelBook(values));
+      const body ={
+        ...values,
+        checkIn: values.checkIn.toJSON(),
+        checkOut: values.checkOut.toJSON(),
+      }
+      dispatch(doHotelBook(body));
       history.push(`/booking-confirmation/${id}`)
     },
   });
@@ -70,12 +75,7 @@ export default function ReservationForm({ price, id }) {
               allowClear
               format={dateFormat}
               disabledDate={disabledDate}
-              onChange={(value) =>
-                formik.setFieldValue(
-                  "checkIn",
-                  moment(value).format(dateFormat)
-                )
-              }
+              onChange={(value) => formik.setFieldValue("checkIn", value)}
             />
           </Form.Item>
 
@@ -90,12 +90,7 @@ export default function ReservationForm({ price, id }) {
             <DatePicker
               allowClear
               disabledDate={disabledDate}
-              onChange={(value) =>
-                formik.setFieldValue(
-                  "checkOut",
-                  moment(value).format(dateFormat)
-                )
-              }
+              onChange={(value) => formik.setFieldValue("checkOut", value)}
             />
           </Form.Item>
 
