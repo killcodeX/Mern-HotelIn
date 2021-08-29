@@ -1,13 +1,11 @@
-import axios from "axios";
-
-const baseUrl = "http://localhost:5000/hotel";
+import { ApiFunc } from './authApi'
 
 
 // get apis
 
 export const getAllhotelsApi = async () => {
   try {
-    let { data }  = await axios.get(baseUrl);
+    let { data }  = await ApiFunc.get(`/hotelin`);
     return data;
   } catch (error) {
     console.log(error);
@@ -16,7 +14,7 @@ export const getAllhotelsApi = async () => {
 
 export const getSinglehotelsApi = async (id) => {
   try {
-    let { data }  = await axios.get(`${baseUrl}/${id}`);
+    let { data }  = await ApiFunc.get(`/hotelin/${id}`);
     return data;
   } catch (error) {
     console.log(error);
@@ -26,7 +24,7 @@ export const getSinglehotelsApi = async (id) => {
 
 export const getFilterCitiesApi = async (city) => {
   try {
-    let { data }  = await axios.get(`${baseUrl}/city/${city}`);
+    let { data }  = await ApiFunc.get(`/hotelin/city/${city}`);
     return data;
   } catch (error) {
     console.log(error);
@@ -39,7 +37,7 @@ export const getFilterCitiesApi = async (city) => {
 
 export const getSearchHotelsApi = async (body) => {
   try {
-    let { data }  = await axios.post(`${baseUrl}/search`, body);
+    let { data }  = await ApiFunc.post(`/hotelin/search`, body);
     return data;
   } catch (error) {
     console.log(error);
@@ -49,7 +47,7 @@ export const getSearchHotelsApi = async (body) => {
 
 export const bookHotelsApi = async (body) => {
   try {
-    let { data }  = await axios.post(`${baseUrl}/book-hotel`, body);
+    let { data }  = await ApiFunc.post(`/hotelin/book-hotel`, body);
     return data;
   } catch (error) {
     console.log(error);

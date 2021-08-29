@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({limit: "30mb", extended: true}))
 app.use(cors())
 
 // sholud be called after initializing cors to avoid cors origin issue
-app.use('/hotel', hotelRoutes)
+app.use('/hotelin', hotelRoutes)
 
 // for database
 const connectionUrl = `mongodb+srv://Aaquib5076:${process.env.DB_PASSWORD}@cluster0.oknup.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
