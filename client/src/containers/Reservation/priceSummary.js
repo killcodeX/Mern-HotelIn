@@ -9,16 +9,17 @@ import {
   DiscountWrapper,
   BookingButton,
 } from "./style";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
-export default function PriceSummary({hotelPrice}) {
+export default function PriceSummary({ hotelPrice }) {
+  const auth = useSelector((state) => state.Auth.isAuthenticated);
   return (
     <CardWrapper>
       <CardHeading>Price Summary</CardHeading>
       <PriceWrapper>
         <PriceSum>
-          <PriceText>
-            Base Price{" "}
-          </PriceText>
+          <PriceText>Base Price </PriceText>
           <PriceText>{`₹ ${hotelPrice.price}`}</PriceText>
         </PriceSum>
       </PriceWrapper>
@@ -42,10 +43,12 @@ export default function PriceSummary({hotelPrice}) {
       <PriceWrapper>
         <PriceSum>
           <PriceText>Price after discounts</PriceText>
-          <PriceText>{`₹ ${hotelPrice.roomNnight - hotelPrice.discountPrice}`}</PriceText>
+          <PriceText>{`₹ ${
+            hotelPrice.roomNnight - hotelPrice.discountPrice
+          }`}</PriceText>
         </PriceSum>
         <PriceSum>
-          <span className='d-flex flex-column'>
+          <span className="d-flex flex-column">
             <PriceText>Taxes & Fees</PriceText>
             <PriceText>(inclusive of all taxes)</PriceText>
           </span>
@@ -58,7 +61,13 @@ export default function PriceSummary({hotelPrice}) {
           <PriceText>{`₹ ${hotelPrice.totalAmount}`}</PriceText>
         </PriceSum>
       </PriceWrapper>
-      <BookingButton variant="primary">Book Now</BookingButton>
+      {auth ? (
+        <BookingButton variant="primary">Book Now</BookingButton>
+      ) : (
+        <BookingButton variant="primary">
+          <Link style={{textDecoration:'none', color:'inherit'}} to='/login'>Login / Register</Link>
+        </BookingButton>
+      )}
     </CardWrapper>
   );
 }
