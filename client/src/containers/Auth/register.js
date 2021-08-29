@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Input } from "antd";
 import { FormLabel, SubmitButton } from "../Home/homestyle";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   Wrapper,
   BannerWrapper,
@@ -15,8 +15,12 @@ import {
   AuthFooter,
   AuthPrivacy,
 } from "./style";
+import { receiveSignUp} from "../../redux/actions/useractions";
+import { useDispatch } from "react-redux";
 
 export default function Register() {
+  const dispatch = useDispatch();
+  const history = useHistory();
   const formik = useFormik({
     initialValues: {
       fname: "",
@@ -26,7 +30,7 @@ export default function Register() {
       mobile: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      dispatch(receiveSignUp(values, history))
     },
   });
   return (

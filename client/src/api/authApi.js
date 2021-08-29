@@ -24,7 +24,7 @@ ApiFunc.interceptors.request.use((req) => {
 // User Api
 export const userRegister = async (body) => {
   try {
-    const { data } = await ApiFunc.post(`/journalbit/signup`, body);
+    const { data } = await ApiFunc.post(`/hotelin/signup`, body);
     openNotificationWithIcon("success", "Signup Successful", "");
     return data;
   } catch (error) {
@@ -40,7 +40,7 @@ export const userRegister = async (body) => {
 
 export const userLogin = async (body) => {
   try {
-    const { data } = await ApiFunc.post(`/journalbit/signin`, body);
+    const { data } = await ApiFunc.post(`/hotelin/signin`, body);
     openNotificationWithIcon("success", "Login Successful", "");
     return data;
   } catch (error) {

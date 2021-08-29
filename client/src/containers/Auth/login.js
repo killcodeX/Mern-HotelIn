@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Input } from "antd";
 import { FormLabel, SubmitButton } from "../Home/homestyle";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   Wrapper,
   BannerWrapper,
@@ -15,15 +15,19 @@ import {
   AuthFooter,
   AuthPrivacy,
 } from "./style";
+import { receiveLogin } from "../../redux/actions/useractions";
+import { useDispatch } from "react-redux";
 
 export default function Login() {
+  const dispatch = useDispatch();
+  const history = useHistory();
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      dispatch(receiveLogin(values, history));
     },
   });
   return (
@@ -51,7 +55,11 @@ export default function Login() {
                 name="email"
                 hasFeedback
                 rules={[
-                  { required: true, type: "email", message: "Please enter correct email!" },
+                  {
+                    required: true,
+                    type: "email",
+                    message: "Please enter correct email!",
+                  },
                 ]}
               >
                 <Input
