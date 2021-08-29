@@ -1,4 +1,5 @@
 import express from "express";
+import { createUser, loginUser } from "../controllers/userController.js";
 import {
   getHotel,
   getSingleHotel,
@@ -13,7 +14,13 @@ import {
 
 import { updateHotel } from "../controllers/updateController.js";
 
+import { AuthenticateToken } from "../middleware/tokenValidate.js";
+
 const router = express.Router();
+
+// User Routes
+router.post("/signup", createUser);
+router.post("/signin", loginUser); //AuthenticateToken,
 
 // get hotel
 router.get("/", getHotel);
