@@ -42,20 +42,23 @@ export default function BookingInfo({hotelInfo}) {
         </HotelDetailsWrapper>
       </HotelDetails>
       <BookingDetails>
-        <BookingWrapper>
+        <BookingWrapper bor={1}>
           <BookingHead>Check In</BookingHead>
           <BookingDate>{moment(hotelInfo.checkIn).format('Do MMM YY')}</BookingDate>
           {/* <BookingHead>02:00 PM</BookingHead> */}
         </BookingWrapper>
-        <BookingWrapper>
+        <BookingWrapper bor={1}>
           <BookingHead>Check Out</BookingHead>
-          <BookingDate>{hotelInfo.checkOut}</BookingDate>
+          <BookingDate>{moment(hotelInfo.checkOut).format('Do MMM YY')}</BookingDate>
           {/* <BookingHead>12:00 PM</BookingHead> */}
         </BookingWrapper>
-        <BookingWrapper>
-          <BookingHead>Guest</BookingHead>
+        <BookingWrapper bor={1}>
+          <BookingHead>Total Guests</BookingHead>
           <BookingDate>{hotelInfo.guest}</BookingDate>
-          <BookingHead>1 Night</BookingHead>
+        </BookingWrapper>
+        <BookingWrapper>
+          <BookingHead>Total Nights</BookingHead>
+          <BookingDate>{hotelInfo.nights}</BookingDate>
         </BookingWrapper>
       </BookingDetails>
     </CardWrapper>

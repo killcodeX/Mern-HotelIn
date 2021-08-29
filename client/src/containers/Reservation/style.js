@@ -71,7 +71,7 @@ export const HotelRating = styled.span``;
 export const BookingDetails = styled.div`
   display: flex;
   //flex-direction:column;
-  //justify-content:space-around;
+  justify-content:space-between;
   border-radius: 1.2rem;
   background: rgb(232, 243, 255);
   padding: 1rem;
@@ -88,7 +88,7 @@ export const BookingWrapper = styled.div`
   flex-direction: column;
   padding-right: 15px;
   padding-left: 15px;
-  border-right: 1px solid rgb(119, 119, 119);
+  border-right: ${props => props.bor == 1? '1px solid rgb(119, 119, 119)':null};
 
   @media (max-width: 480px) {
     padding-right: 0;

@@ -78,6 +78,7 @@ export const bookHotel = async (req, res) => {
       checkOut: checkOut,
       rooms: rooms,
       guest: parseInt(adults) + parseInt(children),
+      nights: totalNights,
     },
     priceDetails: {
       roomNnight: roomNnight,
