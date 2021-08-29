@@ -17,15 +17,18 @@ import {
 } from "./style";
 
 export default function Register() {
-    const formik = useFormik({
-        initialValues: {
-          email: "",
-          password: "",
-        },
-        onSubmit: (values) => {
-          console.log(values);
-        },
-      });
+  const formik = useFormik({
+    initialValues: {
+      fname: "",
+      lname: "",
+      email: "",
+      password: "",
+      mobile: "",
+    },
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
   return (
     <Wrapper className="container-fluid">
       <div className="row">
@@ -46,12 +49,48 @@ export default function Register() {
               <TitleTag>Register</TitleTag>
             </CardUpper>
             <Form onFinish={formik.handleSubmit}>
+              <div className="row">
+                <div className="col-sm-6">
+                  <FormLabel>First Name</FormLabel>
+                  <Form.Item
+                    name="fname"
+                    hasFeedback
+                    rules={[
+                      { required: true, message: "Please enter your first Name!" },
+                    ]}
+                  >
+                    <Input
+                      type="fname"
+                      placeholder="enter your first name.."
+                      value={formik.values.fname}
+                      onChange={formik.handleChange}
+                    />
+                  </Form.Item>
+                </div>
+                <div className="col-sm-6">
+                  <FormLabel>Last Name</FormLabel>
+                  <Form.Item
+                    name="lname"
+                    hasFeedback
+                    rules={[
+                      { required: true, message: "Please enter your last Name!" },
+                    ]}
+                  >
+                    <Input
+                      type="lname"
+                      placeholder="enter your last name.."
+                      value={formik.values.lname}
+                      onChange={formik.handleChange}
+                    />
+                  </Form.Item>
+                </div>
+              </div>
               <FormLabel>Email</FormLabel>
               <Form.Item
                 name="email"
                 hasFeedback
                 rules={[
-                  { required: true, message: "Please Select your city!" },
+                  { required: true, message: "Please enter correct email!" },
                 ]}
               >
                 <Input
@@ -66,7 +105,7 @@ export default function Register() {
                 name="password"
                 hasFeedback
                 rules={[
-                  { required: true, message: "Please Select your city!" },
+                  { required: true, message: "Please enetr your password!" },
                 ]}
               >
                 <Input
@@ -76,7 +115,23 @@ export default function Register() {
                   onChange={formik.handleChange}
                 />
               </Form.Item>
-              <SubmitButton type="submit">Login</SubmitButton>
+              <FormLabel>Mobile Number</FormLabel>
+              <Form.Item
+                name="mobile"
+                hasFeedback
+                rules={[
+                  { required: true, message: "Please enter your mobile no!" },
+                  { pattern:/^([+]\d{2})?\d{10}$/, message:'Enter only mobile number'}
+                ]}
+              >
+                <Input
+                  type="mobile"
+                  placeholder="enter your mobile no.."
+                  value={formik.values.mobile}
+                  onChange={formik.handleChange}
+                />
+              </Form.Item>
+              <SubmitButton type="submit">Register</SubmitButton>
             </Form>
             <AuthFooter>
               <AuthPrivacy>
@@ -84,8 +139,7 @@ export default function Register() {
                 <a href="#">Terms, Data Policy</a> and Cookie Policy.
               </AuthPrivacy>
               <span>
-                Already have an account? Go to{" "}
-                <Link to="/login">Login</Link>
+                Already have an account? Go to <Link to="/login">Login</Link>
               </span>
             </AuthFooter>
           </CardWrapper>

@@ -51,7 +51,7 @@ export default function Login() {
                 name="email"
                 hasFeedback
                 rules={[
-                  { required: true, message: "Please Select your city!" },
+                  { required: true, type: "email", message: "Please enter correct email!" },
                 ]}
               >
                 <Input
