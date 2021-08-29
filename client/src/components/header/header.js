@@ -1,6 +1,7 @@
 import React from "react";
-import { useLocation, Link } from "react-router-dom";
-import { Menu, Dropdown } from "antd";
+import { useLocation, Link, useHistory } from "react-router-dom";
+import { AiOutlineUser, AiOutlineArrowRight } from "react-icons/ai";
+import { Menu, Dropdown, Avatar } from "antd";
 import {
   NavbarWrapper,
   NavItems,
@@ -8,12 +9,42 @@ import {
   ImageAvatar,
   DropdownMenu,
 } from "./navbarStyle";
+import { receiveLogout } from "../../redux/actions/useractions";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Header() {
   const location = useLocation();
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const user = useSelector((state) => state.Auth.user);
+  console.log(user)
+
+  const handlelogout = ({ key }) => {
+    if (key == 3) {
+      dispatch(receiveLogout());
+      history.push("/login");
+    }
+  };
+
+  const menu = (
+    <Menu onClick={handlelogout}>
+      <Menu.Item key="1" icon={<AiOutlineUser />}>
+        {/* <Link to={`/profile/${User._id}`}>View Profile</Link> */}
+        My bookings
+      </Menu.Item>
+      <Menu.Divider />
+      <Menu.Item key="3" icon={<AiOutlineArrowRight />} danger>
+        Log Out
+      </Menu.Item>
+    </Menu>
+  );
   return (
-    <NavbarWrapper back={location.pathname != "/" ? "white" : "Transparent"}
-    shadow={location.pathname != "/" ? "0 0.125rem 0.25rem rgb(0 0 0 / 8%)" : "none"}>
+    <NavbarWrapper
+      back={location.pathname != "/" ? "white" : "Transparent"}
+      shadow={
+        location.pathname != "/" ? "0 0.125rem 0.25rem rgb(0 0 0 / 8%)" : "none"
+      }
+    >
       <div className="container">
         <NavItems>
           <Link to="/">
@@ -30,25 +61,21 @@ export default function Header() {
             )}
           </Link>
           <Dropdown overlay={menu} placement="bottomCenter" arrow>
-            <ImageAvatar>
+            <Avatar
+              style={{ backgroundColor: "#ffbf00", verticalAlign: "middle" }}
+              size="large"
+            >
+              {user.fname || 'User'}
+            </Avatar>
+            {/* <ImageAvatar>
               <img
                 src={process.env.PUBLIC_URL + "/assets/profileImage.jpg"}
                 alt="profile"
               />
-            </ImageAvatar>
+            </ImageAvatar> */}
           </Dropdown>
-          {/* <DropdownMenu>Log Out</DropdownMenu> */}
         </NavItems>
       </div>
     </NavbarWrapper>
   );
 }
-
-
-const menu = (
-  <Menu>
-    <Menu.Item key={1}>
-      Log Out
-    </Menu.Item>
-  </Menu>
-)

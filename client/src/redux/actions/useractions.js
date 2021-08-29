@@ -29,7 +29,7 @@ export const receiveSignUp = (user, history) => async (dispatch) => {
       user: result.result,
       token: result.token,
     });
-    history.push("/account-setting");
+    history.push("/");
   } catch (error) {
     console.log(error);
   }
