@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, Link, useHistory } from "react-router-dom";
-import { AiOutlineUser, AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineArrowRight, AiOutlineRight } from "react-icons/ai";
 import { Menu, Dropdown, Avatar } from "antd";
 import {
   NavbarWrapper,
@@ -17,7 +17,8 @@ export default function Header() {
   const dispatch = useDispatch();
   const history = useHistory();
   const user = useSelector((state) => state.Auth.user);
-  console.log(user)
+  const auth = useSelector((state) => state.Auth.isAuthenticated);
+  console.log(user);
 
   const handlelogout = ({ key }) => {
     if (key == 3) {
@@ -32,10 +33,18 @@ export default function Header() {
         {/* <Link to={`/profile/${User._id}`}>View Profile</Link> */}
         My bookings
       </Menu.Item>
-      <Menu.Divider />
-      <Menu.Item key="3" icon={<AiOutlineArrowRight />} danger>
-        Log Out
-      </Menu.Item>
+      {auth ? (
+        <>
+          <Menu.Divider />
+          <Menu.Item key="3" icon={<AiOutlineArrowRight />} danger>
+            Log Out
+          </Menu.Item>
+        </>
+      ) : (
+        <Menu.Item key="2" icon={<AiOutlineRight />}>
+          <Link to={`/login`}>Login</Link>
+        </Menu.Item>
+      )}
     </Menu>
   );
   return (
@@ -65,7 +74,7 @@ export default function Header() {
               style={{ backgroundColor: "#ffbf00", verticalAlign: "middle" }}
               size="large"
             >
-              {user.fname || 'User'}
+              {user.fname || "User"}
             </Avatar>
             {/* <ImageAvatar>
               <img
