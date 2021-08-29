@@ -5,7 +5,7 @@ const postSchema = new mongoose.Schema({
   lname: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
-  number: { type: String, required: true },
+  mobile: { type: String, required: true },
   createdAt: {
     type: Date,
     default: new Date(),
