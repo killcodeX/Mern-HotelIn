@@ -1,6 +1,10 @@
 import React from "react";
 import { useLocation, Link, useHistory } from "react-router-dom";
-import { AiOutlineUser, AiOutlineArrowRight, AiOutlineRight } from "react-icons/ai";
+import {
+  AiOutlineUser,
+  AiOutlineArrowRight,
+  AiOutlineRight,
+} from "react-icons/ai";
 import { Menu, Dropdown, Avatar } from "antd";
 import {
   NavbarWrapper,
@@ -29,12 +33,11 @@ export default function Header() {
 
   const menu = (
     <Menu onClick={handlelogout}>
-      <Menu.Item key="1" icon={<AiOutlineUser />}>
-        {/* <Link to={`/profile/${User._id}`}>View Profile</Link> */}
-        My bookings
-      </Menu.Item>
-      {auth ? (
+      {auth == false ? (
         <>
+          <Menu.Item key="1" icon={<AiOutlineUser />}>
+            <Link to={`/profile/${user._id}`}>My Bookings</Link>
+          </Menu.Item>
           <Menu.Divider />
           <Menu.Item key="3" icon={<AiOutlineArrowRight />} danger>
             Log Out
