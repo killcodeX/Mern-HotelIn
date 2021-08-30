@@ -27,3 +27,36 @@ export const UserEmail = styled.div`
   font-size: 15px;
   color: #999;
 `;
+
+export const CardUpper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+export const HotelImage = styled.div`
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 5%;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const HotelDetails = styled.div``;
+
+
+
+
+// disclamer section
+
+export const DisclaimerText = styled.div`
+  font-size:25px;
+  width:50%;
+`;
+
+export const BookButton = styled.div``
