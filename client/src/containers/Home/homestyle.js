@@ -118,6 +118,10 @@ export const SubmitButton = styled.button`
 export const ImageSection = styled.div`
   padding-top: 60px;
   padding-right: 70px;
+
+  @media (max-width: 480px) {
+    padding-right: 30px;
+  }
 `;
 
 export const ImagesWrapper = styled.div`
@@ -136,6 +140,11 @@ export const FirstImage = styled.div`
   left: 0;
   padding: 0;
   margin: 0;
+
+  @media (max-width: 480px) {
+    top: -152px;
+    left: 20px;
+  }
 `;
 
 export const SecondImage = styled.div`
@@ -145,6 +154,11 @@ export const SecondImage = styled.div`
   left: auto;
   right: 0;
   bottom: 0;
+
+  @media (max-width: 480px) {
+    top: -152px;
+    right: -15px;
+  }
 `;
 
 export const SecondImageHolder = styled.div`
@@ -201,7 +215,7 @@ export const HeadLine = styled.h2`
 `;
 
 export const FormHeadLine = styled.h3`
-  font-size:25px;
+  font-size: 25px;
   color: #222;
   line-height: 1.4;
   font-weight: 400;
