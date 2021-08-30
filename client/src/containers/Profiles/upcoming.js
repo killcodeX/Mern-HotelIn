@@ -45,8 +45,8 @@ export default function Upcoming() {
             </CardUpper>
             <Divider />
             <CardLower>
-              <BookingDetails>
-                <BookingDates className='pb-1'>
+              <BookingDetails className='pb-1' flexStyle='column'>
+                <BookingDates>
                   <StarWrapper>
                     <BsCalendar />
                   </StarWrapper>
@@ -59,7 +59,7 @@ export default function Upcoming() {
                   <HotelCity>2 Rooms, 2 Guests</HotelCity>
                 </BookingDates>
               </BookingDetails>
-              <BookingDetails className='pt-2'>
+              <BookingDetails className='pt-2' flexStyle='row'>
                 <BookingDates>
                   <StarWrapper>
                     <AiOutlineFileProtect />
@@ -98,8 +98,8 @@ export default function Upcoming() {
             </CardUpper>
             <Divider />
             <CardLower>
-              <BookingDetails>
-                <BookingDates className='pb-1'>
+              <BookingDetails className='pb-1' flexStyle='column'>
+                <BookingDates>
                   <StarWrapper>
                     <BsCalendar />
                   </StarWrapper>
@@ -112,7 +112,7 @@ export default function Upcoming() {
                   <HotelCity>2 Rooms, 2 Guests</HotelCity>
                 </BookingDates>
               </BookingDetails>
-              <BookingDetails className='pt-2'>
+              <BookingDetails className='pt-2' flexStyle='row'>
                 <BookingDates>
                   <StarWrapper>
                     <AiOutlineFileProtect />

@@ -17,9 +17,6 @@ export const HeadWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   margin: 40px 0;
-  @media (max-width: 480px) {
-    flex-direction: column;
-  }
 `;
 
 export const UserDetails = styled.div`
@@ -88,6 +85,10 @@ export const CardLower = styled.div`
 export const BookingDetails = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 480px) {
+    flex-direction: ${props => props.flexStyle};
+  }
 `;
 
 export const BookingDates = styled.div`
