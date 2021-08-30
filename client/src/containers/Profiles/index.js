@@ -2,7 +2,7 @@ import React from "react";
 import { Heading } from "../../components/UI/Heading";
 import { Avatar } from "antd";
 import { FcBusinessman } from "react-icons/fc";
-import { Tabs } from "antd";
+import { Tabs, Divider } from "antd";
 import Upcoming from "./upcoming";
 import Cancelled from "./cancelled";
 import Completed from "./completed";
@@ -28,6 +28,7 @@ export default function Profiles() {
             <UserEmail>aaquib@gmail.com</UserEmail>
           </UserDetails>
         </HeadWrapper>
+        <Divider/>
         <Tabs defaultActiveKey="1">
           <TabPane tab="Upcoming Bookings" key="1">
             <Upcoming />

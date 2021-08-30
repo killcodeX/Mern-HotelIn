@@ -4,6 +4,14 @@ export const SectionWrapper = styled.section`
   padding: 52px 0;
 `;
 
+export const CardWrapper = styled.div`
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
+  padding: 20px;
+`;
+
 export const HeadWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -49,14 +57,47 @@ export const HotelImage = styled.div`
 
 export const HotelDetails = styled.div``;
 
-
-
-
-// disclamer section
-
-export const DisclaimerText = styled.div`
-  font-size:25px;
-  width:50%;
+export const BookingId = styled.div`
+  font-weight: bold;
+  color: rgb(31, 44, 97);
+  font-size: 15px;
+  margin-bottom: 15px;
 `;
 
-export const BookButton = styled.div``
+export const HotelName = styled.div`
+  font-size: 18px;
+`;
+
+export const HotelCity = styled.div`
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 500;
+`;
+
+export const StarWrapper = styled.span`
+  font-size: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  //padding-top: 7px;
+`;
+
+export const CardLower = styled.div`
+  width: 100%;
+`;
+
+export const BookingDetails = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const BookingDates = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+`;
+
+// disclamer section
+export const DisclaimerText = styled.div`
+  font-size: 25px;
+  width: 50%;
+`;
