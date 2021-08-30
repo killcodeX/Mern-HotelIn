@@ -13,19 +13,23 @@ import {
   UserName,
   UserEmail,
 } from "./style";
+import { useSelector } from "react-redux"
 
 const { TabPane } = Tabs;
 
 export default function Profiles() {
+
+  const user = useSelector(state => state.Auth.user)
   return (
     <SectionWrapper>
       <div className="container">
         <Heading content="My Bookings" />
         <HeadWrapper>
-          <Avatar shape="square" size={64} icon={<FcBusinessman />} />
+          <Avatar shape="square" size={70} icon={<FcBusinessman />} />
           <UserDetails>
-            <UserName>Aaquib Ahmed</UserName>
-            <UserEmail>aaquib@gmail.com</UserEmail>
+            <UserName>{`${user.fname} ${user.lname}`}</UserName>
+            <UserEmail>{user.email}</UserEmail>
+            <UserEmail>{user.mobile}</UserEmail>
           </UserDetails>
         </HeadWrapper>
         <Divider/>

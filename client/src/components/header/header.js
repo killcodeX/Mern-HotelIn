@@ -33,7 +33,7 @@ export default function Header() {
 
   const menu = (
     <Menu onClick={handlelogout}>
-      {auth == false ? (
+      {auth ? (
         <>
           <Menu.Item key="1" icon={<AiOutlineUser />}>
             <Link to={`/profile/${user._id}`}>My Bookings</Link>
