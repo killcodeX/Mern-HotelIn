@@ -9,6 +9,7 @@ const postSchema = new mongoose.Schema({
   userId: { type: ObjectId, required: true },
   checkIn: { type: String, required: true },
   checkOut: { type: String, required: true },
+  status: { type: String, required: true},
   createdAt: {
     type: Date,
     default: new Date(),
