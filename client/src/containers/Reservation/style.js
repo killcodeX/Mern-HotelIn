@@ -41,8 +41,8 @@ export const HotelDetails = styled.div`
 export const HotelImage = styled.img`
   border-radius: 1rem;
   object-fit: cover;
-  width: 20%;
-  height: 40%;
+  width: 40%;
+  height: 60%;
 `;
 
 export const HotelDetailsWrapper = styled.div`

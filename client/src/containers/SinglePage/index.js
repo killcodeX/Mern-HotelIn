@@ -20,13 +20,10 @@ export const SingleHotel = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   let data = useSelector((state) => state.Hotels.singleHotel);
-  console.log("current page id", id);
 
   useEffect(() => {
     dispatch(getSingleHotel(id));
   }, [id]);
-
-  console.log(data);
 
   if (!data.name) {
     return <Loader/>

@@ -22,7 +22,6 @@ export default function Header() {
   const history = useHistory();
   const user = useSelector((state) => state.Auth.user);
   const auth = useSelector((state) => state.Auth.isAuthenticated);
-  console.log(user);
 
   const handlelogout = ({ key }) => {
     if (key == 3) {

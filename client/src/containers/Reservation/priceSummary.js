@@ -11,6 +11,7 @@ import {
 } from "./style";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { displayRazorPay } from "../../helpers/razorPayment";
 
 export default function PriceSummary({ hotelPrice }) {
   const auth = useSelector((state) => state.Auth.isAuthenticated);
@@ -62,10 +63,17 @@ export default function PriceSummary({ hotelPrice }) {
         </PriceSum>
       </PriceWrapper>
       {auth ? (
-        <BookingButton variant="primary">Book Now</BookingButton>
+        <BookingButton variant="primary" onClick={displayRazorPay}>
+          Book Now
+        </BookingButton>
       ) : (
         <BookingButton variant="primary">
-          <Link style={{textDecoration:'none', color:'inherit'}} to='/login'>Login / Register</Link>
+          <Link
+            style={{ textDecoration: "none", color: "inherit" }}
+            to="/login"
+          >
+            Login / Register
+          </Link>
         </BookingButton>
       )}
     </CardWrapper>
