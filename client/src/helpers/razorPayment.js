@@ -28,10 +28,10 @@ export const displayRazorPay = async () => {
 
     var options = {
         "key": process.env.REACT_APP_RAZORPAY_ID, 
-        currency: data.currency,
-        amount: data.amount.toString(),
-        order_id: data.id,
-        name: 'Donation',
+        currency: data.data.currency,
+        amount: data.data.amount.toString(),
+        order_id: data.data.id,
+        name: 'Hotel In',
         description: 'Thank you for nothing. Please give us some money',
         image: process.env.PUBLIC_URL + "/assets/logo-black.png",
         handler: function (response) {
@@ -40,9 +40,9 @@ export const displayRazorPay = async () => {
             alert(response.razorpay_signature)
         },
         prefill: {
-            name : 'Aaquib',
-            email: 'sdfdsjfh2@ndsfdf.com',
-            phone_number: '9899999999'
+            name : data.data.name,
+            email: data.data.email,
+            phone_number: data.data.mobile
         }
     }
     const paymentObject = new window.Razorpay(options)

@@ -5,6 +5,7 @@ import cors from "cors";
 import hotelRoutes from "./routes/route.js";
 import dotenv from "dotenv";
 import Razorpay from "razorpay";
+import shortid  from "shortid";
 
 const app = express();
 dotenv.config();

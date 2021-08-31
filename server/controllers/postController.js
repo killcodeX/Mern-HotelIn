@@ -8,9 +8,10 @@ import {
   findTax,
   calPrice,
 } from "../helpers/helper.js";
+import shortid  from "shortid";
+import { razorpay } from "../index.js"
 
 // POST Controllers
-
 export const createHotel = async (req, res) => {
   const body = req.body;
   //console.log('received in backend', body)
@@ -100,12 +101,29 @@ export const bookHotel = async (req, res) => {
 };
 
 // process order
-
 export const handlePayment = async (req, res) => {
+  console.log('called')
   try {
-    const existingUser = await UserMessage.findById(req.userId)
-    console.log(existingUser)
+    const existingUser = await UserMessage.findById(req.userId);
+    const payment_capture = 1;
+    const amount = 499;
+    const currency = "INR";
+    const options = {
+      amount: amount * 100,
+      currency,
+      receipt: shortid.generate(),
+      payment_capture,
+    };
+    const response = await razorpay.orders.create(options)
+    let data = {
+      ...response,
+      name:existingUser.fname+" "+existingUser.lname,
+      email:existingUser.email,
+      mobile:existingUser.mobile
+    }
+    res.status(200).json(data);
   } catch (error) {
+    console.log(error)
     res.status(404).json({ message: error });
   }
 };
