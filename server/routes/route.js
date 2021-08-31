@@ -10,6 +10,7 @@ import {
   createHotel,
   searchHotel,
   bookHotel,
+  handlePayment,
 } from "../controllers/postcontroller.js";
 
 import { updateHotel } from "../controllers/updateController.js";
@@ -31,6 +32,7 @@ router.get("/city/:city", getCityHotel);
 router.post("/", createHotel);
 router.post("/search", searchHotel);
 router.post("/book-hotel", bookHotel);
+router.post("/payment", AuthenticateToken, handlePayment);
 
 // for update hotel
 router.patch("/:id", updateHotel);

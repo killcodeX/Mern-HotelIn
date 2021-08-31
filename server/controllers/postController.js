@@ -98,3 +98,11 @@ export const bookHotel = async (req, res) => {
     res.status(404).json({ message: "No Hotels at these dates" });
   }
 };
+
+
+
+// process order
+
+export const handlePayment = async (req, res) => {
+  console.log('called', req.userId)
+}

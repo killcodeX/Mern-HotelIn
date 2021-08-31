@@ -1,3 +1,4 @@
+import { ApiFunc } from "../api/authApi"
 
 function loadScript(src) {
 	return new Promise((resolve) => {
@@ -21,9 +22,7 @@ export const displayRazorPay = async () => {
         return
     }
 
-    const data = await fetch('http://localhost:1337/razorpay', { method: 'POST' }).then((t) =>
-        t.json()
-    )
+    const data = await ApiFunc.post('http://localhost:5000/hotelin/payment')
 
     console.log(data)
 
