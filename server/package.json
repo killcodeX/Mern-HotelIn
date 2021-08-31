@@ -19,6 +19,8 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
     "mongoose": "^5.13.3",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "razorpay": "^2.0.6",
+    "shortid": "^2.2.16"
   }
 }

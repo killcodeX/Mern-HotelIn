@@ -1,5 +1,5 @@
 import HotelMessage from "../models/hotelModel.js";
-import moment from 'moment';
+import UserMessage from "../models/userModel.js";
 import mongoose from "mongoose";
 import {
   numberOfNights,
@@ -55,7 +55,7 @@ export const bookHotel = async (req, res) => {
   const singleHotel = await HotelMessage.findById(hotelId);
 
   let totalNights = numberOfNights(checkIn, checkOut);
-  let roomNnight = roomNightPrice(singleHotel.price, rooms, totalNights)
+  let roomNnight = roomNightPrice(singleHotel.price, rooms, totalNights);
   let discount = Math.floor(Math.random() * (10, 60) + 1);
   let discountPrice = calDiscount(singleHotel.price, discount);
   let totalTax = findTax(singleHotel.price);
@@ -85,7 +85,7 @@ export const bookHotel = async (req, res) => {
       rooms: rooms,
       guest: parseInt(adults) + parseInt(children),
       nights: totalNights,
-      price:singleHotel.price,
+      price: singleHotel.price,
       discount: discount,
       discountPrice: discountPrice,
       tax: totalTax,
@@ -99,10 +99,13 @@ export const bookHotel = async (req, res) => {
   }
 };
 
-
-
 // process order
 
 export const handlePayment = async (req, res) => {
-  console.log('called', req.userId)
-}
+  try {
+    const existingUser = await UserMessage.findById(req.userId)
+    console.log(existingUser)
+  } catch (error) {
+    res.status(404).json({ message: error });
+  }
+};
