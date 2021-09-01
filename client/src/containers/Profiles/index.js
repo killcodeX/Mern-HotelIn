@@ -27,6 +27,10 @@ export default function Profiles() {
     dispatch(getBooking());
   }, []);
 
+  if(!bookings){
+    return <span>Loading...</span>
+  }
+
   return (
     <SectionWrapper>
       <div className="container">
