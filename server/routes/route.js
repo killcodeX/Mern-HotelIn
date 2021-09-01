@@ -4,6 +4,7 @@ import {
   getHotel,
   getSingleHotel,
   getCityHotel,
+  getBookings
 } from "../controllers/getController.js";
 
 import {
@@ -12,7 +13,7 @@ import {
   bookHotel,
   handlePayment,
   paymentVerification,
-  bookSuccess
+  bookSuccess,
 } from "../controllers/postcontroller.js";
 
 import { updateHotel } from "../controllers/updateController.js";
@@ -29,14 +30,15 @@ router.post("/signin", loginUser); //AuthenticateToken,
 router.get("/", getHotel);
 router.get("/:id", getSingleHotel);
 router.get("/city/:city", getCityHotel);
+router.get("/bookings", AuthenticateToken, getBookings);
 
 // post hotel
 router.post("/", createHotel);
 router.post("/search", searchHotel);
 router.post("/book-hotel", bookHotel);
 router.post("/payment", AuthenticateToken, handlePayment);
-router.post("/payment-verification", AuthenticateToken, paymentVerification)
-router.post("/booking-successfull", AuthenticateToken, bookSuccess)
+router.post("/payment-verification", AuthenticateToken, paymentVerification);
+router.post("/booking-successfull", AuthenticateToken, bookSuccess);
 
 // for update hotel
 router.patch("/:id", updateHotel);

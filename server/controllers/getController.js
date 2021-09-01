@@ -1,4 +1,5 @@
 import HotelMessage from "../models/hotelModel.js";
+import BookingMessage from "../models/bookingModel.js";
 import mongoose from "mongoose";
 
 // GET Controllers
@@ -33,5 +34,14 @@ export const getCityHotel = async (req, res) => {
     res.status(200).json(result);
   } catch (error) {
     res.status(404).json({ message: error.message });
+  }
+};
+
+export const getBookings = async (req, res) => {
+  try {
+    const result = await BookingMessage.find();
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(404).json({ message: error });
   }
 };
