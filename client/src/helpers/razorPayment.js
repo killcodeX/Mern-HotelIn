@@ -66,6 +66,7 @@ export const displayRazorPay = async (fulldetails) => {
         "Booking Confirmed",
         "Successfully booked rooms"
       );
+      //history.push("/profile");
     },
     prefill: {
       name: data.data.name,

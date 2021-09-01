@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Dropdown, Menu, Divider, Button } from "antd";
 import {
   AiTwotoneStar,
@@ -20,8 +20,10 @@ import {
   CardLower,
   BookingDates,
   BookingDetails,
-  DisclaimerText
+  DisclaimerText,
 } from "./style";
+import { getBookingCancel } from "../../redux/actions/actions";
+import { useDispatch } from "react-redux";
 
 // Create our number formatter.
 var formatter = new Intl.NumberFormat("en-US", {
@@ -30,9 +32,17 @@ var formatter = new Intl.NumberFormat("en-US", {
 });
 
 export default function Upcoming({ bookings }) {
+  const dispatch = useDispatch();
+  const [bookId, setBookId] = useState("");
+  const handleCancel = ({ key }) => {
+    if (key == 1) {
+      dispatch(getBookingCancel(bookId));
+    }
+  };
+
   const menu = (
-    <Menu>
-      <Menu.Item icon={<AiOutlineClose/>}>
+    <Menu onClick={handleCancel}>
+      <Menu.Item key="1" icon={<AiOutlineClose />}>
         Cancel Booking
       </Menu.Item>
     </Menu>
@@ -50,8 +60,8 @@ export default function Upcoming({ bookings }) {
               alt="banner"
             />
             <DisclaimerText>
-              Looks like you have never booked with Hotelin, When you book
-              your trips, it will be shown here.
+              Looks like you have never booked with Hotelin, When you book your
+              trips, it will be shown here.
             </DisclaimerText>
           </div>
         </div>
@@ -64,11 +74,15 @@ export default function Upcoming({ bookings }) {
       <div className="row">
         {bookings.map((booking) => {
           return (
-            <div className="col-md-6 col-sm-12 mb-4">
+            <div className="col-md-6 col-sm-12 mb-4" key={booking._id}>
               <CardWrapper>
                 <CardUpper>
                   <BookingId>Booking ID: #{booking.orderId}</BookingId>
-                  <Dropdown overlay={menu} trigger={['click']}>
+                  <Dropdown
+                    overlay={menu}
+                    onVisibleChange={() => setBookId(booking._id)}
+                    trigger={["click"]}
+                  >
                     <Button className="mb-2">
                       <span className="px-1">Change</span>
                       <AiOutlineSetting style={{ fontSize: "15px" }} />

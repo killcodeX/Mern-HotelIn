@@ -6,6 +6,7 @@ import {
   SearchHotel,
   BookHotel,
   BookingDetails,
+  CancelBooking
 } from "./actionConstant";
 
 import {
@@ -15,7 +16,10 @@ import {
   getSearchHotelsApi,
   bookHotelsApi,
   bookingApi,
+  cancelBookingApi
 } from "../../api/api";
+
+
 import { saveState } from "../../helpers/localStorage";
 
 // actions
@@ -80,3 +84,11 @@ export const getBooking = () => async (dispatch) => {
     payload: result,
   });
 };
+
+export const getBookingCancel = (id) => async (dispatch) => {
+  const result = await cancelBookingApi(id);
+  dispatch({
+    type: CancelBooking,
+    payload: result
+  })
+}

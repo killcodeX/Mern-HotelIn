@@ -1,8 +1,15 @@
 import { ApiFunc } from './authApi'
+import { notification } from "antd";
+
+const openNotificationWithIcon = (type, title, message) => {
+  notification[type]({
+    message: title,
+    description: message,
+  });
+}
 
 
 // get apis
-
 export const getAllhotelsApi = async () => {
   try {
     let { data }  = await ApiFunc.get(`/hotelin/all-hotels`);
@@ -60,5 +67,16 @@ export const bookingApi = async () =>{
     return data;
   } catch(error){
     console.log(error)
+  }
+}
+
+export const cancelBookingApi = async (id) => {
+  try{
+    let { data }  = await ApiFunc.put(`/hotelin/cancel-booking/${id}`);
+    openNotificationWithIcon("success", "Booking Cancel Successful");
+    return data;
+  } catch(error){
+    console.log(error)
+    openNotificationWithIcon("error", "Booking Cancel Failed", error);
   }
 }
