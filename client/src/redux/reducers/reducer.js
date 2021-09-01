@@ -112,7 +112,7 @@ const ProductReducer = (state = initialState, action) => {
       };
     case CancelBooking:
       const allBookings = [...state.bookings];
-      const postIndex = newAllPost.findIndex(
+      const postIndex = allBookings.findIndex(
         (post) => post._id == action.payload._id
       );
       allBookings[postIndex] = {
