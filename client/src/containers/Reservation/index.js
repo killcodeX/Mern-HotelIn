@@ -31,7 +31,7 @@ if (Object.keys(state).length === 0) {
                 <BookingInfo hotelInfo={state.hotelDetails}/>
             </div>
             <div className='col-md-5'>
-              <PriceSummary hotelPrice={state.priceDetails}/>
+              <PriceSummary hotelPrice={state.priceDetails} fulldetails={state}/>
             </div>
         </div>
       </div>

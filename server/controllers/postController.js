@@ -1,5 +1,6 @@
 import HotelMessage from "../models/hotelModel.js";
 import UserMessage from "../models/userModel.js";
+import BookingMessage from "../models/bookingModel.js";
 import mongoose from "mongoose";
 import {
   numberOfNights,
@@ -103,14 +104,12 @@ export const bookHotel = async (req, res) => {
 
 // process order
 export const handlePayment = async (req, res) => {
-  console.log("called");
   try {
     const existingUser = await UserMessage.findById(req.userId);
     const payment_capture = 1;
-    const amount = 499;
     const currency = "INR";
     const options = {
-      amount: amount * 100,
+      amount: req.body.totalAmount * 100,
       currency,
       receipt: shortid.generate(),
       payment_capture,
@@ -145,9 +144,25 @@ export const paymentVerification = async (req, res) => {
       //   JSON.stringify(req.body, null, 4)
       // );
     } else {
-      res.status(401).json({ message: 'Unauthorized' });
+      res.status(401).json({ message: "Unauthorized" });
     }
     res.json({ status: "ok" });
+  } catch (error) {
+    console.log(error);
+    res.status(404).json({ message: error });
+  }
+};
+
+
+// for booking sucessful
+export const bookSuccess = async (req, res) => {
+  try {
+    const data = {
+      ...req.body,
+      userId: req.userId,
+    };
+    const result = await BookingMessage.create(data);
+    res.status(200).json(result);
   } catch (error) {
     console.log(error);
     res.status(404).json({ message: error });

@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 // GET Controllers
 
 export const getHotel = async (req, res) => {
-  console.log("called");
   try {
     const hotelMessages = await HotelMessage.find();
     //console.log(pMessages);
@@ -16,8 +15,6 @@ export const getHotel = async (req, res) => {
 
 export const getSingleHotel = async (req, res) => {
   const { id } = req.params;
-  console.log("id received in backend", id);
-
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(404).send("No Hotel with that Id");
   try {
@@ -31,7 +28,6 @@ export const getSingleHotel = async (req, res) => {
 
 export const getCityHotel = async (req, res) => {
   const { city } = req.params;
-  console.log("city hotel --> ", req.params);
   try {
     let result = await HotelMessage.find({ city: city });
     res.status(200).json(result);
