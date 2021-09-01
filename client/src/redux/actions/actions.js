@@ -4,7 +4,8 @@ import {
   GetCityHotel,
   FilterHotel,
   SearchHotel,
-  BookHotel
+  BookHotel,
+  BookingDetails,
 } from "./actionConstant";
 
 import {
@@ -12,9 +13,10 @@ import {
   getSinglehotelsApi,
   getFilterCitiesApi,
   getSearchHotelsApi,
-  bookHotelsApi
+  bookHotelsApi,
+  bookingApi,
 } from "../../api/api";
-import { saveState } from '../../helpers/localStorage';
+import { saveState } from "../../helpers/localStorage";
 
 // actions
 export const getAllhotel = () => async (dispatch) => {
@@ -26,7 +28,6 @@ export const getAllhotel = () => async (dispatch) => {
 };
 
 export const getSingleHotel = (id) => async (dispatch) => {
-  console.log("recived id", id);
   const result = await getSinglehotelsApi(id);
   dispatch({
     type: GetSingleHotel,
@@ -59,16 +60,23 @@ export const getSearchResults = (data) => async (dispatch) => {
 
 export const doHotelBook = (data) => async (dispatch) => {
   const result = await bookHotelsApi(data);
-  saveState('hotelIn booking details',result)
+  saveState("hotelIn booking details", result);
   dispatch({
-    type:BookHotel,
-    payload:result,
-  })
-}
+    type: BookHotel,
+    payload: result,
+  });
+};
 
 export const checkStorageBooking = () => {
-  console.log('called local for booking details')
-  return{
-    type:BookHotel
-  }
-}
+  return {
+    type: BookHotel,
+  };
+};
+
+export const getBooking = () => async (dispatch) => {
+  const result = await bookingApi();
+  dispatch({
+    type: BookingDetails,
+    payload: result,
+  });
+};

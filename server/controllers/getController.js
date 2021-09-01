@@ -38,8 +38,9 @@ export const getCityHotel = async (req, res) => {
 };
 
 export const getBookings = async (req, res) => {
+  console.log('called for booking')
   try {
-    const result = await BookingMessage.find();
+    const result = await BookingMessage.find().populate("hotelId", "name image city rating totalReview");
     res.status(200).json(result);
   } catch (error) {
     res.status(404).json({ message: error });

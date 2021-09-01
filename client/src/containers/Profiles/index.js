@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useEffect } from "react";
 import { Heading } from "../../components/UI/Heading";
 import { Avatar } from "antd";
 import { FcBusinessman } from "react-icons/fc";
@@ -13,13 +13,23 @@ import {
   UserName,
   UserEmail,
 } from "./style";
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux";
+import { getBooking } from "../../redux/actions/actions";
 
 const { TabPane } = Tabs;
 
 export default function Profiles() {
-
+  const dispatch = useDispatch()
   const user = useSelector(state => state.Auth.user)
+  const bookings = useSelector(state => state.Hotels.bookings)
+
+  console.log(bookings)
+
+  useEffect(() => {
+    dispatch(getBooking())
+  }, [])
+
+
   return (
     <SectionWrapper>
       <div className="container">

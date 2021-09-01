@@ -27,10 +27,10 @@ router.post("/signup", createUser);
 router.post("/signin", loginUser); //AuthenticateToken,
 
 // get hotel
-router.get("/", getHotel);
-router.get("/:id", getSingleHotel);
+router.get("/all-hotels", getHotel);
+router.get("/single-hotels/:id", getSingleHotel);
 router.get("/city/:city", getCityHotel);
-router.get("/bookings", AuthenticateToken, getBookings);
+router.get("/all-booking", getBookings);
 
 // post hotel
 router.post("/", createHotel);

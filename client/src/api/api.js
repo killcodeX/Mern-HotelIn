@@ -5,7 +5,7 @@ import { ApiFunc } from './authApi'
 
 export const getAllhotelsApi = async () => {
   try {
-    let { data }  = await ApiFunc.get(`/hotelin`);
+    let { data }  = await ApiFunc.get(`/hotelin/all-hotels`);
     return data;
   } catch (error) {
     console.log(error);
@@ -14,7 +14,7 @@ export const getAllhotelsApi = async () => {
 
 export const getSinglehotelsApi = async (id) => {
   try {
-    let { data }  = await ApiFunc.get(`/hotelin/${id}`);
+    let { data }  = await ApiFunc.get(`/hotelin/single-hotels/${id}`);
     return data;
   } catch (error) {
     console.log(error);
@@ -53,3 +53,12 @@ export const bookHotelsApi = async (body) => {
     console.log(error);
   }
 };
+
+export const bookingApi = async () =>{
+  try{
+    let { data }  = await ApiFunc.get(`/hotelin/all-booking`);
+    return data;
+  } catch(error){
+    console.log(error)
+  }
+}
