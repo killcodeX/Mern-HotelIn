@@ -8,8 +8,9 @@ import {
   findTax,
   calPrice,
 } from "../helpers/helper.js";
-import shortid  from "shortid";
-import { razorpay } from "../index.js"
+import shortid from "shortid";
+import crypto from "crypto";
+import { razorpay } from "../index.js";
 
 // POST Controllers
 export const createHotel = async (req, res) => {
@@ -102,7 +103,7 @@ export const bookHotel = async (req, res) => {
 
 // process order
 export const handlePayment = async (req, res) => {
-  console.log('called')
+  console.log("called");
   try {
     const existingUser = await UserMessage.findById(req.userId);
     const payment_capture = 1;
@@ -114,21 +115,41 @@ export const handlePayment = async (req, res) => {
       receipt: shortid.generate(),
       payment_capture,
     };
-    const response = await razorpay.orders.create(options)
+    const response = await razorpay.orders.create(options);
     let data = {
       ...response,
-      name:existingUser.fname+" "+existingUser.lname,
-      email:existingUser.email,
-      mobile:existingUser.mobile
-    }
+      name: existingUser.fname + " " + existingUser.lname,
+      email: existingUser.email,
+      mobile: existingUser.mobile,
+    };
     res.status(200).json(data);
   } catch (error) {
-    console.log(error)
+    console.log(error);
     res.status(404).json({ message: error });
   }
 };
 
-
 export const paymentVerification = async (req, res) => {
-  
-} 
+  try {
+    const shasum = crypto.createHmac("sha256", process.env.WEBHOOK_SECRET);
+    shasum.update(JSON.stringify(req.body));
+    const digest = shasum.digest("hex");
+
+    console.log(digest, req.headers["x-razorpay-signature"]);
+
+    if (digest === req.headers["x-razorpay-signature"]) {
+      console.log("request is legit");
+      // process it
+      // require("fs").writeFileSync(
+      //   "payment1.json",
+      //   JSON.stringify(req.body, null, 4)
+      // );
+    } else {
+      res.status(401).json({ message: 'Unauthorized' });
+    }
+    res.json({ status: "ok" });
+  } catch (error) {
+    console.log(error);
+    res.status(404).json({ message: error });
+  }
+};
