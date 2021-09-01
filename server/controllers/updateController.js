@@ -1,4 +1,5 @@
 import HotelMessage from "../models/hotelModel.js";
+import BookingMessage from "../models/bookingModel.js";
 import mongoose from "mongoose";
 
 // PTACH Controllers
@@ -16,3 +17,14 @@ export const updateHotel = async (req, res) => {
 
   res.json(update);
 };
+
+
+export const cancelBooking = async (req, res) => {
+  const { id } = req.params;
+  console.log('cancelling booking',id)
+  try{
+
+  }catch(error){
+    console.log(error)
+  }
+}

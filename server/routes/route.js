@@ -16,7 +16,7 @@ import {
   bookSuccess,
 } from "../controllers/postcontroller.js";
 
-import { updateHotel } from "../controllers/updateController.js";
+import { updateHotel, cancelBooking } from "../controllers/updateController.js";
 
 import { AuthenticateToken } from "../middleware/tokenValidate.js";
 
@@ -42,5 +42,6 @@ router.post("/booking-successfull", AuthenticateToken, bookSuccess);
 
 // for update hotel
 router.patch("/:id", updateHotel);
+router.put("/cancel-booking/:id", cancelBooking)
 
 export default router;
