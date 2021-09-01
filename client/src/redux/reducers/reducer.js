@@ -5,40 +5,42 @@ import {
   FilterHotel,
   SearchHotel,
   BookHotel,
-  BookingDetails
+  BookingDetails,
+  CancelBooking,
 } from "../actions/actionConstant";
 
-import { loadState } from '../../helpers/localStorage';
+import { loadState } from "../../helpers/localStorage";
 
 const initialState = {
   allHotels: [],
-  popularHotels:[],
+  popularHotels: [],
   singleHotel: {},
   citiesHotel: [],
   filterData: [],
-  searchResults:[],
-  bookingDetails:{},
-  bookings:[]
+  searchResults: [],
+  bookingDetails: {},
+  bookings: [],
 };
 
 // Reducers
 const ProductReducer = (state = initialState, action) => {
   switch (action.type) {
     case GetAllHotel:
-      let val = []
-      while(val.length < 6){
-	      let rand = Math.floor(Math.random() * (0, 29) + 1)
-	      if(!val.includes(rand)){
-  	      val.push(rand)
-        }}
+      let val = [];
+      while (val.length < 6) {
+        let rand = Math.floor(Math.random() * (0, 29) + 1);
+        if (!val.includes(rand)) {
+          val.push(rand);
+        }
+      }
       let popHotel = [];
-      for(let i = 0; i < val.length; i++){
-        popHotel.push(action.payload[val[i]])
+      for (let i = 0; i < val.length; i++) {
+        popHotel.push(action.payload[val[i]]);
       }
       return {
         ...state,
         allHotels: action.payload || [],
-        popularHotels: popHotel
+        popularHotels: popHotel,
       };
     case GetSingleHotel:
       return {
@@ -49,7 +51,7 @@ const ProductReducer = (state = initialState, action) => {
       return {
         ...state,
         citiesHotel: action.payload,
-        filterData: action.payload
+        filterData: action.payload,
       };
     case FilterHotel:
       let data = action.payload;
@@ -68,7 +70,7 @@ const ProductReducer = (state = initialState, action) => {
         };
       } else if (data == "phl") {
         let sortData = cityData.sort((a, b) => b.price - a.price);
-        console.log(sortData == state.filterData)
+        console.log(sortData == state.filterData);
         return {
           ...state,
           filterData: sortData,
@@ -86,28 +88,41 @@ const ProductReducer = (state = initialState, action) => {
           filterData: sortData,
         };
       }
-      case SearchHotel:
+    case SearchHotel:
       return {
         ...state,
         searchHotel: action.payload,
       };
-      case BookHotel:
+    case BookHotel:
       // loadState('hotelIn booking details')
-      if(loadState('hotelIn booking details')){
+      if (loadState("hotelIn booking details")) {
         return {
           ...state,
-          bookingDetails: loadState('hotelIn booking details')
-        }
+          bookingDetails: loadState("hotelIn booking details"),
+        };
       }
-      return{
+      return {
         ...state,
-        bookingDetails: action.payload
-      }
-      case BookingDetails:
-        return{
-          ...state,
-          bookings: action.payload
-        }
+        bookingDetails: action.payload,
+      };
+    case BookingDetails:
+      return {
+        ...state,
+        bookings: action.payload,
+      };
+    case CancelBooking:
+      const allBookings = [...state.bookings];
+      const postIndex = newAllPost.findIndex(
+        (post) => post._id == action.payload._id
+      );
+      allBookings[postIndex] = {
+        ...allBookings[postIndex],
+        status: action.payload.status,
+      };
+      return {
+        ...state,
+        bookings: allBookings,
+      };
     default:
       return state;
   }

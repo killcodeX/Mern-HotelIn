@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider } from "antd";
+import { Badge, Divider } from "antd";
 import {
   AiTwotoneStar,
   AiOutlineUser,
@@ -20,6 +20,7 @@ import {
   BookingDetails,
   DisclaimerText,
 } from "./style";
+import moment from "moment";
 
 // Create our number formatter.
 var formatter = new Intl.NumberFormat("en-US", {
@@ -54,67 +55,72 @@ export default function Cancelled({ bookings }) {
         {bookings.map((booking) => {
           return (
             <div className="col-md-6 col-sm-12 mb-4">
-              <CardWrapper>
-                <CardUpper>
-                  <BookingId>Booking ID: #{booking.orderId}</BookingId>
-                </CardUpper>
-                <CardUpper>
-                  <HotelDetails>
-                    <HotelName>{booking.hotelId.name}</HotelName>
-                    <HotelCity className="mb-1">
-                      <span>{booking.hotelId.rating}</span>
-                      <StarWrapper>
-                        <AiTwotoneStar style={{ color: "#fad02c" }} />
-                      </StarWrapper>
-                    </HotelCity>
-                    <HotelCity className="mb-1">
-                      {booking.hotelId.totalReview} Reviews
-                    </HotelCity>
-                    <HotelCity className="mb-1">
-                      {booking.hotelId.city}
-                    </HotelCity>
-                    <HotelCity>{booking.nights} Nights</HotelCity>
-                  </HotelDetails>
-                  <HotelImage>
-                    <img
-                      src={booking.hotelId.image}
-                      alt={booking.hotelId.name}
-                    />
-                  </HotelImage>
-                </CardUpper>
-                <Divider />
-                <CardLower>
-                  <BookingDetails className="pb-1" flexStyle="column">
-                    <BookingDates>
-                      <StarWrapper>
-                        <BsCalendar />
-                      </StarWrapper>
-                      <HotelCity>Sat Aug 01 - Sun Aug 02</HotelCity>
-                    </BookingDates>
-                    <BookingDates>
-                      <StarWrapper>
-                        <AiOutlineUser />
-                      </StarWrapper>
-                      <HotelCity>
-                        {booking.rooms} Rooms, {booking.guests} Guests
+              <Badge.Ribbon text="Cancelled" color="red">
+                <CardWrapper>
+                  <CardUpper>
+                    <BookingId>Booking ID: #{booking.orderId}</BookingId>
+                  </CardUpper>
+                  <CardUpper>
+                    <HotelDetails>
+                      <HotelName>{booking.hotelId.name}</HotelName>
+                      <HotelCity className="mb-1">
+                        <span>{booking.hotelId.rating}</span>
+                        <StarWrapper>
+                          <AiTwotoneStar style={{ color: "#fad02c" }} />
+                        </StarWrapper>
                       </HotelCity>
-                    </BookingDates>
-                  </BookingDetails>
-                  <BookingDetails className="pt-2" flexStyle="row">
-                    <BookingDates>
-                      <StarWrapper>
-                        <AiOutlineFileProtect />
-                      </StarWrapper>
-                      <HotelCity>Final Amount:</HotelCity>
-                    </BookingDates>
-                    <BookingDates>
-                      <HotelCity>
-                        {formatter.format(booking.totalAmount)}
+                      <HotelCity className="mb-1">
+                        {booking.hotelId.totalReview} Reviews
                       </HotelCity>
-                    </BookingDates>
-                  </BookingDetails>
-                </CardLower>
-              </CardWrapper>
+                      <HotelCity className="mb-1">
+                        {booking.hotelId.city}
+                      </HotelCity>
+                      <HotelCity>{booking.nights} Nights</HotelCity>
+                    </HotelDetails>
+                    <HotelImage>
+                      <img
+                        src={booking.hotelId.image}
+                        alt={booking.hotelId.name}
+                      />
+                    </HotelImage>
+                  </CardUpper>
+                  <Divider />
+                  <CardLower>
+                    <BookingDetails className="pb-1" flexStyle="column">
+                      <BookingDates>
+                        <StarWrapper>
+                          <BsCalendar />
+                        </StarWrapper>
+                        <HotelCity>
+                          {moment(booking.checkIn).format("ddd MMM Do")} -
+                          {moment(booking.checkOut).format("ddd MMM Do")}
+                        </HotelCity>
+                      </BookingDates>
+                      <BookingDates>
+                        <StarWrapper>
+                          <AiOutlineUser />
+                        </StarWrapper>
+                        <HotelCity>
+                          {booking.rooms} Rooms, {booking.guests} Guests
+                        </HotelCity>
+                      </BookingDates>
+                    </BookingDetails>
+                    <BookingDetails className="pt-2" flexStyle="row">
+                      <BookingDates>
+                        <StarWrapper>
+                          <AiOutlineFileProtect />
+                        </StarWrapper>
+                        <HotelCity>Final Amount:</HotelCity>
+                      </BookingDates>
+                      <BookingDates>
+                        <HotelCity>
+                          {formatter.format(booking.totalAmount)}
+                        </HotelCity>
+                      </BookingDates>
+                    </BookingDetails>
+                  </CardLower>
+                </CardWrapper>
+              </Badge.Ribbon>
             </div>
           );
         })}

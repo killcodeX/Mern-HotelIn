@@ -1,5 +1,5 @@
-import React  from "react";
-import { Divider} from "antd";
+import React from "react";
+import { Divider } from "antd";
 import {
   AiTwotoneStar,
   AiOutlineUser,
@@ -20,8 +20,9 @@ import {
   CardLower,
   BookingDates,
   BookingDetails,
-  DisclaimerText
+  DisclaimerText,
 } from "./style";
+import moment from "moment";
 
 // Create our number formatter.
 var formatter = new Intl.NumberFormat("en-US", {
@@ -91,7 +92,10 @@ export default function Completed({ bookings }) {
                       <StarWrapper>
                         <BsCalendar />
                       </StarWrapper>
-                      <HotelCity>Sat Aug 01 - Sun Aug 02</HotelCity>
+                      <HotelCity>
+                        {moment(booking.checkIn).format("ddd MMM Do")} -
+                        {moment(booking.checkOut).format("ddd MMM Do")}
+                      </HotelCity>
                     </BookingDates>
                     <BookingDates>
                       <StarWrapper>
