@@ -11,6 +11,7 @@ import {
   searchHotel,
   bookHotel,
   handlePayment,
+  paymentVerification
 } from "../controllers/postcontroller.js";
 
 import { updateHotel } from "../controllers/updateController.js";
@@ -33,6 +34,7 @@ router.post("/", createHotel);
 router.post("/search", searchHotel);
 router.post("/book-hotel", bookHotel);
 router.post("/payment", AuthenticateToken, handlePayment);
+router.post("/payment-verification", AuthenticateToken, paymentVerification)
 
 // for update hotel
 router.patch("/:id", updateHotel);

@@ -63,7 +63,7 @@ export default function PriceSummary({ hotelPrice }) {
         </PriceSum>
       </PriceWrapper>
       {auth ? (
-        <BookingButton variant="primary" onClick={displayRazorPay}>
+        <BookingButton variant="primary" onClick={() => displayRazorPay(hotelPrice.totalAmount)}>
           Book Now
         </BookingButton>
       ) : (

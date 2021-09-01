@@ -127,3 +127,8 @@ export const handlePayment = async (req, res) => {
     res.status(404).json({ message: error });
   }
 };
+
+
+export const paymentVerification = async (req, res) => {
+  
+} 
