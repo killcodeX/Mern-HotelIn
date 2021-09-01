@@ -1,7 +1,13 @@
 import React from "react";
-import { Divider } from "antd";
-import { AiTwotoneStar, AiOutlineUser, AiOutlineFileProtect } from "react-icons/ai";
-import { BsCalendar, BsFillPeopleFill } from "react-icons/bs";
+import { Dropdown, Menu, Divider, Button } from "antd";
+import {
+  AiTwotoneStar,
+  AiOutlineUser,
+  AiOutlineFileProtect,
+  AiOutlineSetting,
+  AiOutlineClose,
+} from "react-icons/ai";
+import { BsCalendar } from "react-icons/bs";
 import {
   CardWrapper,
   CardUpper,
@@ -14,118 +20,121 @@ import {
   CardLower,
   BookingDates,
   BookingDetails,
+  DisclaimerText
 } from "./style";
 
-export default function Upcoming() {
+// Create our number formatter.
+var formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "INR",
+});
+
+export default function Upcoming({ bookings }) {
+  const menu = (
+    <Menu>
+      <Menu.Item icon={<AiOutlineClose/>}>
+        Cancel Booking
+      </Menu.Item>
+    </Menu>
+  );
+
+  if (bookings?.length == 0) {
+    return (
+      <div className="container pt-5">
+        <div className="row">
+          <div className="col-sm-12 d-flex justify-content-sm-around align-items-center">
+            <img
+              src={
+                "https://jsak.goibibo.com/pwa_v3/gimima/images/gisrvrError.1e07eff2.png"
+              }
+              alt="banner"
+            />
+            <DisclaimerText>
+              Looks like you have never booked with Hotelin, When you book
+              your trips, it will be shown here.
+            </DisclaimerText>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="container pb-4">
       <div className="row">
-        <div className="col-md-6 col-sm-12 mb-4">
-          <CardWrapper>
-            <CardUpper>
-              <HotelDetails>
-                <BookingId>Booking ID: #1</BookingId>
-                <HotelName>iRoomz Sri Balaji Residency</HotelName>
-                <HotelCity>
-                  <span>4.7</span>
-                  <StarWrapper>
-                    <AiTwotoneStar style={{ color: "#fad02c" }} />
-                  </StarWrapper>
-                  <span>- 709 Reviews</span>
-                </HotelCity>
-                <HotelCity>Delhi</HotelCity>
-                <HotelCity>4 Nights</HotelCity>
-              </HotelDetails>
-              <HotelImage>
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/banners/1.jpg"}
-                  alt="hotel"
-                />
-              </HotelImage>
-            </CardUpper>
-            <Divider />
-            <CardLower>
-              <BookingDetails className='pb-1' flexStyle='column'>
-                <BookingDates>
-                  <StarWrapper>
-                    <BsCalendar />
-                  </StarWrapper>
-                  <HotelCity>Sat Aug 01 - Sun Aug 02</HotelCity>
-                </BookingDates>
-                <BookingDates>
-                  <StarWrapper>
-                    <AiOutlineUser />
-                  </StarWrapper>
-                  <HotelCity>2 Rooms, 2 Guests</HotelCity>
-                </BookingDates>
-              </BookingDetails>
-              <BookingDetails className='pt-2' flexStyle='row'>
-                <BookingDates>
-                  <StarWrapper>
-                    <AiOutlineFileProtect />
-                  </StarWrapper>
-                  <HotelCity>Final Amount:</HotelCity>
-                </BookingDates>
-                <BookingDates>
-                  <HotelCity>₹2200</HotelCity>
-                </BookingDates>
-              </BookingDetails>
-            </CardLower>
-          </CardWrapper>
-        </div>
-        <div className="col-md-6 col-sm-12 mb-4">
-          <CardWrapper>
-            <CardUpper>
-              <HotelDetails>
-                <BookingId>Booking ID: #2</BookingId>
-                <HotelName>iRoomz Nakshatra-LR</HotelName>
-                <HotelCity>
-                  <span>4.2</span>
-                  <StarWrapper>
-                    <AiTwotoneStar style={{ color: "#fad02c" }} />
-                  </StarWrapper>
-                  <span> 9 Reviews</span>
-                </HotelCity>
-                <HotelCity>Mumbai</HotelCity>
-                <HotelCity>1 Nights</HotelCity>
-              </HotelDetails>
-              <HotelImage>
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/banners/3.jpg"}
-                  alt="hotel"
-                />
-              </HotelImage>
-            </CardUpper>
-            <Divider />
-            <CardLower>
-              <BookingDetails className='pb-1' flexStyle='column'>
-                <BookingDates>
-                  <StarWrapper>
-                    <BsCalendar />
-                  </StarWrapper>
-                  <HotelCity>Sat Aug 01 - Sun Aug 02</HotelCity>
-                </BookingDates>
-                <BookingDates>
-                  <StarWrapper>
-                    <AiOutlineUser />
-                  </StarWrapper>
-                  <HotelCity>2 Rooms, 2 Guests</HotelCity>
-                </BookingDates>
-              </BookingDetails>
-              <BookingDetails className='pt-2' flexStyle='row'>
-                <BookingDates>
-                  <StarWrapper>
-                    <AiOutlineFileProtect />
-                  </StarWrapper>
-                  <HotelCity>Final Amount:</HotelCity>
-                </BookingDates>
-                <BookingDates>
-                  <HotelCity>₹2200</HotelCity>
-                </BookingDates>
-              </BookingDetails>
-            </CardLower>
-          </CardWrapper>
-        </div>
+        {bookings.map((booking) => {
+          return (
+            <div className="col-md-6 col-sm-12 mb-4">
+              <CardWrapper>
+                <CardUpper>
+                  <BookingId>Booking ID: #{booking.orderId}</BookingId>
+                  <Dropdown overlay={menu} trigger={['click']}>
+                    <Button className="mb-2">
+                      <span className="px-1">Change</span>
+                      <AiOutlineSetting style={{ fontSize: "15px" }} />
+                    </Button>
+                  </Dropdown>
+                </CardUpper>
+                <CardUpper>
+                  <HotelDetails>
+                    <HotelName>{booking.hotelId.name}</HotelName>
+                    <HotelCity className="mb-1">
+                      <span>{booking.hotelId.rating}</span>
+                      <StarWrapper>
+                        <AiTwotoneStar style={{ color: "#fad02c" }} />
+                      </StarWrapper>
+                    </HotelCity>
+                    <HotelCity className="mb-1">
+                      {booking.hotelId.totalReview} Reviews
+                    </HotelCity>
+                    <HotelCity className="mb-1">
+                      {booking.hotelId.city}
+                    </HotelCity>
+                    <HotelCity>{booking.nights} Nights</HotelCity>
+                  </HotelDetails>
+                  <HotelImage>
+                    <img
+                      src={booking.hotelId.image}
+                      alt={booking.hotelId.name}
+                    />
+                  </HotelImage>
+                </CardUpper>
+                <Divider />
+                <CardLower>
+                  <BookingDetails className="pb-1" flexStyle="column">
+                    <BookingDates>
+                      <StarWrapper>
+                        <BsCalendar />
+                      </StarWrapper>
+                      <HotelCity>Sat Aug 01 - Sun Aug 02</HotelCity>
+                    </BookingDates>
+                    <BookingDates>
+                      <StarWrapper>
+                        <AiOutlineUser />
+                      </StarWrapper>
+                      <HotelCity>
+                        {booking.rooms} Rooms, {booking.guests} Guests
+                      </HotelCity>
+                    </BookingDates>
+                  </BookingDetails>
+                  <BookingDetails className="pt-2" flexStyle="row">
+                    <BookingDates>
+                      <StarWrapper>
+                        <AiOutlineFileProtect />
+                      </StarWrapper>
+                      <HotelCity>Final Amount:</HotelCity>
+                    </BookingDates>
+                    <BookingDates>
+                      <HotelCity>
+                        {formatter.format(booking.totalAmount)}
+                      </HotelCity>
+                    </BookingDates>
+                  </BookingDetails>
+                </CardLower>
+              </CardWrapper>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

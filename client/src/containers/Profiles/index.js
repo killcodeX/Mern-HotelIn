@@ -1,4 +1,4 @@
-import React,{ useEffect } from "react";
+import React, { useEffect } from "react";
 import { Heading } from "../../components/UI/Heading";
 import { Avatar } from "antd";
 import { FcBusinessman } from "react-icons/fc";
@@ -19,16 +19,13 @@ import { getBooking } from "../../redux/actions/actions";
 const { TabPane } = Tabs;
 
 export default function Profiles() {
-  const dispatch = useDispatch()
-  const user = useSelector(state => state.Auth.user)
-  const bookings = useSelector(state => state.Hotels.bookings)
-
-  console.log(bookings)
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.Auth.user);
+  const bookings = useSelector((state) => state.Hotels.bookings);
 
   useEffect(() => {
-    dispatch(getBooking())
-  }, [])
-
+    dispatch(getBooking());
+  }, []);
 
   return (
     <SectionWrapper>
@@ -42,16 +39,16 @@ export default function Profiles() {
             <UserEmail>{user.mobile}</UserEmail>
           </UserDetails>
         </HeadWrapper>
-        <Divider/>
+        <Divider />
         <Tabs defaultActiveKey="1">
           <TabPane tab="Upcoming Bookings" key="1">
-            <Upcoming />
+            <Upcoming bookings={bookings.filter(booking => booking.status == 'booked')} />
           </TabPane>
           <TabPane tab="Cancelled Bookings" key="2">
-            <Cancelled />
+            <Cancelled bookings={bookings.filter(booking => booking.status == 'cancelled')}/>
           </TabPane>
           <TabPane tab="Completed Bookings" key="3">
-            <Completed />
+            <Completed bookings={bookings.filter(booking => booking.status == 'completed')}/>
           </TabPane>
         </Tabs>
       </div>

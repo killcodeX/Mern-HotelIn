@@ -36,6 +36,7 @@ export const UserEmail = styled.div`
 export const CardUpper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items:center;
   width: 100%;
 `;
 
@@ -43,7 +44,7 @@ export const HotelImage = styled.div`
   width: 140px;
   height: 140px;
   overflow: hidden;
-  border-radius: 5%;
+  //border-radius: 5%;
   cursor: pointer;
   img {
     width: 100%;
@@ -52,7 +53,10 @@ export const HotelImage = styled.div`
   }
 `;
 
-export const HotelDetails = styled.div``;
+export const HotelDetails = styled.div`
+  // display:flex;
+  // justify-content: space-between;
+`;
 
 export const BookingId = styled.div`
   font-weight: bold;
