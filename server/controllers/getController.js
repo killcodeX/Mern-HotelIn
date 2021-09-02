@@ -5,7 +5,6 @@ import mongoose from "mongoose";
 // GET Controllers
 
 export const getHotel = async (req, res) => {
-  console.log('called')
   try {
     const hotelMessages = await HotelMessage.find();
     //console.log(pMessages);
