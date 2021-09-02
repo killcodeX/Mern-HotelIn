@@ -38,10 +38,37 @@ export const getCityHotel = async (req, res) => {
 };
 
 export const getBookings = async (req, res) => {
+  // to mark booking completed
+  isBookingCompleted();
   try {
-    const result = await BookingMessage.find().populate("hotelId", "name image city rating totalReview");
-    res.status(200).json(result);
+    const FinalResult = await BookingMessage.find().populate(
+      "hotelId",
+      "name image city rating totalReview"
+    );
+    res.status(200).json(FinalResult);
   } catch (error) {
     res.status(404).json({ message: error });
+  }
+};
+
+const isBookingCompleted = async () => {
+  try {
+    const result = await BookingMessage.find();
+    let bookResult = result.filter((book) => book.status == "booked");
+    bookResult.forEach((book) => {
+      let currDate = new Date();
+      let checkOutDate = new Date(book.checkOut);
+      if (currDate > checkOutDate) {
+        await BookingMessage.findByIdAndUpdate(
+          book._id,
+          {
+            $set: { status: "completed" },
+          },
+          { new: true }
+        );
+      }
+    });
+  } catch (error) {
+    console.log(error);
   }
 };
