@@ -22,7 +22,7 @@ function loadScript(src) {
   });
 }
 
-export const displayRazorPay = async (fulldetails) => {
+export const displayRazorPay = async (fulldetails, userId, history) => {
   const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
   if (!res) {
     alert("Razorpay SDK failed to load. Are you online?");
@@ -66,7 +66,7 @@ export const displayRazorPay = async (fulldetails) => {
         "Booking Confirmed",
         "Successfully booked rooms"
       );
-      //history.push("/profile");
+      history.push(`/profile/${userId}`);
     },
     prefill: {
       name: data.data.name,
