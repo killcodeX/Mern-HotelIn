@@ -9,8 +9,11 @@ export const numberOfNights = (startDate, endDate) => {
   let date1 = moment(startDate);
   let date2 = moment(endDate);
   let numberOfNight = date2.diff(date1, 'days')
-
-  return numberOfNight
+    if(numberOfNight > 0){
+        return numberOfNight
+    } else{
+        return 1
+    }
 };
 
 export const roomNightPrice = (price, rooms, totalNights) => {

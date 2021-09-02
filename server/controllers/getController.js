@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 // GET Controllers
 
 export const getHotel = async (req, res) => {
+  console.log('called')
   try {
     const hotelMessages = await HotelMessage.find();
     //console.log(pMessages);
@@ -59,7 +60,7 @@ const isBookingCompleted = async () => {
       let currDate = new Date();
       let checkOutDate = new Date(book.checkOut);
       if (currDate > checkOutDate) {
-        await BookingMessage.findByIdAndUpdate(
+        BookingMessage.findByIdAndUpdate(
           book._id,
           {
             $set: { status: "completed" },
