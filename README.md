@@ -33,6 +33,46 @@ Final Backend Code -> [https://github.com/killcodeX/hotelin-backend](https://git
 <p align="center">
   Main Page
 </p>
+<br>
+<br>
+<p align="center">
+  <img src="https://github.com/killcodeX/mern-hotelin/blob/main/screenshots/2.png" />
+</p>
+<p align="center">
+  Login Page
+</p>
+<br>
+<br>
+<p align="center">
+  <img src="https://github.com/killcodeX/mern-hotelin/blob/main/screenshots/3.png" />
+</p>
+<p align="center">
+  Hotels Listing Page
+</p>
+<br>
+<br>
+<p align="center">
+  <img src="https://github.com/killcodeX/mern-hotelin/blob/main/screenshots/4.png" />
+</p>
+<p align="center">
+  Single Hotel Page with booking form
+</p>
+<br>
+<br>
+<p align="center">
+  <img src="https://github.com/killcodeX/mern-hotelin/blob/main/screenshots/5.png" />
+</p>
+<p align="center">
+  Booking Page with Payment Gateway
+</p>
+<br>
+<br>
+<p align="center">
+  <img src="https://github.com/killcodeX/mern-hotelin/blob/main/screenshots/6.png" />
+</p>
+<p align="center">
+  Booking History Page
+</p>
 
 
 ## Overall Functionlity
