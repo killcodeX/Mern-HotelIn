@@ -27,6 +27,14 @@ Final Backend Code -> [https://github.com/killcodeX/hotelin-backend](https://git
 
 ## ScreenShots
 
+<p align="center">
+  <img src="https://github.com/killcodeX/mern-hotelin/blob/main/screenshots/1.png" />
+</p>
+<p align="center">
+  Main Page
+</p>
+
+
 ## Overall Functionlity
 - Main Landing Listing Page with search form, Descriptions, Cities and Few hotels
 - Viewing Hotels by search or selecting cities
