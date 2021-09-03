@@ -14,7 +14,7 @@ import {
   handlePayment,
   paymentVerification,
   bookSuccess,
-} from "../controllers/postcontroller.js";
+} from "../controllers/postController.js";
 
 import { updateHotel, cancelBooking } from "../controllers/updateController.js";
 
