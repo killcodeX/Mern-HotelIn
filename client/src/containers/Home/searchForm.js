@@ -92,6 +92,7 @@ export default function SearchForm() {
           >
             <DatePicker
               allowClear
+              format={dateFormat}
               disabledDate={disabledDate}
               onChange={(value) =>
                 formik.setFieldValue(

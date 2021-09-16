@@ -89,6 +89,7 @@ export default function ReservationForm({ price, id }) {
           >
             <DatePicker
               allowClear
+              format={dateFormat}
               disabledDate={disabledDate}
               onChange={(value) => formik.setFieldValue("checkOut", value)}
             />
