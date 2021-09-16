@@ -12,8 +12,6 @@ export default function Reservation() {
   const dispatch = useDispatch();
   const state = useSelector(state => state.Hotels.bookingDetails)
 
-  console.log('this is state -->', state)
-
   useEffect(() => {
    dispatch(checkStorageBooking())
    dispatch(setBookingLocation())
