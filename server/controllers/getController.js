@@ -41,7 +41,7 @@ export const getBookings = async (req, res) => {
   // to mark booking completed
   isBookingCompleted();
   try {
-    const FinalResult = await BookingMessage.find().populate(
+    const FinalResult = await BookingMessage.find({userId: req.userId}).populate(
       "hotelId",
       "name image city rating totalReview"
     );
