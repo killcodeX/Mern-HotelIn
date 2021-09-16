@@ -2,6 +2,7 @@ import {
   LOGIN_SUCCESS,
   LOGOUT_SUCCESS,
   SIGNUP_SUCCESS,
+  UPDATE_BOOKING_LOCATION,
   VERIFY_LOCAL_STORAGE,
 } from "../actions/actionConstant";
 
@@ -11,6 +12,7 @@ const initialState = {
   isAuthenticated: loadState("hotelInLoggedIn") || false,
   token: "",
   user: {},
+  inBooking: false,
 };
 
 // Reducers
@@ -48,11 +50,16 @@ const AuthReducer = (state = initialState, action) => {
         token: "",
       };
 
+    case UPDATE_BOOKING_LOCATION:
+      return {
+        ...state,
+        inBooking: true,
+      };
+
     case VERIFY_LOCAL_STORAGE:
       const auth = loadState("hotelInLoggedIn");
       const user = loadState("hotelInUser");
       const token = loadState("hotelIntoken");
-      console.log(auth, user);
       return {
         ...state,
         isAuthenticated: auth,

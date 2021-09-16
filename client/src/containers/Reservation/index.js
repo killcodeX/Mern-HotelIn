@@ -5,6 +5,7 @@ import BookingInfo from "./bookingInfo";
 import PriceSummary from "./priceSummary";
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStorageBooking } from '../../redux/actions/actions';
+import { setBookingLocation } from '../../redux/actions/useractions';
 import Loader from "../../components/loader";
 
 export default function Reservation() {
@@ -15,6 +16,7 @@ export default function Reservation() {
 
   useEffect(() => {
    dispatch(checkStorageBooking())
+   dispatch(setBookingLocation())
   }, [])
 
 

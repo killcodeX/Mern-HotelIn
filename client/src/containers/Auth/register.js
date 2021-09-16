@@ -15,12 +15,13 @@ import {
   AuthFooter,
   AuthPrivacy,
 } from "./style";
-import { receiveSignUp} from "../../redux/actions/useractions";
-import { useDispatch } from "react-redux";
+import { receiveSignUp } from "../../redux/actions/useractions";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Register() {
   const dispatch = useDispatch();
   const history = useHistory();
+  const inBooking = useSelector((state) => state.Auth.inBooking);
   const formik = useFormik({
     initialValues: {
       fname: "",
@@ -30,7 +31,7 @@ export default function Register() {
       mobile: "",
     },
     onSubmit: (values) => {
-      dispatch(receiveSignUp(values, history))
+      dispatch(receiveSignUp(values, history, inBooking));
     },
   });
   return (
@@ -39,12 +40,14 @@ export default function Register() {
         <FormWrapper className="col-sm-6">
           <CardWrapper>
             <CardUpper>
-              <LogoWrapper>
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/logo-black.png"}
-                  alt="hotel.in"
-                />
-              </LogoWrapper>
+              <Link to="/">
+                <LogoWrapper>
+                  <img
+                    src={process.env.PUBLIC_URL + "/assets/logo-black.png"}
+                    alt="hotel.in"
+                  />
+                </LogoWrapper>
+              </Link>
               <HotelTag>
                 Raising Comfort to the highest level, Our Hotels & Resorts
                 remain stylish, modern, forward thinking global leader of
@@ -60,7 +63,10 @@ export default function Register() {
                     name="fname"
                     hasFeedback
                     rules={[
-                      { required: true, message: "Please enter your first Name!" },
+                      {
+                        required: true,
+                        message: "Please enter your first Name!",
+                      },
                     ]}
                   >
                     <Input
@@ -77,7 +83,10 @@ export default function Register() {
                     name="lname"
                     hasFeedback
                     rules={[
-                      { required: true, message: "Please enter your last Name!" },
+                      {
+                        required: true,
+                        message: "Please enter your last Name!",
+                      },
                     ]}
                   >
                     <Input
@@ -125,7 +134,10 @@ export default function Register() {
                 hasFeedback
                 rules={[
                   { required: true, message: "Please enter your mobile no!" },
-                  { pattern:/^([+]\d{2})?\d{10}$/, message:'Enter only mobile number'}
+                  {
+                    pattern: /^([+]\d{2})?\d{10}$/,
+                    message: "Enter only mobile number",
+                  },
                 ]}
               >
                 <Input
@@ -139,7 +151,7 @@ export default function Register() {
             </Form>
             <AuthFooter>
               <AuthPrivacy>
-                By creating your Journal Bit account, you agree to our{" "}
+                By creating your Hotel In account, you agree to our{" "}
                 <a href="#">Terms, Data Policy</a> and Cookie Policy.
               </AuthPrivacy>
               <span>

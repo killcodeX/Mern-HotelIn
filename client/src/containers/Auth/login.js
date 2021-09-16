@@ -16,18 +16,19 @@ import {
   AuthPrivacy,
 } from "./style";
 import { receiveLogin } from "../../redux/actions/useractions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Login() {
   const dispatch = useDispatch();
   const history = useHistory();
+  const inBooking = useSelector((state) => state.Auth.inBooking);
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
     onSubmit: (values) => {
-      dispatch(receiveLogin(values, history));
+      dispatch(receiveLogin(values, history, inBooking));
     },
   });
   return (
@@ -36,12 +37,14 @@ export default function Login() {
         <FormWrapper className="col-sm-6">
           <CardWrapper>
             <CardUpper>
-              <LogoWrapper>
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/logo-black.png"}
-                  alt="hotel.in"
-                />
-              </LogoWrapper>
+              <Link to="/">
+                <LogoWrapper>
+                  <img
+                    src={process.env.PUBLIC_URL + "/assets/logo-black.png"}
+                    alt="hotel.in"
+                  />
+                </LogoWrapper>
+              </Link>
               <HotelTag>
                 Raising Comfort to the highest level, Our Hotels & Resorts
                 remain stylish, modern, forward thinking global leader of
@@ -88,7 +91,7 @@ export default function Login() {
             </Form>
             <AuthFooter>
               <AuthPrivacy>
-                By creating your Journal Bit account, you agree to our{" "}
+                By creating your Hotel In account, you agree to our{" "}
                 <a href="#">Terms, Data Policy</a> and Cookie Policy.
               </AuthPrivacy>
               <span>

@@ -1,5 +1,5 @@
 # Hotel In
-The Hotel In app is a hotel booking, where users can browse different hotels by city, filter them according to price or rating, view single hotels, and book them.
+The Hotel In app is a hotel booking web app, where users can browse different hotels by city, filter them according to price or rating, view single hotels, and book them.
 
 ## Project Overview
 
